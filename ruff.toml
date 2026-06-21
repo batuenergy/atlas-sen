@@ -1,0 +1,6 @@
+line-length = 140
+
+[lint]
+# Keep the real-bug rules (F: undefined names, unused imports, etc.) but allow the
+# compact one-liner style used in the data scripts.
+ignore = ["E701", "E702", "E703", "E401", "E402", "E722", "E741"]

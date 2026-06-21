@@ -1,0 +1,912 @@
+{
+  "gerencia": "Baja California Sur",
+  "asOf": "2021-04",
+  "source": "CENACE Diagramas Unifilares SEN 2020-2025",
+  "zones": [
+    {
+      "gerencia": "Baja California Sur",
+      "zona": "Constitución 2020-2025",
+      "substations": [
+        {
+          "name": "Santo Domingo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Insurgentes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73250",
+            "73410",
+            "73850",
+            "73240"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "General Agustin Olachea",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Central Agustin Olachea Puerto San Carlos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 104,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Escondido",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Loreto",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "P17-BS1/May-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Villa Constitución",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5,
+            20,
+            20
+          ],
+          "lineIds": [
+            "73280",
+            "73270",
+            "73210",
+            "73190"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-BS3/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Las Pilas Switcheo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73350",
+            "73460",
+            "73420",
+            "73170"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "CEGEN7",
+          "mw": 23,
+          "type": "cegen",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "CEGEN7 Baterías",
+          "mw": 6,
+          "type": "baterías",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "CEGEN30 Baterías",
+          "mw": 20,
+          "type": "baterías",
+          "obra": "Oct-21"
+        },
+        {
+          "plant": "Central Agustin Olachea Puerto San Carlos",
+          "mw": 104,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "TG Villa Constitución",
+          "mw": 30,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Santo Domingo",
+          "to": "Insurgentes",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Insurgentes",
+          "to": "Villa Constitución",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Insurgentes",
+          "to": "Puerto Escondido",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Insurgentes",
+          "to": "Loreto",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Central Agustin Olachea Puerto San Carlos",
+          "to": "General Agustin Olachea",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "General Agustin Olachea",
+          "to": "Villa Constitución",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Villa Constitución",
+          "to": "Las Pilas Switcheo",
+          "kv": 115,
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "gerencia": "Baja California Sur",
+      "zona": "La Paz 2020-2025",
+      "substations": [
+        {
+          "name": "Rofomex",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73170"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Reformas Agrarias",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            6.25
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Recreo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-BS6/Ene-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Bledales",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            18
+          ],
+          "lineIds": [
+            "73470",
+            "73170",
+            "73380",
+            "73120"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P15-BS2/Dic-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Palmira",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Paz",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Prieta I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "Abr-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Prieta II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73160",
+            "73150",
+            "73230",
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Pichilingue",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73950",
+            "73980"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Pichilingue",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Camino Real",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [
+            "73320"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P16-BS2/Sep-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "El Triunfo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9,
+            14
+          ],
+          "lineIds": [
+            "73550",
+            "73BS0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Olas Altas",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73420",
+            "73370",
+            "73380",
+            "73180",
+            "93130",
+            "93140",
+            "93110",
+            "93120"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Coromuel",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "TG Punta Prieta I",
+          "mw": 43,
+          "type": "turbogás",
+          "obra": ""
+        },
+        {
+          "plant": "Aeroderivadas Punta Prieta I",
+          "mw": 75.2,
+          "type": "turbogás",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "TC Punta Prieta II",
+          "mw": 112.5,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN CFE11 Paquete 1 y 2",
+          "mw": 199,
+          "type": "cegen",
+          "obra": "Abr-24"
+        },
+        {
+          "plant": "CEGEN45",
+          "mw": 50,
+          "type": "cegen",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "CEGEN45 Baterías",
+          "mw": 10,
+          "type": "baterías",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "CEGEN35",
+          "mw": 100,
+          "type": "cegen",
+          "obra": "Jun-21"
+        },
+        {
+          "plant": "CEPP3",
+          "mw": 30,
+          "type": "combustión_interna",
+          "obra": "Dic-20"
+        },
+        {
+          "plant": "CEPP3 Baterías",
+          "mw": 7,
+          "type": "baterías",
+          "obra": "Dic-20"
+        },
+        {
+          "plant": "Aura Solar",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Aura Solar Tres",
+          "mw": 25,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Aura Solar Tres Baterías",
+          "mw": 10,
+          "type": "baterías",
+          "obra": ""
+        },
+        {
+          "plant": "Central Baja California Sur",
+          "mw": 209.6,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "Aeroderivadas Coromuel",
+          "mw": 75.2,
+          "type": "turbogás",
+          "obra": "Mar-23"
+        },
+        {
+          "plant": "TG Lechería",
+          "mw": 74,
+          "type": "turbogás",
+          "obra": "Mar-23"
+        }
+      ],
+      "edges": [
+        {
+          "from": "El Recreo",
+          "to": "Reformas Agrarias",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Punta Prieta II",
+          "to": "Punta Prieta I",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Punta Prieta II",
+          "to": "Palmira",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Punta Prieta II",
+          "to": "La Paz",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Punta Prieta II",
+          "to": "Maniobras Pichilingue",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Maniobras Pichilingue",
+          "to": "Pichilingue",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Bledales",
+          "to": "El Recreo",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Bledales",
+          "to": "Palmira",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Olas Altas",
+          "to": "Coromuel",
+          "kv": 230,
+          "confidence": "high"
+        },
+        {
+          "from": "Olas Altas",
+          "to": "Camino Real",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Camino Real",
+          "to": "El Triunfo",
+          "kv": 115,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "gerencia": "Baja California Sur",
+      "zona": "Los Cabos 2020-2025",
+      "substations": [
+        {
+          "name": "El Palmar",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "93150",
+            "93160",
+            "93130",
+            "93140",
+            "73430",
+            "73450",
+            "73280",
+            "73440",
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-BS2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Cabo Falso",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "D19-BS1/Jun-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Desaladora",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cabo San Lucas Dos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            10.5,
+            30,
+            30
+          ],
+          "lineIds": [
+            "73530"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cabo Bello",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [
+            "73290",
+            "73390"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cabo del Sol",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A18-BS2/May-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Cabo Real",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73310"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Palmilla",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73220"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San José del Cabo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30,
+            20,
+            12
+          ],
+          "lineIds": [
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Buenavista",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-BS1/Abr-24",
+            "D18-BS1/Abr-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Santiago",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            6,
+            6
+          ],
+          "lineIds": [
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P15-BS1/Dic-23",
+            "Jun-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Aeropuerto San José",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Maniobras Aeropuerto San José",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73440",
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Monte Real",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "P20-BS1/Abr-24",
+            "S53/Abr-21"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Central Turbogas Los Cabos",
+          "mw": 158.7,
+          "type": "turbogás",
+          "obra": ""
+        },
+        {
+          "plant": "CE GEN18",
+          "mw": 5,
+          "type": "cegen",
+          "obra": "Abr-21"
+        }
+      ],
+      "edges": [
+        {
+          "from": "Central Turbogas Los Cabos",
+          "to": "Cabo San Lucas Dos",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Palmar",
+          "to": "Cabo San Lucas Dos",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "El Palmar",
+          "to": "Cabo Real",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "El Palmar",
+          "to": "Cabo del Sol",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Palmar",
+          "to": "Palmilla",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Palmar",
+          "to": "San José del Cabo",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Cabo Falso",
+          "to": "Cabo San Lucas Dos",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cabo San Lucas Dos",
+          "to": "Cabo Bello",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santiago",
+          "to": "Buenavista",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santiago",
+          "to": "Maniobras Aeropuerto San José",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Maniobras Aeropuerto San José",
+          "to": "Aeropuerto San José",
+          "kv": 115,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

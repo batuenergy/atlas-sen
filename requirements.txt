@@ -1,0 +1,4 @@
+shapely>=2.0
+requests>=2.31
+ruff>=0.5
+pytest>=8.0

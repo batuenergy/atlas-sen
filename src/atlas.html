@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas de Red — SEN</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="atlas.css"></head><body>
+<div id="map"></div>
+<div id="title" class="float"><div class="ov">Atlas de red</div><div class="hero">Sistema Eléctrico Nacional<span class="i" id="info">i</span></div></div>
+<div id="tally" class="float"></div>
+<button id="pill-ctrl" class="pill frost float">Capas y filtros<span class="badge" id="fbadge"></span></button>
+<button id="pill-time" class="pill frost float">Ver evolución · 1960–2026</button>
+<div id="intro-bg">
+ <div id="intro">
+  <span class="x" id="intro-x">×</span>
+  <div class="ov">Atlas de red · Prototipo Batu</div>
+  <h1>Sistema Eléctrico Nacional</h1>
+  <p class="lede">Un mapa interactivo de toda la red eléctrica de México — generación, transmisión y geografía tarifaria — reconstruido a partir de los diagramas unifilares de CENACE (2020–2025), geolocalizado y enriquecido con propietario, mercado y fecha de operación.</p>
+  <div class="stats"><div class="st"><b>__TOT__ GW</b><span>generación</span></div><div class="st"><b>__NP__</b><span>plantas</span></div><div class="st"><b>__NH__</b><span>nodos AT</span></div><div class="st"><b>__NOWN__</b><span>c/propietario</span></div></div>
+  <h2>Cómo leerlo</h2>
+  <ul class="guide">
+   <li><span class="gw"><span class="m-dot"></span></span><span><b>Burbujas de color</b> — plantas de generación. El tamaño es la capacidad (MW); el color, la fuente.</span></li>
+   <li><span class="gw"><span class="m-ring"></span></span><span><b>Anillos grises</b> — subestaciones de 400/230 kV, la columna vertebral de la red de transmisión.</span></li>
+   <li><span class="gw"><span class="m-sq"></span></span><span><b>Capas y filtros</b> (arriba a la derecha) — filtra por fuente, propietario, mercado, tamaño, COD, región o división tarifaria de CFE.</span></li>
+   <li><span class="gw"><span class="m-play"></span></span><span><b>Ver evolución</b> (abajo a la derecha) — anima el crecimiento del parque de generación, 1960–2026.</span></li>
+  </ul>
+  <button class="go" id="intro-go">Explorar el mapa</button>
+ </div>
+</div>
+<div id="scrim"></div>
+<aside id="sheet" class="frost float">
+ <span class="x" id="sheet-x" title="Cerrar">×</span>
+ <div class="sgrp"><h4>Capas</h4>
+  <div class="row on" id="lr_gen"><span class="dot" style="background:var(--ink)"></span><span class="nm" data-exp="gen">Generación</span><button class="chev open" data-exp="gen" aria-label="Expandir filtros">&#8250;</button><span class="sw" data-tog="gen"></span></div>
+  <div class="sub show" id="genfilters">
+   <div id="srcrows"></div>
+   <div class="fld"><label>Grupo / propietario</label><select id="f_grp"></select></div>
+   <div class="fld"><label>Mercado</label><div class="seg" id="f_mkt"><button data-v="" class="on">Todos</button><button data-v="MEM">MEM</button><button data-v="Legado">Legado</button></div></div>
+   <div class="fld"><label>Tamaño mínimo · <span class="val" id="o_mw">0 MW</span></label><input type="range" id="f_mw" min="0" max="2800" step="10" value="0"></div>
+   <div class="fld"><label>COD desde · <span class="val" id="o_cod">cualquiera</span></label><input type="range" id="f_cod" min="1960" max="2026" step="1" value="1960"></div>
+   <div class="fld"><label>Región</label><select id="f_reg"></select></div>
+  </div>
+ </div>
+ <div class="sgrp">
+  <div class="row on" id="lr_hub"><span class="dot" style="background:#8A8A8A"></span><span class="nm" data-exp="hub">Red 400/230 kV</span><button class="chev open" data-exp="hub" aria-label="Expandir filtros">&#8250;</button><span class="sw" data-tog="hub"></span></div>
+  <div class="sub show" id="netfilters">
+   <div class="fld"><label>Tensión</label><div class="seg" id="f_kv"><button data-v="" class="on">Todas</button><button data-v="400">400 kV</button><button data-v="230">230 kV</button></div></div>
+   <div class="fld"><label>Capacidad mínima · <span class="val" id="o_mva">0 MVA</span></label><input type="range" id="f_mva" min="0" max="1300" step="25" value="0"></div>
+   <div class="fld"><label>Saturación mínima · <span class="val" id="o_sat">0</span></label><input type="range" id="f_sat" min="0" max="3" step="0.1" value="0"><p class="hint">Generación conectada ÷ capacidad de transformación (MVA × 0.9 factor de potencia). <b>1.0×</b> = en balance · <b>&gt;1×</b> = exceso de generación / posible congestión.</p></div>
+  </div>
+ </div>
+ <div class="sgrp">
+  <div class="row" id="lr_line"><span class="dot" style="background:#A32D2D"></span><span class="nm">Líneas de transmisión</span><span class="sw" data-tog="line"></span></div>
+  <p class="hint">Trazado real de OpenStreetMap — __NL__ líneas de alta tensión. Color por tensión: <b style="color:#A32D2D">400</b> · <b style="color:#C2410C">230</b> · <b style="color:#7C8AA0">115–161 kV</b>.</p>
+  <div class="row" id="lr_con"><span class="dot" style="background:#C9C6BC"></span><span class="nm">Conexiones planta–subestación</span><span class="sw" data-tog="con"></span></div>
+ </div>
+ <div class="sgrp">
+  <div class="row" id="lr_sat"><span class="dot" style="background:#E24B4A"></span><span class="nm">Saturación regional</span><span class="sw" data-tog="sat"></span></div>
+  <p class="hint">Por región de control: generación conectada ÷ capacidad de transformación AT. <b>&gt;1×</b> = la zona genera más de lo que sus transformadores pueden manejar (señal de congestión o necesidad de refuerzo).</p>
+  <div class="row" id="lr_tz"><span class="dot" style="background:#534AB7"></span><span class="nm">Zonas tarifarias CFE (17)</span><span class="sw" data-tog="tz"></span></div>
+  <div class="row" id="lr_rgn"><span class="dot" style="background:#3C7DC4"></span><span class="nm">Regiones de control (CENACE)</span><span class="sw" data-tog="rgn"></span></div>
+  <p class="hint">Las 7 regiones del SIN + Baja California, BCS y Mulegé — la misma división con que CENACE reporta demanda y generación. Territorio aproximado según la cobertura de subestaciones.</p>
+ </div>
+ <div class="sgrp"><h4>Zona / división</h4>
+  <div class="fld"><label>Zona operativa (CENACE)</label><select id="f_zona"></select></div>
+  <div class="fld"><label>División tarifaria (CFE)</label><select id="f_tdiv"></select></div>
+ </div>
+ <a id="reset">Limpiar filtros</a>
+</aside>
+<div id="lane" class="frost float">
+ <div class="lh"><div class="tt">Capacidad al <b id="t_yr">2026</b> · <b id="t_tot">0</b> GW <span style="color:var(--faint);font-size:11px">(con COD)</span><span id="t_yrchip"></span></div>
+  <div style="display:flex;align-items:center;gap:10px"><div class="seg" id="t_agg"><button data-v="cum" class="on">Acumulado</button><button data-v="ann">Anual</button></div><button id="t_big" class="iconbtn" title="Expandir" aria-label="Expandir gráfica"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2H14v4.5M14 2l-5 5M6.5 14H2V9.5M2 14l5-5"/></svg></button><span class="x" id="lane-x">×</span></div></div>
+ <div id="tchart"></div>
+ <div class="lr"><button id="t_play" aria-label="Reproducir"></button><input type="range" id="t_slider" min="1960" max="2026" step="1" value="2026"></div>
+</div>
+<button id="pill-demand" class="pill frost float">Demanda en vivo</button>
+<div id="dlane" class="frost float">
+ <div class="lh"><select id="d_reg" class="dtitle" aria-label="Región"></select>
+  <div style="display:flex;align-items:center;gap:8px"><button id="d_center" class="iconbtn" title="Centrar en el mapa" aria-label="Centrar en el mapa"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M8 1v2.2M8 12.8V15M1 8h2.2M12.8 8H15" stroke-linecap="round"/></svg></button><button id="d_big" class="iconbtn" title="Expandir" aria-label="Expandir gráfica"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2H14v4.5M14 2l-5 5M6.5 14H2V9.5M2 14l5-5"/></svg></button><span class="x" id="dlane-x">×</span></div></div>
+ <div class="dstats" id="d_stats"></div>
+ <div id="dchart"></div>
+ <div class="dlg"><span><i style="background:#1D4ED8"></i>Demanda</span><span><i style="background:#9A9A95"></i>Generación</span><span><i class="dash"></i>Pronóstico</span><span class="dupd" id="d_upd">Fuente: CENACE</span></div>
+</div>
+<div id="empty" class="float"><div class="m">Sin resultados con estos filtros</div><a id="empty-reset">Limpiar filtros</a></div>
+<script>
+(function(){
+  var COORDS_URL=window.ATLAS_COORDS_URL||'data/coordinates.json';
+  Promise.all([
+    fetch('data/atlas.json').then(function(r){return r.json();}),
+    fetch(COORDS_URL).then(function(r){return r.json();})
+  ]).then(function(res){
+    var D=res[0],C=res[1];
+    D.P.forEach(function(p,i){var c=(C.plants&&C.plants[i])||[null,null];p[1]=c[0];p[2]=c[1];var s=C.conns&&C.conns[i];if(s){p[12]=s[0];p[13]=s[1];}});
+    D.H.forEach(function(h,j){var c=(C.hubs&&C.hubs[j])||[null,null];h[1]=c[0];h[2]=c[1];});
+    window.__ATLAS_DATA__=D;
+    var s=document.createElement('script');s.src='atlas.js';document.body.appendChild(s);
+  }).catch(function(e){console.error('atlas load failed',e);var m=document.createElement('div');m.style.cssText='position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font:14px -apple-system,sans-serif;color:#6B6B66';m.textContent='No se pudieron cargar los datos del atlas.';document.body.appendChild(m);});
+})();
+</script></body></html>

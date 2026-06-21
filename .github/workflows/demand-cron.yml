@@ -1,0 +1,43 @@
+name: Demand snapshot
+
+# Fetches CENACE semi-real-time demand every ~10 min and commits to the `data` branch
+# (kept off main to avoid CI/deploy churn). The site reads today.json from there;
+# a once-daily finalize appends history/<date>.json.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demand-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data        # dedicated data branch
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+        # requirements.txt is on main; fetch it explicitly if absent on the data branch
+        continue-on-error: true
+      - name: Fetch snapshot
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/main/scripts/fetch_demand.py -o fetch_demand.py
+          python fetch_demand.py --out public/data/demand --history
+      - name: Commit if changed
+        run: |
+          git config user.name "atlas-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A public/data/demand
+          git diff --quiet --cached || git commit -m "data: demand snapshot $(date -u +%FT%TZ)"
+          git push

@@ -1,0 +1,7169 @@
+{
+  "gerencia": "Norte",
+  "asOf": "2021-04",
+  "source": "CENACE Diagramas Unifilares SEN 2020-2025",
+  "zones": [
+    {
+      "gerencia": "Norte",
+      "zona": "Juárez 2020-2025",
+      "substations": [
+        {
+          "name": "Anapra",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73130",
+            "73140"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Diablo USA",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Jerónimo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT30/Abr-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "FoxConn II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25
+          ],
+          "lineIds": [
+            "73600"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Delphi",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Automotive Lighting",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ascarate",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Rivereña",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73110",
+            "73280"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuatro Siglos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT11/Dic-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Insurgentes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73380",
+            "73390",
+            "73210",
+            "73190"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chamizal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73120"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Paso del Norte",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73140",
+            "73410",
+            "73150"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "RMSC Comercio Altair Alaia II - V",
+          "kv": [
+            230
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [
+            "93NT0",
+            "93320"
+          ],
+          "generationMw": 180,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chaveña",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73050"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cartagena",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Colegio",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Fuentes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73220",
+            "23NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tecnológico",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73230"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Cuesta",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Aztecas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Géminis",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73510",
+            "73570"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Foxconn",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            10
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Industrial Juárez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73240"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ethiconn",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Valle Independencia II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Libertad",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73040"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "T.G. Industrial Juárez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 18,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Aeropuerto",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73170"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lexmark",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Masa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Torres",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73450"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Salvacar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73330",
+            "73340",
+            "73310"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Granjero",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73320"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Parque",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73040",
+            "73020"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "T.G. Parque",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 44,
+          "obras": [
+            {
+              "code": "Retiro 2021",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Lagos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73270"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Valle Independencia I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Intermex Oriente",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lexmark II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Oriente XXI",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73620"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Medanos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73530"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Sauzal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS18-NT27/Abr-21",
+              "type": "sustitución"
+            },
+            {
+              "code": "D18-NT2/Dic-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Valle de Juárez",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "73090",
+            "73030",
+            "73080",
+            "92010"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT2/Dic-21",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Zaragoza",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73020",
+            "73050"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Robert Bosch",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Wistron",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Werner",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Reforma",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73180",
+            "73160",
+            "73250",
+            "73260",
+            "73290",
+            "73110"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEAUT8 Maniobras",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93310"
+          ],
+          "generationMw": 150,
+          "obras": [
+            {
+              "code": "Sep-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Patria",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [
+            "73460"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Terranova",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            300,
+            300
+          ],
+          "lineIds": [
+            "73440",
+            "73430",
+            "73650"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P19-NT1/Feb-24",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN23",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 80,
+          "obras": [
+            {
+              "code": "Sep-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Cereso",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73100"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Flextronics",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73580",
+            "73590",
+            "73420",
+            "73540",
+            "73610"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "CM Electrolux",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Electrolux",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Intermex Sur",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Ignacio",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73520"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "San Isidro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Porvenir",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "CEGEN42",
+          "kv": [
+            12.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 2,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Conejos Medanos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73560"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Rollo Solar Juárez Renovables",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73920"
+          ],
+          "generationMw": 60,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Cementos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73470",
+            "73480"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Cereso Juárez",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            10.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Cementos Samalayuca",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73600"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Dunas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.3
+          ],
+          "lineIds": [
+            "73490"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Norte Juárez",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93110",
+            "93120",
+            "93650",
+            "93660",
+            "93670"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Norte III",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 906,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Norte Cereso",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "C.T. Samalayuca",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93270",
+            "93280",
+            "93630"
+          ],
+          "generationMw": 316,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.C. Samalayuca II",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93640"
+          ],
+          "generationMw": 522,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.C. Chihuahua III",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93390",
+            "93400"
+          ],
+          "generationMw": 268,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Samalayuca",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Samalayuca II",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Samalayuca Sur",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93300",
+            "93480",
+            "93290",
+            "93190",
+            "93460",
+            "93450",
+            "93440"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "RMSC Comercio Altair Alaia II - V",
+          "mw": 180,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "CEAUT8",
+          "mw": 150,
+          "type": "cegen",
+          "obra": "Sep-20"
+        },
+        {
+          "plant": "T.G. Industrial Juárez",
+          "mw": 18,
+          "type": "turbogás",
+          "obra": ""
+        },
+        {
+          "plant": "T.G. Parque",
+          "mw": 44,
+          "type": "turbogás",
+          "obra": "Retiro 2021"
+        },
+        {
+          "plant": "CEGEN23",
+          "mw": 80,
+          "type": "cegen",
+          "obra": "Sep-20"
+        },
+        {
+          "plant": "CEGEN42",
+          "mw": 2,
+          "type": "cegen",
+          "obra": ""
+        },
+        {
+          "plant": "El Rollo Solar Juárez Renovables",
+          "mw": 60,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Norte III",
+          "mw": 906,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.T. Samalayuca",
+          "mw": 316,
+          "type": "termoeléctrica",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Samalayuca II",
+          "mw": 522,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Chihuahua III",
+          "mw": 268,
+          "type": "ciclo_combinado",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Anapra",
+          "to": "Insurgentes",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Diablo USA",
+          "to": "Anapra",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Insurgentes",
+          "to": "Paso del Norte",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Chamizal",
+          "to": "Colegio",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Rivereña",
+          "to": "Valle de Juárez",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cuatro Siglos",
+          "to": "Fuentes",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Paso del Norte",
+          "to": "Chaveña",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Paso del Norte",
+          "to": "Cartagena",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "La Cuesta",
+          "to": "Libertad",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Industrial Juárez",
+          "to": "Torres",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Salvacar",
+          "to": "Granjero",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Parque",
+          "to": "Valle de Juárez",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Zaragoza",
+          "to": "Robert Bosch",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Reforma",
+          "to": "Cereso",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Terranova",
+          "to": "Patria",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Terranova",
+          "to": "Valle de Juárez",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Norte Juárez",
+          "to": "Norte Cereso",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "C.T. Samalayuca",
+          "to": "Samalayuca",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "C.C. Samalayuca II",
+          "to": "Samalayuca II",
+          "kv": 230,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Moctezuma 2020-2025",
+      "substations": [
+        {
+          "name": "Las Cuatas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Gavilán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73700"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS18-NT31/Abr-21",
+              "type": "sustitución"
+            },
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Santos Solar Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73910",
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Los Santos Solar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 13.6,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Villa Ahumada",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Ahumada IV",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ahumada V",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ahumada III",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ahumada I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ahumada",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            225
+          ],
+          "lineIds": [
+            "73850",
+            "73270",
+            "73950",
+            "73400",
+            "73930",
+            "73600"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M20-NT1/Abr-23",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Ahumada II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [
+            {
+              "code": "Jun-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Valle Esperanza",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "La Palma",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT4/May-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Benito Juárez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73720",
+            "73660",
+            "73330",
+            "73910"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Moctezuma",
+          "kv": [
+            230,
+            400
+          ],
+          "transformersMva": [
+            375,
+            375,
+            300
+          ],
+          "lineIds": [
+            "93810",
+            "93920",
+            "93250",
+            "93440",
+            "93450",
+            "93460",
+            "93670",
+            "A3A70"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "BNB Villa Ahumada Solar",
+          "kv": [
+            230
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [],
+          "generationMw": 150,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Laguna Encinillas",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93550"
+          ],
+          "generationMw": 60,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Los Santos Solar",
+          "mw": 13.6,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ahumada IV",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ahumada V",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ahumada III",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ahumada I",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ahumada II",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": "Jun-20"
+        },
+        {
+          "plant": "BNB Villa Ahumada Solar",
+          "mw": 150,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Laguna Encinillas",
+          "mw": 60,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Gavilán",
+          "to": "Villa Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santos Solar Maniobras",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Villa Ahumada",
+          "to": "Valle Esperanza",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada IV",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada V",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada III",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada I",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada",
+          "to": "Moctezuma",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ahumada",
+          "to": "Benito Juárez",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Moctezuma",
+          "to": "BNB Villa Ahumada Solar",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "La Palma",
+          "to": "Ahumada",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Casas Grandes 2020-2025",
+      "substations": [
+        {
+          "name": "Palomas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73830"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Bismark",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT1/May-22",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Bismark",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73810",
+            "73860"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Salada",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            7.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT5/Abr-21",
+              "type": "indicativa"
+            },
+            {
+              "code": "P17-NT1/Feb-20",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Ascensión II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73830"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P17-NT1/Feb-20",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Ascensión",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73NT0",
+            "73760",
+            "73750",
+            "73800"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Buenavista",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT6/Ene-22",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Janos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            30
+          ],
+          "lineIds": [
+            "73790",
+            "73740"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Monteverde",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            15
+          ],
+          "lineIds": [
+            "73880"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT5/Abr-21",
+              "type": "indicativa"
+            },
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Nuevo Casas Grandes",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "73790",
+            "93950",
+            "93930",
+            "93940",
+            "93910",
+            "93920",
+            "93900"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P17-NT2/Sep-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "Vado Santa María",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT24/May-20",
+              "type": "indicativa"
+            },
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa María Solar",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225
+          ],
+          "lineIds": [
+            "93250"
+          ],
+          "generationMw": 148,
+          "obras": [
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "El Capulín",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT3/Abr-21",
+              "type": "indicativa"
+            },
+            {
+              "code": "P20-NT2/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Casas Grandes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73NT0",
+            "73780",
+            "73820",
+            "73720",
+            "73660"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Galeana",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lebarón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT7/Abr-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "San Buenaventura",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A20-NT1/Abr-20",
+              "type": "indicativa"
+            },
+            {
+              "code": "M19-NT1/May-22",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Cerros Blancos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT25/Dic-24",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Santa María Solar",
+          "mw": 148,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Palomas",
+          "to": "Bismark",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Bismark",
+          "to": "La Salada",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cuadro de Maniobras Bismark",
+          "to": "Ascensión II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ascensión II",
+          "to": "Nuevo Casas Grandes",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Ascensión",
+          "to": "Buenavista",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Janos",
+          "to": "Monteverde",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Nuevo Casas Grandes",
+          "to": "Santa María Solar",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Santa María Solar",
+          "to": "Vado Santa María",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Casas Grandes",
+          "to": "Galeana",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Galeana",
+          "to": "Lebarón",
+          "kv": 115,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Chihuahua 2020-2025",
+      "substations": [
+        {
+          "name": "Motorola",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73540"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Altec",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Carolinas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73640"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Sauz",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [
+            "73650"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chihuahua Norte",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [
+            "93370",
+            "93220",
+            "93550",
+            "93520",
+            "93120",
+            "73840",
+            "73680",
+            "73670"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P15-NT1/May-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "El Saucito",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73550"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT49/Abr-24",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Industria Superior",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73660"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ford Planta Dos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73790"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ford Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73690",
+            "73700"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ford",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Componentes Chihuahua",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73620"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Jabil",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73710"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Interceramic",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73730"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Complejo Industrial",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73270"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nombre de Dios",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73360"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cementos Chihuahua",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chihuahua Planta",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25
+          ],
+          "lineIds": [
+            "73110"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Aldama",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Victaulic",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Honey Well",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Vitromex",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73400",
+            "73190",
+            "73180",
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "División del Norte",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73600",
+            "73590",
+            "73090",
+            "73610",
+            "73570",
+            "73580",
+            "73250",
+            "73770"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Palomar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Complejo de Seguridad",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Robinson",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Papelera Chihuahua",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73890"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Auma",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Bafar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73070"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Haciendas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25,
+            30
+          ],
+          "lineIds": [
+            "73630",
+            "73560"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chihuahua Poniente",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Bafar (gen)",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 8,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chuviscar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73150",
+            "73160",
+            "73140",
+            "73750",
+            "73780"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Concordia",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT18/Abr-23",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Paneles Ponderosa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73760"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tabalaopa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Emerging Energy",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [],
+          "generationMw": 111,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Vitromex",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Industria Superior II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Industria Superior Planta 15",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ocampo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73120"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Fuentes Mares",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73100"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ávalos",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "73080",
+            "73130",
+            "93970"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P15-NT1/May-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Encino II",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93860"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "C.C. Norte II",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93540",
+            "93530",
+            "93210",
+            "93260"
+          ],
+          "generationMw": 433,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Encino",
+          "kv": [
+            230,
+            400
+          ],
+          "transformersMva": [
+            225,
+            225,
+            225
+          ],
+          "lineIds": [
+            "93420",
+            "93550",
+            "93440",
+            "93060",
+            "93010"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "C.C. El Encino",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 619,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Bafar",
+          "mw": 8,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Emerging Energy",
+          "mw": 111,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Norte II",
+          "mw": 433,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. El Encino",
+          "mw": 619,
+          "type": "ciclo_combinado",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Motorola",
+          "to": "Carolinas",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "El Sauz",
+          "to": "Chihuahua Norte",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Saucito",
+          "to": "Américas",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Ford Maniobras",
+          "to": "Ford",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Complejo Industrial",
+          "to": "Chihuahua Planta",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "División del Norte",
+          "to": "Palomar",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Robinson",
+          "to": "Complejo de Seguridad",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Chuviscar",
+          "to": "Concordia",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Emerging Energy",
+          "to": "Tabalaopa",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Encino",
+          "to": "C.C. El Encino",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "El Encino",
+          "to": "Encino II",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Ávalos",
+          "to": "El Encino",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Chihuahua Norte",
+          "to": "Ávalos",
+          "kv": 230,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Cuauhtémoc 2020-2025",
+      "substations": [
+        {
+          "name": "Menonita",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ruiz Cortinez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73820",
+            "73870",
+            "73830"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Namiquipa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "1721D/Ene-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Nicolás Bravo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Quevedo",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73800",
+            "73720",
+            "73810"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Maniobras 108",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Bachíniva",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT21/Abr-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Campo 73",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT1/Dic-22",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Álvaro Obregón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73210",
+            "73220",
+            "73300"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Manitoba",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73290"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Sol de los Manzanos",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73260",
+            "73380",
+            "73240",
+            "73330",
+            "73230"
+          ],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Palmarejo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            25
+          ],
+          "lineIds": [
+            "73930"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "López Mateos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS19-NT9/Abr-21",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Divisadero",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [
+            "23860"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Creel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [
+            "73880"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Pedro Potencia",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100
+          ],
+          "lineIds": [
+            "73850",
+            "73910",
+            "93880"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Arenales",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73370",
+            "73300"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT40/Abr-20",
+              "type": "sustitución"
+            },
+            {
+              "code": "PDS18-NT19/Abr-22",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Cuauhtémoc II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "93500",
+            "93430",
+            "93860",
+            "93340",
+            "93350",
+            "93870"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Pondercel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73280"
+          ],
+          "generationMw": 65,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Leoni Cable",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Basaseachi",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4,
+            7.5
+          ],
+          "lineIds": [
+            "73920"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuauhtémoc",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73250",
+            "73350"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Treinta y Cuatro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73320",
+            "73310"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera Los Gatos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Francisco de Borja",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Santa Rosa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73340",
+            "73770"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "General Trias",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            10
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Carichic",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cahuisori Potencia",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100
+          ],
+          "lineIds": [
+            "73940",
+            "73950"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Gasachic",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73960",
+            "73970",
+            "73990"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Mulatos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Concheño",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras (Gasachic)",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            15
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Minera Dolores",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Agnico Eagle",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Gammon Lake",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5,
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Sol de los Manzanos",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Pondercel",
+          "mw": 65,
+          "type": "combustión_interna",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Ruiz Cortinez",
+          "to": "Quevedo",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Namiquipa",
+          "to": "Quevedo",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Nicolás Bravo",
+          "to": "Quevedo",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Maniobras 108",
+          "to": "Bachíniva",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Álvaro Obregón",
+          "to": "Campo 73",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Sol de los Manzanos",
+          "to": "Cuauhtémoc II",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Arenales",
+          "to": "Cuauhtémoc II",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "San Pedro Potencia",
+          "to": "Cuauhtémoc II",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Divisadero",
+          "to": "Creel",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cuauhtémoc",
+          "to": "Maniobras Treinta y Cuatro",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Cahuisori Potencia",
+          "to": "Gammon Lake",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Camargo 2020-2025",
+      "substations": [
+        {
+          "name": "Delicias",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Delicias II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73370"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Desarrollos Solares de Delicias I,II,III",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 15,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Wrangler",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lázaro Cárdenas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Meoqui",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73990",
+            "73880"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS18-NT13/Dic-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Naica",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73210"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Naica",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Boquilla",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [
+            "73030",
+            "73010",
+            "73040",
+            "73230"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "C.H. Boquilla",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 25,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Kilómetro 88",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Armendariz",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.T. Francisco Villa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 316,
+          "obras": [
+            {
+              "code": "Retiro 2021",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Francisco Villa",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "93110",
+            "93210",
+            "93200",
+            "93220",
+            "73850",
+            "73210",
+            "73190"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P17-NT5/Ago-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "Colina",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.H. Colina",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 3,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Abraham González",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73220"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT5/Abr-24",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Camargo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73250"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Torreoncitos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Torreoncitos Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Río Florido",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT3/Abr-24",
+              "type": "indicativa"
+            },
+            {
+              "code": "PDS18-NT12/Abr-20",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Jiménez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73370",
+            "73970",
+            "73390"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Búfalo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT39/Abr-24",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Escalón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Camargo II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            200
+          ],
+          "lineIds": [
+            "73480",
+            "73470",
+            "73640",
+            "73860",
+            "73450",
+            "93160",
+            "93080",
+            "93040",
+            "93100",
+            "93200",
+            "93170"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Ávant",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Mimbre",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT13/Abr-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Tres Hermanos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nueva Holanda",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ojinaga",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Oasis",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73790",
+            "73770",
+            "73780"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P20-NT1/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "La Perla",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Rancho Cuernavaca",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT12/Jun-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "C.M. Tacubaya",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73441",
+            "73440",
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Trébol",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P20-NT1/Abr-23",
+              "type": "instruida"
+            },
+            {
+              "code": "1920D/Feb-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Rancho el Trece",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73780"
+          ],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Mesteñas",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73800",
+            "73730",
+            "73740",
+            "93220"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P20-NT1/Abr-23",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Trece Solar Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera Hércules",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Hércules Potencia",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "A3A10",
+            "A3000"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "RE36/Jun-19",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Desarrollos Solares de Delicias I,II,III",
+          "mw": 15,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "C.H. Boquilla",
+          "mw": 25,
+          "type": "hidroeléctrica",
+          "obra": ""
+        },
+        {
+          "plant": "C.T. Francisco Villa",
+          "mw": 316,
+          "type": "termoeléctrica",
+          "obra": "Retiro 2021"
+        },
+        {
+          "plant": "C.H. Colina",
+          "mw": 3,
+          "type": "hidroeléctrica",
+          "obra": ""
+        },
+        {
+          "plant": "Torreoncitos",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Ávant",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Rancho el Trece",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Delicias II",
+          "to": "Delicias",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Delicias II",
+          "to": "Wrangler",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Lázaro Cárdenas",
+          "to": "Meoqui",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Naica",
+          "to": "Boquilla",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Boquilla",
+          "to": "Colina",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "C.T. Francisco Villa",
+          "to": "Francisco Villa",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Francisco Villa",
+          "to": "Camargo II",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Abraham González",
+          "to": "Camargo",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Torreoncitos",
+          "to": "Torreoncitos Maniobras",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Río Florido",
+          "to": "Camargo II",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Camargo II",
+          "to": "Ávant",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Mesteñas",
+          "to": "Rancho el Trece",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "C.M. Tacubaya",
+          "to": "Mesteñas",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Oasis",
+          "to": "El Trébol",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Santiago 2020-2025",
+      "substations": [
+        {
+          "name": "Minera San Julián",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Catedral",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            7.5
+          ],
+          "lineIds": [
+            "73600"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Guachochi",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Justo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73840",
+            "73820"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Duraplay",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73130"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa Bárbara",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73860"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Francisco del Oro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras San Francisco",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73810",
+            "73820"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santiago I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [
+            "73880"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Altavista",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Parral",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            12.5,
+            12.5
+          ],
+          "lineIds": [
+            "73130",
+            "73030"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santiago II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73830",
+            "73120",
+            "73040",
+            "93160"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Bolivar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73810"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Bolivar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73810",
+            "73870"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Refinadora de Plata Guanaceví",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Guanaceví",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa María del Oro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73800"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [],
+      "edges": [
+        {
+          "from": "Minera San Julián",
+          "to": "Catedral",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Catedral",
+          "to": "Puerto Justo",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Guachochi",
+          "to": "Puerto Justo",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Puerto Justo",
+          "to": "Cuadro de Maniobras San Francisco",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Santiago I",
+          "to": "Santiago II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santiago II",
+          "to": "Cuadro de Maniobras Bolivar",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cuadro de Maniobras Bolivar",
+          "to": "Bolivar",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Cuadro de Maniobras Bolivar",
+          "to": "Santa María del Oro",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santa María del Oro",
+          "to": "Guanaceví",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Altavista",
+          "to": "Parral",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Torreón I 2020-2025",
+      "substations": [
+        {
+          "name": "NP Energía La Lucha",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 131,
+          "obras": [
+            {
+              "code": "Oct-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Mapimí",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT7/Abr-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Bermejillo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Yermo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ceballos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73720"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Abastos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [
+            "73780",
+            "73420"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.C. Gómez Palacio",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93080",
+            "93040",
+            "93320"
+          ],
+          "generationMw": 220,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Gómez Palacio",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "73410",
+            "73330",
+            "73100"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "C.C. La Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73110",
+            "73120",
+            "73600",
+            "73610",
+            "73050"
+          ],
+          "generationMw": 510,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Iberdrola La Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Francke",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            40
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT2/May-23",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Fesa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 1,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Sacramento",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73080"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT2/May-23",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Francisco Zarco",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73750",
+            "73760"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT6/Abr-20",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Dinamita",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73820"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Regio Mármol",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Vergel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT1/Dic-22",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Álamos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [
+            "73430"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A20-NT2/Abr-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Clarum Energy",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 2.6,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Miravalle",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cementos Torreón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cementos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73380"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Jardín",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "León Guzmán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera Robles",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Laguna II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            40
+          ],
+          "lineIds": [
+            "73270",
+            "73840"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT2/May-23",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Tuberías Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lala",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73590",
+            "73840"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M19-NT2/May-23",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "T.G. La Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 48,
+          "obras": [
+            {
+              "code": "Retiro 2021",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Pedriceña",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73830"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nazas",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [
+            "73470",
+            "73490",
+            "73620",
+            "73480",
+            "73180"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "John Deree Planta",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            14,
+            14
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Mieleras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Diagonal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P16-NT1/Jun-24",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Torreón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [
+            "73190"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS18-NT2/Abr-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Lerdo",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93060",
+            "93090",
+            "93740"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "C.T. Lerdo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 320,
+          "obras": [
+            {
+              "code": "Retiro 2021",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Maniobras Peñoles",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93750",
+            "93730",
+            "93780",
+            "93790"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Peñoles",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Fundílag",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73250"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Montiac",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Caterpillar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73260"
+          ],
+          "generationMw": 5.9,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "NP Energía La Lucha",
+          "mw": 131,
+          "type": "fotovoltaica",
+          "obra": "Oct-20"
+        },
+        {
+          "plant": "C.C. Gómez Palacio",
+          "mw": 220,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. La Laguna",
+          "mw": 510,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "Fesa",
+          "mw": 1,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Clarum Energy",
+          "mw": 2.6,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "T.G. La Laguna",
+          "mw": 48,
+          "type": "turbogás",
+          "obra": "Retiro 2021"
+        },
+        {
+          "plant": "C.T. Lerdo",
+          "mw": 320,
+          "type": "termoeléctrica",
+          "obra": "Retiro 2021"
+        },
+        {
+          "plant": "Caterpillar",
+          "mw": 5.9,
+          "type": "combustión_interna",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "C.C. Gómez Palacio",
+          "to": "Gómez Palacio",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Gómez Palacio",
+          "to": "C.C. La Laguna",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Bermejillo",
+          "to": "Yermo",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Yermo",
+          "to": "Ceballos",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Francke",
+          "to": "Fesa",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Francisco Zarco",
+          "to": "El Vergel",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "El Vergel",
+          "to": "Álamos",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Álamos",
+          "to": "Clarum Energy",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Laguna II",
+          "to": "La Laguna",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "La Laguna",
+          "to": "T.G. La Laguna",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Nazas",
+          "to": "John Deree Planta",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Nazas",
+          "to": "Maniobras Mieleras",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Lerdo",
+          "to": "C.T. Lerdo",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Maniobras Peñoles",
+          "to": "Peñoles",
+          "kv": 230,
+          "confidence": "high"
+        },
+        {
+          "from": "Jardín",
+          "to": "León Guzmán",
+          "kv": 115,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Torreón II 2020-2025",
+      "substations": [
+        {
+          "name": "Química del Rey",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 6,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Laguna del Rey",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            7
+          ],
+          "lineIds": [
+            "73370"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tres Manantiales",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Energía Limpia de La Laguna",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 30,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Pilar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73890",
+            "73390"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Batopilas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73360",
+            "73340"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS19-NT10/Abr-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "T.G. Chávez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 24,
+          "obras": [
+            {
+              "code": "Retiro 2021",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Chávez I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73350",
+            "73410",
+            "73600",
+            "73160"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Popular",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Lucero",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "1920D/Abr-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Andalucía II",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 83,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Andalucía",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "93NT0",
+            "93050",
+            "93710",
+            "93720",
+            "73650",
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        },
+        {
+          "name": "Revolución",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Matamoros",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73660"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A20-NT3/Abr-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Viñedos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D18-NT9/Mar-23",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Rancho Lucero",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Coronel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73250"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Pedro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73530",
+            "73130"
+          ],
+          "generationMw": 2,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera Autlán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Philips",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Unión",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT2/Dic-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Mayran",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS18-NT1/Abr-24",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Complejo Lala",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Allende",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73770",
+            "73630",
+            "73610",
+            "73240",
+            "73440"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "California",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73780",
+            "73420"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT43/Abr-20",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Grupo Essex México",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "John Deere",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73380"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Arcadio",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Emiliano Zapata",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "CEAUT22",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73NT0"
+          ],
+          "generationMw": 50,
+          "obras": [
+            {
+              "code": "Abr-21",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Parras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73300",
+            "73680"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT8/Abr-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Parras Cone",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 8,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Paila",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Laguna Seca",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73660"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Parque Solar Coahuila",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 20,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Paso del Águila",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Escuadrón 201",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Valle Verde",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73280",
+            "73320"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Torreón Oriente",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [
+            "73670",
+            "73690",
+            "73690"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Takata",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lajat",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73690"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Delphi",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Torreón Sur",
+          "kv": [
+            115,
+            230,
+            400
+          ],
+          "transformersMva": [
+            375,
+            375
+          ],
+          "lineIds": [
+            "93790",
+            "93740",
+            "93710",
+            "93720",
+            "73560",
+            "73540",
+            "73570",
+            "73170",
+            "A3A20",
+            "A3A40"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "P16-NT1/Jun-24",
+              "type": "instruida"
+            }
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "La Rosita",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Laguna Solar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 101,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Villanueva Solar III",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "A3700",
+            "A3A50"
+          ],
+          "generationMw": 480,
+          "obras": [
+            {
+              "code": "jun-23",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Villanueva Solar I",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "A3A60"
+          ],
+          "generationMw": 250,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Villanueva",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN64",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 150,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Química del Rey",
+          "mw": 6,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Energía Limpia de La Laguna",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "T.G. Chávez",
+          "mw": 24,
+          "type": "turbogás",
+          "obra": "Retiro 2021"
+        },
+        {
+          "plant": "Andalucía II",
+          "mw": 83,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "San Pedro",
+          "mw": 2,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "CEAUT22",
+          "mw": 50,
+          "type": "cegen",
+          "obra": "Abr-21"
+        },
+        {
+          "plant": "Parras Cone",
+          "mw": 8,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Parque Solar Coahuila",
+          "mw": 20,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Laguna Solar",
+          "mw": 101,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "Villanueva Solar III",
+          "mw": 480,
+          "type": "fotovoltaica",
+          "obra": "jun-23"
+        },
+        {
+          "plant": "Villanueva Solar I",
+          "mw": 250,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN64",
+          "mw": 150,
+          "type": "cegen",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Laguna del Rey",
+          "to": "Tres Manantiales",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "El Pilar",
+          "to": "Batopilas",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Batopilas",
+          "to": "Chávez I",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "T.G. Chávez",
+          "to": "Chávez I",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Andalucía II",
+          "to": "Andalucía",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Andalucía",
+          "to": "Matamoros",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Revolución",
+          "to": "Matamoros",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Coronel",
+          "to": "San Pedro",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Allende",
+          "to": "Complejo Lala",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Torreón Sur",
+          "to": "La Rosita",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Torreón Sur",
+          "to": "Laguna Solar",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Villanueva Solar I",
+          "to": "Maniobras Villanueva",
+          "kv": 400,
+          "confidence": "medium"
+        },
+        {
+          "from": "Villanueva Solar III",
+          "to": "Maniobras Villanueva",
+          "kv": 400,
+          "confidence": "medium"
+        },
+        {
+          "from": "Maniobras Villanueva",
+          "to": "Torreón Sur",
+          "kv": 400,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Norte",
+      "zona": "Durango 2020-2025",
+      "substations": [
+        {
+          "name": "Canatlán II Potencia",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100
+          ],
+          "lineIds": [
+            "73550",
+            "73650",
+            "93NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN 5",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 100,
+          "obras": [
+            {
+              "code": "Dic-20",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Canatlán II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4,
+            20
+          ],
+          "lineIds": [
+            "73460"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D19-NT2/Abr-22",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Mina Cerro del Mercado",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Cerro del Mercado",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73460"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M18-NT1/May-22",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Masisa",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73880"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cerro del Mercado",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "93880"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "CLID",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 71,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "CEGEN 1",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 23,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Durango II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            100
+          ],
+          "lineIds": [
+            "93820",
+            "93840",
+            "73450",
+            "73420",
+            "73430",
+            "73940",
+            "93620"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A19-NT8/May-21",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "La Trinidad",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93830",
+            "93090",
+            "93NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "La Trinidad Solar I y II, Tai Durango VI",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 90,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "C.C. Norte Durango",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 450,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras La Trinidad",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nuevo Ideal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73480"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "PDS19-NT7/Abr-20",
+              "type": "sustitución"
+            },
+            {
+              "code": "D19-NT1/Abr-23",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Guadiana",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73920",
+            "72970"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "D19-NT3/Abr-22",
+              "type": "sustitución"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Guadalupe Victoria",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73330"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Milenio",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Internacional Wire",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73910",
+            "73540"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Internacional Wire",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "El Salto",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Quince de Octubre",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Durango I",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Felipe Pescador",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "A18-NT52/Abr-24",
+              "type": "indicativa"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Santiago Papasquiaro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73470"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cuadro de Maniobras Altares",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [
+            "73500",
+            "73510"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Basis",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Ciénega II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73550"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Ciénega",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73550"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Ramón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            4.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Versalles de las Cuatas I, II y III",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 65,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Mina Sabinas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73520"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Mina San Martín",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73930"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Sabinas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Antonio de Belem",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Vicente Guerrero",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73410"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Parrilla",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [
+            "73360"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M20-NT2/Mar-22",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Sombrerete",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Charcos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73560"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Colorada",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chalchihuites",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20
+          ],
+          "lineIds": [
+            "73690",
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera del Toro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Centauro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73580",
+            "73320"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Biopapel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Amado Nervo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73350"
+          ],
+          "generationMw": 0,
+          "obras": [
+            {
+              "code": "M20-NT2/Mar-22",
+              "type": "modernización"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "La Flor",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Jerónimo Ortiz Martínez",
+          "kv": [
+            230,
+            400
+          ],
+          "transformersMva": [
+            300
+          ],
+          "lineIds": [
+            "A3A30",
+            "A3A20",
+            "93760",
+            "93770",
+            "93NT0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "low"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "CEGEN 5",
+          "mw": 100,
+          "type": "cegen",
+          "obra": "Dic-20"
+        },
+        {
+          "plant": "CLID",
+          "mw": 71,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN 1",
+          "mw": 23,
+          "type": "cegen",
+          "obra": ""
+        },
+        {
+          "plant": "La Trinidad Solar I y II, Tai Durango VI",
+          "mw": 90,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Norte Durango",
+          "mw": 450,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "Versalles de las Cuatas I, II y III",
+          "mw": 65,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Canatlán II Potencia",
+          "to": "Canatlán II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Canatlán II Potencia",
+          "to": "CEGEN 5",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Cuadro de Maniobras Cerro del Mercado",
+          "to": "Cerro del Mercado",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Durango II",
+          "to": "La Trinidad",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "La Trinidad",
+          "to": "C.C. Norte Durango",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Durango II",
+          "to": "Cuadro de Maniobras Internacional Wire",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Milenio",
+          "to": "Cuadro de Maniobras Internacional Wire",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Nuevo Ideal",
+          "to": "Santiago Papasquiaro",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Santiago Papasquiaro",
+          "to": "Cuadro de Maniobras Altares",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "La Ciénega II",
+          "to": "La Ciénega",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Vicente Guerrero",
+          "to": "Chalchihuites",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Jerónimo Ortiz Martínez",
+          "to": "Durango II",
+          "kv": 230,
+          "confidence": "low"
+        }
+      ]
+    }
+  ]
+}

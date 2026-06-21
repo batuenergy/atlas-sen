@@ -1,0 +1,2911 @@
+{
+  "gerencia": "Peninsular",
+  "asOf": "2021-04",
+  "source": "CENACE Diagramas Unifilares SEN 2020-2025",
+  "zones": [
+    {
+      "gerencia": "Peninsular",
+      "zona": "Campeche 2020-2025",
+      "substations": [
+        {
+          "name": "Calkiní II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Samulá II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            15,
+            30
+          ],
+          "lineIds": [
+            "73020",
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Samulá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ah-Kim-Pech",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73030",
+            "73A20"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "2120E/Oct-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Kalá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73040"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lerma",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225
+          ],
+          "lineIds": [
+            "73PN0",
+            "73A50",
+            "73A70",
+            "73080",
+            "73110",
+            "73140",
+            "93020"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Hecelchakán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73020",
+            "73A60"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Hopelchén",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Sihochac",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A19-PE5/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Champotón",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cayal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Candelaria II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Xpujil",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73A80"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chicbul",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Sabancuy",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73130"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa Lucía",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93820",
+            "93810",
+            "93PN0",
+            "93220"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Escárcega Potencia",
+          "kv": [
+            115,
+            230,
+            400
+          ],
+          "transformersMva": [
+            100,
+            100,
+            330,
+            300
+          ],
+          "lineIds": [
+            "93PN0",
+            "93120",
+            "93110",
+            "93100",
+            "73150",
+            "73A90",
+            "73A40",
+            "A3Q10",
+            "A3Q20"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "M18-SIN1/Ago-22",
+            "RP-CFE/Abr-21",
+            "CFE20-VAC/Ene-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN56 Maniobras",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "C.T. Lerma",
+          "mw": 112.5,
+          "type": "termoeléctrica",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Campeche",
+          "mw": 252.4,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN56",
+          "mw": 300,
+          "type": "cegen",
+          "obra": "Jul-21"
+        }
+      ],
+      "edges": [
+        {
+          "from": "Lerma",
+          "to": "Hecelchakán",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Hecelchakán",
+          "to": "Hopelchén",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Samulá II",
+          "to": "Lerma",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Samulá",
+          "to": "Kalá",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Kalá",
+          "to": "Ah-Kim-Pech",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Champotón",
+          "to": "Candelaria II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Champotón",
+          "to": "Cayal",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Lerma",
+          "to": "Escárcega Potencia",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santa Lucía",
+          "to": "Escárcega Potencia",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Escárcega Potencia",
+          "to": "Champotón",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Escárcega Potencia",
+          "to": "Xpujil",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Sabancuy",
+          "to": "Chicbul",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Ciudad del Carmen 2020-2025",
+      "substations": [
+        {
+          "name": "Laguna de Términos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Concordia",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            7.5,
+            24
+          ],
+          "lineIds": [
+            "73180",
+            "73A70"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ciudad del Carmen",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            30,
+            30
+          ],
+          "lineIds": [
+            "73A70",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Isla de Tris",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "2020/Feb-22",
+            "2020K/Jun-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Real",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            150,
+            150,
+            6.3
+          ],
+          "lineIds": [
+            "90PN0",
+            "90PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P17-PE2/Sep-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Palmar",
+          "kv": [
+            115,
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "T.G. Carmen",
+          "mw": 33,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Laguna de Términos",
+          "to": "Concordia",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Laguna de Términos",
+          "to": "Ciudad del Carmen",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Ciudad del Carmen",
+          "to": "Isla de Tris",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Laguna de Términos",
+          "to": "Puerto Real",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Puerto Real",
+          "to": "Palmar",
+          "kv": 34.5,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Ticul 2020-2025",
+      "substations": [
+        {
+          "name": "Maxcanú",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            6.3,
+            20
+          ],
+          "lineIds": [
+            "73030",
+            "73580"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tixméhuac",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ticul Distribución",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "P20-PE2/Abr-25"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Tekax II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [
+            "73M10",
+            "73210"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D20-PE3/Abr-25"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Kambul",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9,
+            20,
+            20
+          ],
+          "lineIds": [
+            "73220"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Photoemeris Sustentable Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73M50"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Ticul Potencia",
+          "kv": [
+            115,
+            230,
+            400
+          ],
+          "transformersMva": [
+            375,
+            375
+          ],
+          "lineIds": [
+            "73060",
+            "73100",
+            "73090",
+            "73M20",
+            "73070",
+            "93030",
+            "93220",
+            "93020",
+            "93090",
+            "A3240",
+            "A3Q60",
+            "A3Q20",
+            "A3Q30"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Photoemeris Sustentable",
+          "mw": 30,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Ticul Potencia",
+          "to": "Ticul Distribución",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ticul Distribución",
+          "to": "Tekax II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Tekax II",
+          "to": "Tixméhuac",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Tekax II",
+          "to": "Kambul",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Kambul",
+          "to": "Photoemeris Sustentable Maniobras",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Ticul Potencia",
+          "to": "Maxcanú",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Mérida 2020-2025",
+      "substations": [
+        {
+          "name": "Hunucmá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [
+            "73M30",
+            "73M60"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE5/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Ucú",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73690"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE6/Dic-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Caucel Potencia",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225
+          ],
+          "lineIds": [
+            "93240",
+            "93250",
+            "93PN0",
+            "93130",
+            "93140",
+            "73960"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "CFE20-MDC/Ene-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Poniente",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30,
+            40
+          ],
+          "lineIds": [
+            "73670",
+            "73690",
+            "73240",
+            "73230"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Ignacio",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "Mar-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Xcunyá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE2/Dic-20",
+            "Mar-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Dzityá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE13/Dic-22",
+            "Mar-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Progreso",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73940"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE11/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Maniobras Eólica Progreso",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73940"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "Jun-20"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Norte",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225
+          ],
+          "lineIds": [
+            "73540",
+            "73410",
+            "93PN0",
+            "93PN0",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE10/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Cholul",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Conkal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE3/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Chichí Suárez",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225
+          ],
+          "lineIds": [
+            "73PN0",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P16-PE2/Jul-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Chuburná",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE9/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Itzimná",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73M00"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE14/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Alom",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE5/Jun-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Mérida Potencia",
+          "kv": [
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "93160",
+            "93150"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Mérida II",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73320",
+            "73310",
+            "73390",
+            "73400",
+            "73530",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "CFE20-MDC/Ene-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Metropolitana",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE12/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Itzáes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            30
+          ],
+          "lineIds": [
+            "73510"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Centro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            30
+          ],
+          "lineIds": [
+            "73520"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nachi-Cocom",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40,
+            40
+          ],
+          "lineIds": [
+            "73370",
+            "73380",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Héroes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73PN0",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE15/Dic-22"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Mérida Oriente",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "A19-PE4/Jun-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Sur",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            40,
+            30
+          ],
+          "lineIds": [
+            "73980",
+            "73050"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "CFE20-MDC/Ene-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Hunxectamán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE4/Jul-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Hidrogeneradora Yucateca",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cementos Maya",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Umán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73560"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE6/Jun-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Manufacturera LEE de México",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Kanasín Potencia",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73550",
+            "73640",
+            "73970",
+            "73660",
+            "73PN0",
+            "93030",
+            "93230",
+            "93060",
+            "93PN0",
+            "93PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN43 Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "Dic-21"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN CFE10 Maniobras",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "Jun-24"
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Energía Solar San Ignacio",
+          "mw": 20,
+          "type": "fotovoltaica",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN39",
+          "mw": 70,
+          "type": "cegen",
+          "obra": "Mar-21"
+        },
+        {
+          "plant": "CEGEN58",
+          "mw": 86,
+          "type": "cegen",
+          "obra": "May-22"
+        },
+        {
+          "plant": "Energía Renovable de la Península",
+          "mw": 90,
+          "type": "eólica",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Mérida III",
+          "mw": 484,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.T. Mérida II",
+          "mw": 198,
+          "type": "termoeléctrica",
+          "obra": "Jun-24"
+        },
+        {
+          "plant": "CEGEN CFE10",
+          "mw": 521,
+          "type": "cegen",
+          "obra": "Jun-24"
+        },
+        {
+          "plant": "Cog. Enerkin",
+          "mw": 13.1,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "C.I. Nutricarsa",
+          "mw": 1.1,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN43",
+          "mw": 30,
+          "type": "cegen",
+          "obra": "Dic-21"
+        }
+      ],
+      "edges": [
+        {
+          "from": "Caucel Potencia",
+          "to": "Poniente",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Norte",
+          "to": "Cholul",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Norte",
+          "to": "Conkal",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Norte",
+          "to": "Chuburná",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "San Ignacio",
+          "to": "Xcunyá",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Xcunyá",
+          "to": "Norte",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Mérida II",
+          "to": "C.T. Mérida II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Mérida II",
+          "to": "Alom",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Itzáes",
+          "to": "Centro",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Nachi-Cocom",
+          "to": "Héroes",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Mérida Potencia",
+          "to": "Caucel Potencia",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Kanasín Potencia",
+          "to": "Norte",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Umán",
+          "to": "Sur",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Chichí Suárez",
+          "to": "Héroes",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Tizimín - Motul 2020-2025",
+      "substations": [
+        {
+          "name": "Kopté",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20,
+            15
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Temax II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            6.3
+          ],
+          "lineIds": [
+            "73850",
+            "73780"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santo Domingo",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [
+            "73PN0",
+            "73PN0",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "Dic-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Sucilá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73850"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tizimín",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5,
+            20,
+            20
+          ],
+          "lineIds": [
+            "73190",
+            "73150",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Popolnáh",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [
+            "73160"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE16/Dic-22"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Eólica del Golfo 1 Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "San Pedro",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Valladolid Distribución",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            20
+          ],
+          "lineIds": [
+            "73T10",
+            "73120"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Izamal",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0",
+            "73130"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Dzitás",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73130"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Valladolid",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            166
+          ],
+          "lineIds": [
+            "73490",
+            "73810",
+            "73820",
+            "73140",
+            "73PN0",
+            "93080",
+            "93070",
+            "93050"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Chemax",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73480",
+            "73P30"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "CEGEN36 Maniobras",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "Sep-21"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Dzitnup",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "A3PN0",
+            "A3NP0",
+            "A3Q40",
+            "A3Q50"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "CFE20-VAC/Ene-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "CEGEN CFE13 Maniobras",
+          "kv": [
+            400
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "CEGEN40",
+          "mw": 30,
+          "type": "cegen",
+          "obra": "Dic-21"
+        },
+        {
+          "plant": "CEGEN41",
+          "mw": 30,
+          "type": "cegen",
+          "obra": "Dic-21"
+        },
+        {
+          "plant": "CEGEN65",
+          "mw": 76,
+          "type": "cegen",
+          "obra": "Ene-24"
+        },
+        {
+          "plant": "Fuerza y Energía Limpia de Tizimín",
+          "mw": 84,
+          "type": "eólica",
+          "obra": ""
+        },
+        {
+          "plant": "Eólica del Golfo 1",
+          "mw": 70,
+          "type": "eólica",
+          "obra": ""
+        },
+        {
+          "plant": "C.T. Valladolid",
+          "mw": 145,
+          "type": "termoeléctrica",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Valladolid II",
+          "mw": 150,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "C.C. Valladolid III",
+          "mw": 525,
+          "type": "ciclo_combinado",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN36",
+          "mw": 70,
+          "type": "cegen",
+          "obra": "Sep-21"
+        },
+        {
+          "plant": "CEGEN CFE13",
+          "mw": 1037,
+          "type": "cegen",
+          "obra": "Jun-23"
+        }
+      ],
+      "edges": [
+        {
+          "from": "Temax II",
+          "to": "Eólica del Golfo 1 Maniobras",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Kopté",
+          "to": "Temax II",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santo Domingo",
+          "to": "Sucilá",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Sucilá",
+          "to": "Tizimín",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Tizimín",
+          "to": "Popolnáh",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Valladolid Distribución",
+          "to": "Valladolid",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Valladolid",
+          "to": "Chemax",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Valladolid",
+          "to": "Izamal",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Izamal",
+          "to": "Dzitás",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Valladolid",
+          "to": "Dzitnup",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Dzitnup",
+          "to": "CEGEN CFE13 Maniobras",
+          "kv": 400,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Cancún 2020-2025",
+      "substations": [
+        {
+          "name": "Puerto Morelos",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            40
+          ],
+          "lineIds": [
+            "73R40"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Moon Palace",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73930",
+            "73C20"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Kohunlich",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73760",
+            "73460",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-PE3/Abr-24",
+            "D20-PE2/Abr-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Canek",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            40
+          ],
+          "lineIds": [
+            "73610",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-PE3/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Juárez",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            26
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Leona Vicario",
+          "kv": [
+            115,
+            400
+          ],
+          "transformersMva": [
+            375,
+            200
+          ],
+          "lineIds": [
+            "A3PN0",
+            "A3PN0",
+            "90PN0",
+            "90PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-PE3/Abr-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Kekén",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [
+            "73C40"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P20-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Balam",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            225,
+            225
+          ],
+          "lineIds": [
+            "73680",
+            "73630",
+            "73690",
+            "73C10",
+            "73C20",
+            "73620",
+            "90050"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Keeh",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D20-PE1/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Bonfil",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A18-PE4/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Kukulkán",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            40
+          ],
+          "lineIds": [
+            "73660"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nizuc",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100
+          ],
+          "lineIds": [
+            "73780",
+            "73440",
+            "93040",
+            "93170",
+            "93070",
+            "93060",
+            "73PN0",
+            "73700"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "M18-PE1/May-23",
+            "A20-PE17/Dic-22",
+            "M18-SIN1/Ago-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Cancún",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            40,
+            30,
+            40
+          ],
+          "lineIds": [
+            "73670",
+            "73800",
+            "73650"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Sam",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73C30"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Yaxché",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chaac",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73750"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Kabah",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73740",
+            "73710"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE7/Dic-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Bonampak",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30,
+            20
+          ],
+          "lineIds": [
+            "73640"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Playa Mujeres",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            40
+          ],
+          "lineIds": [
+            "73C50"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE4/Dic-20",
+            "A20-PE8/Abr-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Nicté-Ha",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            40
+          ],
+          "lineIds": [
+            "73750"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Hunab-Ku",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73730"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Pok-Ta-Pok",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73720",
+            "73770"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nichupté",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            30
+          ],
+          "lineIds": [
+            "73760"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ixchel",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73550"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "T.G. Nizuc",
+          "mw": 88,
+          "type": "turbogás",
+          "obra": ""
+        },
+        {
+          "plant": "T.G. Cancún",
+          "mw": 72,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Canek",
+          "to": "Keeh",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Canek",
+          "to": "Bonfil",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Canek",
+          "to": "Puerto Juárez",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Puerto Juárez",
+          "to": "Kukulkán",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Balam",
+          "to": "Kekén",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Balam",
+          "to": "Punta Sam",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Balam",
+          "to": "Yaxché",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Leona Vicario",
+          "to": "Balam",
+          "kv": 230,
+          "confidence": "low"
+        },
+        {
+          "from": "Nizuc",
+          "to": "Cancún",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Nizuc",
+          "to": "Chaac",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Cancún",
+          "to": "Bonampak",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Bonampak",
+          "to": "Pok-Ta-Pok",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Kabah",
+          "to": "Hunab-Ku",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Nicté-Ha",
+          "to": "Hunab-Ku",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Riviera Maya 2020-2025",
+      "substations": [
+        {
+          "name": "Kantenáh",
+          "kv": [
+            115,
+            400
+          ],
+          "transformersMva": [
+            375,
+            200
+          ],
+          "lineIds": [
+            "A3PN0",
+            "73PN0",
+            "73PN0",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Xcalacoco",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [
+            "73R20"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE7/Jul-21",
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Riviera Maya",
+          "kv": [
+            115,
+            230,
+            400
+          ],
+          "transformersMva": [
+            375,
+            375
+          ],
+          "lineIds": [
+            "73830",
+            "73R40",
+            "73R20"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Iberostar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4,
+            9.4
+          ],
+          "lineIds": [
+            "73920"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Mayakobá",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73910",
+            "73900"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "2020J/Nov-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Zac Nicté",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30,
+            40
+          ],
+          "lineIds": [
+            "73830",
+            "73R30"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE8/Nov-21",
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Calica",
+          "kv": [
+            115
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Playa del Carmen",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            30,
+            30
+          ],
+          "lineIds": [
+            "9J180",
+            "9J190",
+            "73390"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "medium"
+        },
+        {
+          "name": "Playacar",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            37.5,
+            40,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chankanaab II",
+          "kv": [
+            34.5,
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "5J170",
+            "5J180"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P15-PE1/Abr-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Cozumel",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "5J190"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P15-PE1/Abr-23"
+          ],
+          "confidence": "low"
+        },
+        {
+          "name": "Chankanaab",
+          "kv": [
+            34.5,
+            115
+          ],
+          "transformersMva": [
+            20,
+            7.5
+          ],
+          "lineIds": [
+            "5JPN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P15-PE1/Abr-23"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Tulum",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73830"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A20-PE18/Dic-23"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Akumal II",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73840",
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "A19-PE1/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Aktun-Chen",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            30
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-PE2/Abr-24"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Aventura Palace",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            12.5
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "C.T.G. Chankanaab",
+          "mw": 53,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Riviera Maya",
+          "to": "Xcalacoco",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Riviera Maya",
+          "to": "Zac Nicté",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Riviera Maya",
+          "to": "Playa del Carmen",
+          "kv": 230,
+          "confidence": "medium"
+        },
+        {
+          "from": "Playa del Carmen",
+          "to": "Playacar",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Playa del Carmen",
+          "to": "Chankanaab II",
+          "kv": 34.5,
+          "confidence": "low"
+        },
+        {
+          "from": "Mayakobá",
+          "to": "Iberostar",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Kantenáh",
+          "to": "Tulum",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Akumal II",
+          "to": "Aktun-Chen",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Aktun-Chen",
+          "to": "Aventura Palace",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Chankanaab",
+          "to": "Chankanaab II",
+          "kv": 34.5,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Peninsular",
+      "zona": "Chetumal 2020-2025",
+      "substations": [
+        {
+          "name": "Polyuc",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            7.5,
+            20,
+            12.5
+          ],
+          "lineIds": [
+            "73220"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Lázaro Cárdenas",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73330",
+            "73200"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE2/Jul-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Mahahual",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            9.4
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Xul-Ha",
+          "kv": [
+            115,
+            230
+          ],
+          "transformersMva": [
+            100,
+            100,
+            20,
+            20
+          ],
+          "lineIds": [
+            "73A80",
+            "73A40",
+            "73280",
+            "73240",
+            "93100",
+            "93090"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "M18-SIN1/Ago-24"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "name": "Insurgentes",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "73250",
+            "73270"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Chetumal Norte",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20,
+            30
+          ],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Oxtankah",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            20
+          ],
+          "lineIds": [
+            "73PN0"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "D18-PE3/Ago-21"
+          ],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "T.G. Xul-Ha",
+          "mw": 58.7,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Polyuc",
+          "to": "Lázaro Cárdenas",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Lázaro Cárdenas",
+          "to": "Xul-Ha",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Lázaro Cárdenas",
+          "to": "Mahahual",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Xul-Ha",
+          "to": "Insurgentes",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Xul-Ha",
+          "to": "Chetumal Norte",
+          "kv": 115,
+          "confidence": "low"
+        },
+        {
+          "from": "Chetumal Norte",
+          "to": "Oxtankah",
+          "kv": 115,
+          "confidence": "low"
+        }
+      ]
+    }
+  ]
+}

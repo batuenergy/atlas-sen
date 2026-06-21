@@ -1,0 +1,628 @@
+{
+  "gerencia": "Mulegé",
+  "asOf": "2021-04",
+  "source": "CENACE Diagramas Unifilares SEN 2020-2025",
+  "zones": [
+    {
+      "gerencia": "Mulegé",
+      "zona": "Santa Rosalía 2020-2025",
+      "substations": [
+        {
+          "name": "Mezquital",
+          "kv": [
+            115
+          ],
+          "transformersMva": [
+            2.5
+          ],
+          "lineIds": [
+            "73140",
+            "73130",
+            "73110"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-MU3/Dic-20"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa Rosalía",
+          "kv": [
+            115,
+            34.5
+          ],
+          "transformersMva": [
+            20,
+            20
+          ],
+          "lineIds": [
+            "5320",
+            "5310"
+          ],
+          "generationMw": 0,
+          "obras": [
+            "P18-MU1/Junio-21"
+          ],
+          "confidence": "high"
+        },
+        {
+          "name": "San Ignacio",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Secundaria",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Entronque",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Minera Carbón Mexicano",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Tiburones",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Gasolinera",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Cread",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Misiones",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Palo Verde",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San José",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Bruno",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Lucas",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa Águeda",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Central Geotérmica Tres Vírgenes",
+          "mw": 10.0,
+          "type": "geotérmica",
+          "obra": ""
+        },
+        {
+          "plant": "Central Diésel Eléctrica Santa Rosalía Unidades de emergencia",
+          "mw": 11.3,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Turbo Jet Santa Rosalía (Traslado al SIBC)",
+          "mw": 12.5,
+          "type": "turbogás",
+          "obra": "Abril-2021"
+        },
+        {
+          "plant": "Central Diésel Eléctrica Santa Rosalía",
+          "mw": 7.15,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Central Fotovoltaica Santa Rosalía",
+          "mw": 1,
+          "type": "fotovoltaica",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Mezquital",
+          "to": "Santa Rosalía",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santa Rosalía",
+          "to": "San Ignacio",
+          "kv": 34.5,
+          "confidence": "medium"
+        },
+        {
+          "from": "Santa Rosalía",
+          "to": "Minera Carbón Mexicano",
+          "kv": 34.5,
+          "confidence": "low"
+        },
+        {
+          "from": "Santa Rosalía",
+          "to": "Tiburones",
+          "kv": 34.5,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "gerencia": "Mulegé",
+      "zona": "Guerrero Negro 2020-2025",
+      "substations": [
+        {
+          "name": "Guerrero Negro Uno",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "5325",
+            "5315",
+            "5335"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Benito Juárez",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Guerrero Negro Dos",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [
+            9.4,
+            9.4
+          ],
+          "lineIds": [
+            "5355",
+            "5335",
+            "5325",
+            "5345"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Vizcaíno",
+          "kv": [
+            115,
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [
+            "73120",
+            "73140"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Bahía Asunción",
+          "kv": [
+            115,
+            34.5
+          ],
+          "transformersMva": [
+            9.4,
+            9.4
+          ],
+          "lineIds": [
+            "5355",
+            "5230",
+            "5365"
+          ],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Parador",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Bahía de los Ángeles",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Santa Rosalita",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Nuevo Rosarito",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Jesús María",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ejido Lagunero",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ejido Mújica",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Población Vizcaíno",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Acueducto",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Ejido Díaz Ordaz",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Rancho El Silencio",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Zapata",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Colonias",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Eugenia",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Bahía Tortugas",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Puerto Nuevo",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Prieta",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "San Hipólito",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "La Bocana",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        },
+        {
+          "name": "Punta Abreojos",
+          "kv": [
+            34.5
+          ],
+          "transformersMva": [],
+          "lineIds": [],
+          "generationMw": 0,
+          "obras": [],
+          "confidence": "high"
+        }
+      ],
+      "generation": [
+        {
+          "plant": "Guerrero Negro II",
+          "mw": 10.8,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "Guerrero Negro III",
+          "mw": 11.6,
+          "type": "combustión_interna",
+          "obra": ""
+        },
+        {
+          "plant": "CEGEN CFE1",
+          "mw": 4.0,
+          "type": "cegen",
+          "obra": "Jul-21"
+        },
+        {
+          "plant": "CEGEN CFE1",
+          "mw": 4.0,
+          "type": "cegen",
+          "obra": "Jul-21"
+        },
+        {
+          "plant": "Turbo Jet Vizcaíno (Traslado al SIBC)",
+          "mw": 12.5,
+          "type": "turbogás",
+          "obra": "Mar-2021"
+        },
+        {
+          "plant": "Turbo Gas Vizcaíno Unidades de emergencia",
+          "mw": 24.0,
+          "type": "turbogás",
+          "obra": ""
+        }
+      ],
+      "edges": [
+        {
+          "from": "Guerrero Negro Uno",
+          "to": "Benito Juárez",
+          "kv": 34.5,
+          "confidence": "medium"
+        },
+        {
+          "from": "Guerrero Negro Uno",
+          "to": "Guerrero Negro Dos",
+          "kv": 34.5,
+          "confidence": "low"
+        },
+        {
+          "from": "Guerrero Negro Dos",
+          "to": "Vizcaíno",
+          "kv": 115,
+          "confidence": "medium"
+        },
+        {
+          "from": "Vizcaíno",
+          "to": "Bahía Asunción",
+          "kv": 115,
+          "confidence": "high"
+        },
+        {
+          "from": "Vizcaíno",
+          "to": "Mezquital",
+          "kv": 115,
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}
