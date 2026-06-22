@@ -14,6 +14,9 @@ that produces it. Reproduce any of it with `make data`.
 | `edges.json` | Substation‑to‑substation topology (schematic) | CENACE single‑line diagrams (extracted) | CC‑BY 4.0 | `scripts/extract_grid.py` |
 | `regions.json` | CENACE control‑region polygons (7 SIN + BCA/BCS/Mulegé) | INEGI/CONABIO municipio geometry + region assignment | CC‑BY 4.0 | `scripts/dissolve_regions.py` |
 | `tariff_divisions.json` | CFE 17 tariff‑division polygons | DOF acuerdo (municipio→división) + INEGI geometry | CC‑BY 4.0 | `scripts/dissolve_divisions.py` |
+| `state_polys.json` | 32 state (entidad federativa) polygons | INEGI/CONABIO 2020 municipio geometry (dissolved) | CC‑BY 4.0 | `scripts/dissolve_states.py` |
+| `dg_by_size.json`, `dg_by_state.json` | Distributed‑generation installed capacity (MW) + contracts, by size bucket × year and by state × semester | CNE/CRE *Estadísticas de GD / generación exenta* (RES/142/2017) + datos.gob.mx | CC‑BY 4.0 | `scripts/fetch_dg.py` |
+| `cfe_users_ts.json`, `cfe_energy_ts.json` | Estimated users & energy sales (MWh) by tarifa × división × year | CNE *Memorias de cálculo de las tarifas de operación / finales del Suministro Básico* | CC‑BY 4.0 | `scripts/fetch_cfe_tarifa_ts.py` |
 | `timeseries.json` | Generation capacity by source by year (1960–2026) | Derived from `plants.json` COD | CC‑BY 4.0 | `scripts/build_timeseries.py` |
 | `demand/today.json`, `demand/history/*.json` | Semi‑real‑time demand/generation/forecast per region | CENACE `GraficaDemanda.aspx` | Public (attribute CENACE) | `scripts/fetch_demand.py` (scheduled) |
 
