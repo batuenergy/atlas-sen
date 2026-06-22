@@ -103,7 +103,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
   const tariff=polyFC(D.TZ,['#7F77DD','#1D9E75','#D85A30','#378ADD','#C9A227','#534AB7','#97C459','#A98B63','#185FA5','#D4537E','#0F6E56','#993C1D','#3C3489','#639922','#854F0B','#5DCAA5','#B4537E']);
   const typeColor=['match',['get','t']];Object.entries(D.T).forEach(([k,v])=>typeColor.push(k,v[1]));typeColor.push('#8a8f9c');
 
-  map.on('load',()=>{
+  function onMapReady(){
     map.addSource('regions',{type:'geojson',data:regions});map.addSource('tariff',{type:'geojson',data:tariff});
     map.addSource('lines',{type:'geojson',data:lines});map.addSource('hubs',{type:'geojson',data:hubs});map.addSource('plants',{type:'geojson',data:plants});
     map.addSource('rgnhi',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
@@ -138,7 +138,8 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     document.getElementById('reset').onclick=()=>{f.src=new Set(Object.keys(D.T));f.mkt='';f.mw=0;f.reg='';f.kv=0;document.querySelectorAll('#srcrows .row').forEach(r=>r.classList.remove('off'));document.getElementById('f_reg').value='';document.getElementById('f_mw').value=0;document.getElementById('o_mw').textContent='0 MW';['f_mkt','f_kv'].forEach(id=>[...document.getElementById(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));applyFilters();};
 
     initTimeline();initDemand();applyFilters();
-  });
+  }
+  if(map.loaded())onMapReady();else map.on('load',onMapReady);
 }).catch(e=>{document.getElementById('tally').textContent='error al cargar datos';console.error(e);});
 
 function filtBase(p){if(!f.src.has(p[4]))return false;if(f.mkt&&p[8]!==f.mkt)return false;if(f.mw>0&&p[3]<f.mw)return false;if(f.reg&&D.REG[p[6]]!==f.reg)return false;return true;}
@@ -211,6 +212,8 @@ function initDemand(){
   document.getElementById('d_center').onclick=centerRegion;
   const ch=document.getElementById('dchart');ch.addEventListener('mousemove',onDMove);ch.addEventListener('mouseleave',dHide);
   fetch(window.ATLAS_DEMAND_URL||'data/demand/today.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!j.regions)return;DEM=j;const names=Object.keys(j.regions).sort((a,b)=>{const sa=a.indexOf('Interconectado')>=0,sb=b.indexOf('Interconectado')>=0;return sa===sb?a.localeCompare(b):(sa?-1:1);});document.getElementById('d_reg').innerHTML=names.map(n=>`<option value="${n}">${n}</option>`).join('');document.getElementById('pill-demand').style.display='inline-flex';}).catch(()=>{});
+  // re-poll the live feed every ~10 min so the chart updates while open
+  setInterval(()=>{fetch(window.ATLAS_DEMAND_URL||'data/demand/today.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.regions){DEM=j;if(document.getElementById('dlane').classList.contains('open'))buildDemandChart(document.getElementById('d_reg').value);}}).catch(()=>{});},600000);
 }
 function closeD(){document.getElementById('dlane').classList.remove('open');if(DEM)document.getElementById('pill-demand').style.opacity=1;map.getSource('rgnhi')&&map.getSource('rgnhi').setData({type:'FeatureCollection',features:[]});}
 function selectDemand(){const nm=document.getElementById('d_reg').value;_curName=nm;buildDemandChart(nm);highlightRegion(nm);}
