@@ -7,7 +7,9 @@ name: Demand snapshot
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    # Off the congested :00/:15/:30/:45 marks — GitHub drops fewer off-peak scheduled runs.
+    # (Best-effort regardless; the reliable cadence comes from the Vercel-cron workflow_dispatch.)
+    - cron: "9,24,39,54 * * * *"
   workflow_dispatch:
 
 permissions:
