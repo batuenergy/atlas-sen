@@ -1,12 +1,13 @@
 name: Demand snapshot
 
-# Optional self-hosted live-demand feed for forks. DISABLED by default: scheduled runs
-# require an orphan `data` branch to exist AND a deployment that reads it. (Batu's
-# production live demand comes from an app route instead, so this isn't used there.)
-# To enable: create an orphan `data` branch, add a `schedule:` trigger below, and
-# re-enable the workflow in the repo's Actions tab.
+# Fetches CENACE semi-real-time demand and commits it to the `data` branch.
+# Runs on a GitHub (Azure) runner because CENACE serves those IPs but rejects Vercel's
+# datacenter IPs (returns empty/500). The preview polls the snapshot via raw.githubusercontent
+# (CORS + 5-min cache). Keeps `main` clean by committing to the dedicated `data` branch.
 
 on:
+  schedule:
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,17 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: data        # dedicated data branch
+          ref: data
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
-        # requirements.txt is on main; fetch it explicitly if absent on the data branch
-        continue-on-error: true
-      - name: Fetch snapshot
+      - name: Fetch CENACE snapshot
         run: |
-          curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/main/scripts/fetch_demand.py -o fetch_demand.py
+          curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/main/scripts/fetch_demand.py" -o fetch_demand.py
           python fetch_demand.py --out public/data/demand --history
       - name: Commit if changed
         run: |
