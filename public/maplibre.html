@@ -107,6 +107,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
   <div class="fld"><label>Mercado</label><div class="seg" id="f_mkt"><button data-v="" class="on">Todos</button><button data-v="MEM">MEM</button><button data-v="Legado">Legado</button></div></div>
   <div class="fld"><label>Tamaño mínimo · <span class="val" id="o_mw">0 MW</span></label><input type="range" id="f_mw" min="0" max="2800" step="10" value="0"></div>
   <div class="fld"><label>Región</label><select id="f_reg"></select></div>
+  <div class="fld"><label>Grupo / propietario</label><select id="f_grp"></select></div>
   <h4>Tensión (líneas)</h4><div class="seg" id="f_kv"><button data-v="0" class="on">Todas</button><button data-v="230">230+</button><button data-v="400">400+</button></div>
   <a id="reset">Limpiar filtros</a>
 </aside>
@@ -144,7 +145,7 @@ aboutBg.onclick=function(e){if(e.target===aboutBg)openAbout(false);};
 try{if(!localStorage.getItem('atlasAboutSeen'))openAbout(true);}catch(e){openAbout(true);}
 document.getElementById('side-toggle').onclick=function(){document.getElementById('side').classList.toggle('open');};
 let D,C,DEM=null;
-const f={src:null,mkt:'',mw:0,reg:'',kv:0,year:0};
+const f={src:null,mkt:'',mw:0,reg:'',kv:0,year:0,own:''};
 const T={on:false,year:2026,agg:'cum',big:false};
 const GRP={cc:'Ciclo combinado',th:'Termo/Carbón',coal:'Termo/Carbón',tg:'Turbogás/CI',ci:'Turbogás/CI',cog:'Cogeneración',pv:'Solar',wind:'Eólica',hydro:'Hidro',geo:'Geotérmica',nuc:'Nuclear'};
 const TORDER=['Termo/Carbón','Turbogás/CI','Ciclo combinado','Cogeneración','Nuclear','Geotérmica','Hidro','Eólica','Solar'];
@@ -194,23 +195,28 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     Object.keys(D.T).forEach(t=>{const r=document.createElement('div');r.className='row';r.dataset.t=t;r.innerHTML=`<span class="sw" style="background:${D.T[t][1]}"></span><span class="nm">${D.T[t][0]}</span><span class="ct"></span>`;r.onclick=()=>{f.src.has(t)?f.src.delete(t):f.src.add(t);r.classList.toggle('off',!f.src.has(t));applyFilters();};sr.appendChild(r);});
     document.getElementById('f_reg').innerHTML='<option value="">Todas</option>'+D.REG.map(x=>`<option>${x}</option>`).join('');
     document.getElementById('f_reg').onchange=e=>{f.reg=e.target.value;applyFilters();};
+    const oc={};D.P.forEach(p=>{const o=(p[7]||'').trim();if(o)oc[o]=(oc[o]||0)+1;});
+    const owners=Object.keys(oc).sort((a,b)=>oc[b]-oc[a]||a.localeCompare(b));
+    document.getElementById('f_grp').innerHTML='<option value="">Todos</option>'+owners.map(o=>`<option value="${o.replace(/"/g,'&quot;')}">${o} (${oc[o]})</option>`).join('');
+    document.getElementById('f_grp').onchange=e=>{f.own=e.target.value;applyFilters();};
     function seg(id,key){const el=document.getElementById(id);[...el.children].forEach(b=>b.onclick=()=>{[...el.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');f[key]=key==='kv'?+b.dataset.v:b.dataset.v;applyFilters();});}
     seg('f_mkt','mkt');seg('f_kv','kv');
     document.getElementById('f_mw').oninput=e=>{f.mw=+e.target.value;document.getElementById('o_mw').textContent=(+e.target.value).toLocaleString()+' MW';applyFilters();};
-    document.getElementById('reset').onclick=()=>{f.src=new Set(Object.keys(D.T));f.mkt='';f.mw=0;f.reg='';f.kv=0;document.querySelectorAll('#srcrows .row').forEach(r=>r.classList.remove('off'));document.getElementById('f_reg').value='';document.getElementById('f_mw').value=0;document.getElementById('o_mw').textContent='0 MW';['f_mkt','f_kv'].forEach(id=>[...document.getElementById(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));applyFilters();};
+    document.getElementById('reset').onclick=()=>{f.src=new Set(Object.keys(D.T));f.mkt='';f.mw=0;f.reg='';f.kv=0;f.own='';document.querySelectorAll('#srcrows .row').forEach(r=>r.classList.remove('off'));document.getElementById('f_reg').value='';document.getElementById('f_grp').value='';document.getElementById('f_mw').value=0;document.getElementById('o_mw').textContent='0 MW';['f_mkt','f_kv'].forEach(id=>[...document.getElementById(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));applyFilters();};
 
     initTimeline();initDemand();applyFilters();
   }
   _initFn=onMapReady;if(_mapLoaded)onMapReady();
 }).catch(e=>{document.getElementById('tally').textContent='error al cargar datos';console.error(e);});
 
-function filtBase(p){if(!f.src.has(p[4]))return false;if(f.mkt&&p[8]!==f.mkt)return false;if(f.mw>0&&p[3]<f.mw)return false;if(f.reg&&D.REG[p[6]]!==f.reg)return false;return true;}
+function filtBase(p){if(!f.src.has(p[4]))return false;if(f.mkt&&p[8]!==f.mkt)return false;if(f.mw>0&&p[3]<f.mw)return false;if(f.reg&&D.REG[p[6]]!==f.reg)return false;if(f.own&&(p[7]||'')!==f.own)return false;return true;}
 function applyFilters(){
   if(!D)return;const types=[...f.src];
   const pf=['all',['in',['get','t'],['literal',types]]];
   if(f.mkt)pf.push(['==',['get','market'],f.mkt]);
   if(f.mw>0)pf.push(['>=',['get','mw'],f.mw]);
   if(f.reg)pf.push(['==',['get','region'],f.reg]);
+  if(f.own)pf.push(['==',['get','owner'],f.own]);
   if(f.year)pf.push(['==',['get','cod'],f.year]);
   else if(T.on){pf.push(['>',['get','cod'],0]);pf.push(['<=',['get','cod'],T.year]);}
   map.setFilter('plants',pf);
