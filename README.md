@@ -11,6 +11,7 @@ An interactive map of Mexico's national electricity system (Sistema Eléctrico N
 - **Generación** — ~540 power plants by source, owner, market (MEM/Legado), size, and commissioning date (COD), with a 1960–2026 build‑out timeline.
 - **Red 400/230 kV** — ~470 high‑voltage substations with transformer capacity and saturation.
 - **Líneas de transmisión** — real routed high‑voltage line geometry from OpenStreetMap.
+- **Subestaciones de distribución** — ~2,000 distribution / sub‑transmission substations (≤161 kV) from OpenStreetMap, plus per‑division transformer capacity from CFE's RGD short‑circuit report.
 - **Regiones de control (CENACE)** and **Zonas tarifarias CFE (17)** as choropleths.
 - **Demanda en vivo** — semi‑real‑time demand / generation / forecast per region, from CENACE.
 

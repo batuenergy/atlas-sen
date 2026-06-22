@@ -9,6 +9,8 @@ that produces it. Reproduce any of it with `make data`.
 | `substations.json` | 400/230 kV substations: kV, transformer MVA, generation, saturation | CENACE single‑line diagrams (extracted) | CC‑BY 4.0 | `scripts/extract_grid.py` |
 | `coordinates.json` | lat/lng for plants & substations | Geocoded via **Google Maps Platform** (proprietary) | © Google — **not** openly licensed; **not committed** here, served at runtime from a Batu endpoint | (internal) |
 | `lines.json` | High‑voltage transmission line geometry (115–400 kV) | **OpenStreetMap** (`power=line`, Overpass) | **ODbL 1.0** | `scripts/fetch_osm_lines.py` |
+| `osm_substations.json` | Distribution & sub‑transmission substations (≤161 kV) with real coordinates | **OpenStreetMap** (`power=substation`, Overpass) | **ODbL 1.0** | `scripts/fetch_osm_substations.py` |
+| `cfe_rgd_by_division.json` | Per‑division distribution‑substation count + transformer MVA | CFE Distribución — *Valores de Corto Circuito de las RGD* (extracted) | CC‑BY 4.0 | `scripts/fetch_rgd_substations.py` |
 | `edges.json` | Substation‑to‑substation topology (schematic) | CENACE single‑line diagrams (extracted) | CC‑BY 4.0 | `scripts/extract_grid.py` |
 | `regions.json` | CENACE control‑region polygons (7 SIN + BCA/BCS/Mulegé) | INEGI/CONABIO municipio geometry + region assignment | CC‑BY 4.0 | `scripts/dissolve_regions.py` |
 | `tariff_divisions.json` | CFE 17 tariff‑division polygons | DOF acuerdo (municipio→división) + INEGI geometry | CC‑BY 4.0 | `scripts/dissolve_divisions.py` |

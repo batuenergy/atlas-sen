@@ -144,7 +144,7 @@ document.getElementById('info-btn').onclick=function(){openAbout(true);};
 aboutBg.onclick=function(e){if(e.target===aboutBg)openAbout(false);};
 try{if(!localStorage.getItem('atlasAboutSeen'))openAbout(true);}catch(e){openAbout(true);}
 document.getElementById('side-toggle').onclick=function(){document.getElementById('side').classList.toggle('open');};
-let D,C,DEM=null;
+let D,C,DEM=null,RGD={};
 const f={src:null,mkt:'',mw:0,reg:'',kv:0,year:0,own:''};
 const T={on:false,year:2026,agg:'cum',big:false};
 const GRP={cc:'Ciclo combinado',th:'Termo/Carbón',coal:'Termo/Carbón',tg:'Turbogás/CI',ci:'Turbogás/CI',cog:'Cogeneración',pv:'Solar',wind:'Eólica',hydro:'Hidro',geo:'Geotérmica',nuc:'Nuclear'};
@@ -153,13 +153,14 @@ let GCOL={},Y0=1960,Y1=2026,NY=67;
 const PLAY='<svg width="11" height="11" viewBox="0 0 11 11"><path d="M2 1l8 4.5-8 4.5z" fill="#e7e9ee"/></svg>';
 const PAUSE='<svg width="11" height="11" viewBox="0 0 11 11"><rect x="2" y="1" width="2.5" height="9" fill="#e7e9ee"/><rect x="6.5" y="1" width="2.5" height="9" fill="#e7e9ee"/></svg>';
 
-Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.json').then(r=>r.json())]).then(([d,c])=>{
-  D=d;C=c;f.src=new Set(Object.keys(D.T));
+Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.json').then(r=>r.json()),fetch('data/osm_substations.json').then(r=>r.json()).catch(()=>({subs:[]})),fetch('data/cfe_rgd_by_division.json').then(r=>r.json()).catch(()=>({byDivision:{}}))]).then(([d,c,ds,rgd])=>{
+  D=d;C=c;RGD=(rgd&&rgd.byDivision)||{};f.src=new Set(Object.keys(D.T));
   GCOL={'Solar':D.T.pv[1],'Eólica':D.T.wind[1],'Hidro':D.T.hydro[1],'Geotérmica':D.T.geo[1],'Nuclear':D.T.nuc[1],'Ciclo combinado':D.T.cc[1],'Cogeneración':D.T.cog[1],'Turbogás/CI':D.T.tg[1],'Termo/Carbón':D.T.th[1]};
   const rev=p=>[p[1],p[0]];
   const lines={type:'FeatureCollection',features:(D.OL||[]).map(o=>({type:'Feature',properties:{kv:o[0]},geometry:{type:'LineString',coordinates:o[1].map(rev)}}))};
   const plants={type:'FeatureCollection',features:D.P.map((p,i)=>{const k=C.plants[i];if(!k||k[0]==null)return null;return{type:'Feature',properties:{name:p[0],mw:p[3],t:p[4],tlabel:(D.T[p[4]]||['?'])[0],owner:p[7]||'',market:p[8]||'',cod:p[9]||0,region:D.REG[p[6]]||'',tariff:p[15]||''},geometry:{type:'Point',coordinates:[k[1],k[0]]}};}).filter(Boolean)};
   const hubs={type:'FeatureCollection',features:D.H.map((h,j)=>{const k=C.hubs[j];if(!k||k[0]==null)return null;return{type:'Feature',properties:{name:h[0],kv:h[3],mva:h[4],sat:(h[6]==null?'n/d':h[6])},geometry:{type:'Point',coordinates:[k[1],k[0]]}};}).filter(Boolean)};
+  const dsubs={type:'FeatureCollection',features:((ds&&ds.subs)||[]).map(s=>({type:'Feature',properties:{band:s[2],name:s[3]||'Subestación',op:s[4]||'',v:s[5]||''},geometry:{type:'Point',coordinates:[s[1],s[0]]}}))};
   function polyFC(obj,pal){const ns=Object.keys(obj||{});const ft=[];ns.forEach((nm,idx)=>{(obj[nm]||[]).forEach(poly=>{ft.push({type:'Feature',properties:{name:nm,color:pal[idx%pal.length]},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(rev))}});});});return{type:'FeatureCollection',features:ft};}
   window.__RP=D.RP;
   const regions=polyFC(D.RP,['#3C7DC4','#1D9E75','#D8803A','#9B6BD8','#C94F7C','#5BA3A0','#C9A227','#7C8AA0','#8A6240','#639922']);
@@ -170,6 +171,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     map.addSource('regions',{type:'geojson',data:regions});map.addSource('tariff',{type:'geojson',data:tariff});
     map.addSource('lines',{type:'geojson',data:lines});map.addSource('hubs',{type:'geojson',data:hubs});map.addSource('plants',{type:'geojson',data:plants});
     map.addSource('rgnhi',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
+    map.addSource('dsubs',{type:'geojson',data:dsubs});
     map.addLayer({id:'tariff-fill',source:'tariff',type:'fill',layout:{visibility:'none'},paint:{'fill-color':['get','color'],'fill-opacity':0.14}});
     map.addLayer({id:'tariff-line',source:'tariff',type:'line',layout:{visibility:'none'},paint:{'line-color':['get','color'],'line-opacity':0.5,'line-width':0.8}});
     map.addLayer({id:'regions-fill',source:'regions',type:'fill',layout:{visibility:'none'},paint:{'fill-color':['get','color'],'fill-opacity':0.13}});
@@ -177,6 +179,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     map.addLayer({id:'lines-glow',source:'lines',type:'line',layout:{'line-cap':'round'},paint:{'line-color':KVCOLOR,'line-width':['interpolate',['linear'],['get','kv'],69,2,230,4,400,7],'line-blur':4,'line-opacity':0.35}});
     map.addLayer({id:'lines',source:'lines',type:'line',layout:{'line-cap':'round'},paint:{'line-color':KVCOLOR,'line-width':['interpolate',['linear'],['zoom'],4,['interpolate',['linear'],['get','kv'],69,0.4,230,1,400,1.8],10,['interpolate',['linear'],['get','kv'],69,1,230,2.2,400,3.6]],'line-opacity':0.92}});
     map.addLayer({id:'rgnhi-line',source:'rgnhi',type:'line',paint:{'line-color':'#2bd4ee','line-width':2,'line-opacity':0.9}});
+    map.addLayer({id:'dsubs',source:'dsubs',type:'circle',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],4,1.5,8,3,11,5],'circle-color':['match',['get','band'],0,'#ffd29b','#ff9d54'],'circle-opacity':0.78,'circle-stroke-color':'#0b0e14','circle-stroke-width':0.5}});
     map.addLayer({id:'hubs',source:'hubs',type:'circle',paint:{'circle-radius':['interpolate',['linear'],['get','kv'],69,2,230,3.2,400,4.5],'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#aeb6c6','circle-stroke-width':1,'circle-stroke-opacity':0.85}});
     map.addLayer({id:'plants',source:'plants',type:'circle',paint:{'circle-radius':['interpolate',['linear'],['get','mw'],0,2.2,100,4,500,7.5,1500,12,2800,17],'circle-color':typeColor,'circle-opacity':0.82,'circle-stroke-color':'#0b0e14','circle-stroke-width':0.6}});
     map.addLayer({id:'lines-label',source:'lines',type:'symbol',minzoom:6,layout:{'symbol-placement':'line','symbol-spacing':320,'text-field':['concat',['to-string',['get','kv']],' kV'],'text-size':10,'text-font':['Open Sans Bold','Noto Sans Regular']},paint:{'text-color':KVCOLOR,'text-halo-color':'#0b0e14','text-halo-width':1.4}});
@@ -184,10 +187,12 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     const pop=(html,e)=>new maplibregl.Popup({closeButton:false,maxWidth:'260px'}).setLngLat(e.lngLat).setHTML(html).addTo(map);
     map.on('click','plants',e=>{const p=e.features[0].properties;pop(`<b>${p.name}</b><br>${(+p.mw).toLocaleString()} MW · ${p.tlabel}${p.market?' · '+p.market:''}${p.cod?' · '+p.cod:''}${p.owner?'<br>'+p.owner:''}${p.tariff?'<br><span class="tag">tarifa '+p.tariff+'</span>':''}`,e);});
     map.on('click','hubs',e=>{const h=e.features[0].properties;pop(`<b>${h.name}</b><br>${h.kv} kV${h.mva?' · '+(+h.mva).toLocaleString()+' MVA':''}<br><span class="tag">saturación ${h.sat}</span>`,e);});
-    ['plants','hubs'].forEach(l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');});
+    map.on('click','dsubs',e=>{const s=e.features[0].properties;const vk=(s.v||'').split(';').map(x=>+x/1000).filter(Boolean).join(' / ');pop(`<b>${s.name}</b>${s.op?'<br>'+s.op:''}${vk?'<br><span class="tag">'+vk+' kV</span>':''}<br><span class="tag">Subestación · OpenStreetMap</span>`,e);});
+    map.on('click','tariff-fill',e=>{const nm=e.features[0].properties.name;const r=RGD[nm];pop(`<b>${nm}</b><br><span class="tag">división tarifaria CFE</span>${r?`<br>${r.subs} subestaciones de distribución<br>${r.mva.toLocaleString()} MVA de transformación`:''}`,e);});
+    ['plants','hubs','dsubs','tariff-fill'].forEach(l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');});
 
-    const GROUPS={plants:['plants'],lines:['lines-glow','lines','lines-label'],hubs:['hubs'],regions:['regions-fill','regions-line'],tariff:['tariff-fill','tariff-line']};
-    const TOGS=[['plants','Generación','#F5B301',1],['lines','Líneas de transmisión','#2bd4ee',1],['hubs','Subestaciones','#9aa3b2',1],['regions','Regiones (CENACE)','#3C7DC4',0],['tariff','Zonas tarifarias CFE','#7F77DD',0]];
+    const GROUPS={plants:['plants'],lines:['lines-glow','lines','lines-label'],hubs:['hubs'],dsubs:['dsubs'],regions:['regions-fill','regions-line'],tariff:['tariff-fill','tariff-line']};
+    const TOGS=[['plants','Generación','#F5B301',1],['lines','Líneas de transmisión','#2bd4ee',1],['hubs','Subestaciones','#9aa3b2',1],['dsubs','Subest. de distribución','#ff9d54',0],['regions','Regiones (CENACE)','#3C7DC4',0],['tariff','Zonas tarifarias CFE','#7F77DD',0]];
     const tc=document.getElementById('toggles');
     TOGS.forEach(([k,lab,col,on])=>{const r=document.createElement('div');r.className='tog'+(on?' on':'');r.innerHTML=`<span class="bx" style="${on?'background:'+col+';border-color:'+col:''}"></span>${lab}`;if(!on)GROUPS[k].forEach(id=>map.setLayoutProperty(id,'visibility','none'));r.onclick=()=>{const vis=r.classList.toggle('on');GROUPS[k].forEach(id=>map.setLayoutProperty(id,'visibility',vis?'visible':'none'));r.querySelector('.bx').style.cssText=vis?`background:${col};border-color:${col}`:'';};tc.appendChild(r);});
 
