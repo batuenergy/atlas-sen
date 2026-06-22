@@ -39,7 +39,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
 .iconbtn{width:26px;height:26px;border:1px solid rgba(255,255,255,.12);border-radius:6px;background:transparent;color:#9aa3b2;cursor:pointer;display:flex;align-items:center;justify-content:center}
 #tchart{height:58px;position:relative;cursor:crosshair}#lane.big #tchart{height:188px}
 .lr{display:flex;align-items:center;gap:12px;margin-top:6px}
-#t_play{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+#t_play,#e_play{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 #dchart{height:150px;position:relative;cursor:crosshair}#dlane.big #dchart{height:300px}
 #e_read{font-size:12px;color:#e7e9ee;margin:2px 0}#e_read b{font-size:15px}
 #e_scale{display:flex;align-items:center;gap:7px;font-size:10px;color:#9aa3b2;margin:5px 0 2px}#e_scale .e_g{height:9px;width:130px;border-radius:3px;display:inline-block;flex:none}
@@ -153,7 +153,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
   <div id="e_read"></div>
   <div id="e_scale"></div>
   <div id="echart"></div>
-  <div class="lr"><input type="range" id="e_slider" min="0" max="1" step="1" value="0"><b id="e_yr" style="min-width:62px;text-align:right">—</b></div>
+  <div class="lr"><button id="e_play" aria-label="play"></button><input type="range" id="e_slider" min="0" max="1" step="1" value="0"><b id="e_yr" style="min-width:62px;text-align:right">—</b></div>
 </div>
 <script>
 const KVCOLOR=['step',['get','kv'],'#6b7280',115,'#8b7cf0',230,'#3aa0ff',400,'#22d3ee'];
@@ -324,11 +324,13 @@ const EVO={loaded:false,metric:'users',tarifa:'ALL',dgview:'region',idx:0,data:n
 const EVO_TF=['DB1','DB2','PDBT','GDBT','GDMTH','GDMTO','DIST','DIT','RABT','RAMT','APBT','APMT'];
 const EVO_SZ=['0-5 kW','5-10 kW','10-30 kW','30-50 kW','50-100 kW','100-250 kW','250-500 kW'];
 const EVO_SZC=['#fde68a','#fbbf24','#fb923c','#f97316','#e85d3a','#d63f2f','#b01c1c'];
-const EVO_RAMP={users:['#0e2a45','#3aa0ff'],energy:['#3a2a0c','#f5b301'],dg:['#241a3d','#b388ff']};
+const EVO_RAMP={users:['#0b2545','#2f8fd0','#ffe27a'],energy:['#3b0d0d','#f1731f','#ffe08a'],dg:['#0d2818','#1f9e6f','#c9f57e']};
 const EVO_UNIT={users:'usuarios',energy:'GWh',dg:'MW'};
 function evRev(c){return [c[1],c[0]];}
 function evLerp(a,b,t){const A=parseInt(a.slice(1),16),B=parseInt(b.slice(1),16);const r=Math.round((A>>16)+((B>>16)-(A>>16))*t),g=Math.round(((A>>8)&255)+(((B>>8)&255)-((A>>8)&255))*t),bl=Math.round((A&255)+((B&255)-(A&255))*t);return '#'+((1<<24)+(r<<16)+(g<<8)+bl).toString(16).slice(1);}
 function evFmt(n){return n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(0)+'k':String(Math.round(n));}
+function evRampColor(s,t){const n=s.length-1,i=Math.max(0,Math.min(n-1,Math.floor(t*n)));return evLerp(s[i],s[i+1],t*n-i);}
+function stopEvoPlay(){if(window._et){clearInterval(window._et);window._et=null;}const b=document.getElementById('e_play');if(b)b.innerHTML=PLAY;}
 function evYears(){const E=EVO.data;return EVO.metric==='users'?E.users.years:EVO.metric==='energy'?E.energy.years:EVO.dgview==='size'?E.dgsize.years:E.dgstate.periods;}
 function evVal(name,key){const E=EVO.data;
   if(EVO.metric==='dg'){const s=E.dgstate.byState[name];return s&&s[key]?s[key].mw:null;}
@@ -347,27 +349,28 @@ function buildEvo(){
   const polys=evPolys();const names=Object.keys(polys);let max=0;
   names.forEach(n=>{const v=evVal(n,key);if(v!=null&&v>max)max=v;});if(max<=0)max=1;
   const ramp=EVO_RAMP[EVO.metric];const ft=[];let tot=0;
-  names.forEach(n=>{const v=evVal(n,key);if(v!=null)tot+=v;(polys[n]||[]).forEach(poly=>{const col=v==null?'#33384a':evLerp(ramp[0],ramp[1],Math.pow(v/max,0.6));ft.push({type:'Feature',properties:{name:n,v:v==null?-1:v,color:col},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(evRev))}});});});
+  names.forEach(n=>{const v=evVal(n,key);if(v!=null)tot+=v;(polys[n]||[]).forEach(poly=>{const col=v==null?'#33384a':evRampColor(ramp,Math.pow(v/max,0.6));ft.push({type:'Feature',properties:{name:n,v:v==null?-1:v,color:col},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(evRev))}});});});
   map.getSource('evo').setData({type:'FeatureCollection',features:ft});
   const div=EVO.metric==='energy'?1000:1,u=EVO_UNIT[EVO.metric];
   const lbl=EVO.metric==='dg'?'nacional · GD acumulada':(EVO.tarifa==='ALL'?'todas las tarifas':'tarifa '+EVO.tarifa);
   document.getElementById('e_read').innerHTML=`<b>${Math.round(tot/div).toLocaleString()}</b> ${u} · ${lbl} · ${key}`;
-  document.getElementById('e_scale').innerHTML=`<span class="e_g" style="background:linear-gradient(90deg,${ramp[0]},${ramp[1]})"></span><span>0</span><span style="margin-left:auto">${evFmt(max/div)} ${u}</span>`;
+  document.getElementById('e_scale').innerHTML=`<span class="e_g" style="background:linear-gradient(90deg,${ramp.join(',')})"></span><span>0</span><span style="margin-left:auto">${evFmt(max/div)} ${u}</span>`;
 }
 function drawDGSize(){
-  const E=EVO.data.dgsize,yrs=E.years,W=860,H=190,mL=46,mR=12,mT=10,mB=18,pw=W-mL-mR,ph=H-mT-mB;
+  const E=EVO.data.dgsize,yrs=E.years,cur=Math.min(EVO.idx,yrs.length-1),W=860,H=190,mL=46,mR=12,mT=10,mB=18,pw=W-mL-mR,ph=H-mT-mB;
   let max=0;yrs.forEach(y=>{let s=0;EVO_SZ.forEach(sz=>s+=(E.capacityMWp[sz]||{})[y]||0);if(s>max)max=s;});if(max<=0)max=1;
   const X=i=>mL+(yrs.length<=1?0:i/(yrs.length-1)*pw),Y=v=>mT+ph-v/max*ph;
   let svg=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%;height:${H}px;display:block">`;
   for(let g=0;g<=4;g++){const gv=max*g/4,gy=Y(gv);svg+=`<line x1="${mL}" y1="${gy}" x2="${W-mR}" y2="${gy}" stroke="#fff" stroke-opacity=".06"/><text x="${mL-5}" y="${gy+3}" text-anchor="end" font-size="8" fill="#7d8597">${evFmt(gv)}</text>`;}
   let base=yrs.map(()=>0);
-  EVO_SZ.forEach((sz,si)=>{const top=yrs.map((y,i)=>base[i]+((E.capacityMWp[sz]||{})[y]||0));let pts=[];for(let i=0;i<yrs.length;i++)pts.push(X(i)+','+Y(top[i]));for(let i=yrs.length-1;i>=0;i--)pts.push(X(i)+','+Y(base[i]));svg+=`<polygon points="${pts.join(' ')}" fill="${EVO_SZC[si]}" fill-opacity=".85"/>`;base=top;});
-  yrs.forEach((y,i)=>svg+=`<text x="${X(i)}" y="${H-4}" text-anchor="middle" font-size="8" fill="#7d8597">${y}</text>`);
+  EVO_SZ.forEach((sz,si)=>{const top=yrs.map((y,i)=>base[i]+((E.capacityMWp[sz]||{})[y]||0));let pts=[];for(let i=0;i<=cur;i++)pts.push(X(i)+','+Y(top[i]));for(let i=cur;i>=0;i--)pts.push(X(i)+','+Y(base[i]));svg+=`<polygon points="${pts.join(' ')}" fill="${EVO_SZC[si]}" fill-opacity=".85"/>`;base=top;});
+  svg+=`<line x1="${X(cur)}" y1="${mT}" x2="${X(cur)}" y2="${mT+ph}" stroke="#cdd5e3" stroke-width="1" stroke-dasharray="2 2" opacity=".7"/>`;
+  yrs.forEach((y,i)=>svg+=`<text x="${X(i)}" y="${H-4}" text-anchor="middle" font-size="8" fill="${i===cur?'#e7e9ee':'#7d8597'}">${y}</text>`);
   svg+=`<text x="3" y="${mT+6}" font-size="8" fill="#7d8597">MW</text></svg>`;
   document.getElementById('echart').innerHTML=svg+'<div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:5px;font-size:9px;color:#9aa3b2">'+EVO_SZ.map((sz,i)=>`<span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${EVO_SZC[i]};margin-right:3px;vertical-align:middle"></i>${sz}</span>`).join('')+'</div>';
-  const last=yrs[yrs.length-1];document.getElementById('e_read').innerHTML=`<b>${Math.round((E.capacityMWp_total||{})[last]||max).toLocaleString()}</b> MW de GD acumulada · por tamaño de sistema · ${yrs[0]}–${last}`;
+  const tot=(E.capacityMWp_total||{})[yrs[cur]]||0;document.getElementById('e_read').innerHTML=`<b>${Math.round(tot).toLocaleString()}</b> MW de GD acumulada · por tamaño · ${yrs[cur]}`;
 }
-function closeEvo(){const el=document.getElementById('elane');if(!el)return;el.classList.remove('open');const p=document.getElementById('pill-evo');if(p)p.style.opacity=1;['evo-fill','evo-line'].forEach(id=>map.getLayer(id)&&map.setLayoutProperty(id,'visibility','none'));}
+function closeEvo(){stopEvoPlay();const el=document.getElementById('elane');if(!el)return;el.classList.remove('open');const p=document.getElementById('pill-evo');if(p)p.style.opacity=1;['evo-fill','evo-line'].forEach(id=>map.getLayer(id)&&map.setLayoutProperty(id,'visibility','none'));}
 function evoLoad(cb){if(EVO.loaded)return cb();document.getElementById('e_read').textContent='cargando…';Promise.all(['dg_by_size','dg_by_state','cfe_users_ts','cfe_energy_ts','state_polys'].map(f=>fetch('data/'+f+'.json').then(r=>r.json()))).then(([dgsize,dgstate,users,energy,spoly])=>{EVO.data={dgsize,dgstate,users,energy,spoly};EVO.loaded=true;cb();}).catch(err=>{console.error('evo load',err);document.getElementById('e_read').textContent='error al cargar datos';});}
 function initEvo(){
   map.addSource('evo',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
@@ -379,12 +382,14 @@ function initEvo(){
   document.getElementById('e_tarifa').innerHTML='<option value="ALL">Todas las tarifas</option>'+EVO_TF.map(t=>`<option value="${t}">${t}</option>`).join('');
   const el=document.getElementById('elane');
   function sync(){document.getElementById('e_tarifa').style.display=EVO.metric==='dg'?'none':'';document.getElementById('e_dgview').style.display=EVO.metric==='dg'?'':'none';}
-  document.getElementById('pill-evo').onclick=()=>{closeD();document.getElementById('lane').classList.remove('open');document.getElementById('pill-time').style.opacity=1;T.on=false;f.year=0;document.getElementById('t_chip').style.display='none';applyFilters();el.classList.add('open');document.getElementById('pill-evo').style.opacity=0;sync();evoLoad(buildEvo);};
+  document.getElementById('pill-evo').onclick=()=>{closeD();document.getElementById('lane').classList.remove('open');document.getElementById('pill-time').style.opacity=1;T.on=false;f.year=0;document.getElementById('t_chip').style.display='none';applyFilters();el.classList.add('open');document.getElementById('pill-evo').style.opacity=0;EVO.idx=1e9;sync();evoLoad(buildEvo);};
   document.getElementById('e_x').onclick=closeEvo;
-  [...document.getElementById('e_metric').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_metric').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.metric=b.dataset.v;EVO.idx=0;sync();buildEvo();});
-  [...document.getElementById('e_dgview').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_dgview').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.dgview=b.dataset.v;EVO.idx=0;buildEvo();});
+  [...document.getElementById('e_metric').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_metric').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.metric=b.dataset.v;EVO.idx=1e9;stopEvoPlay();sync();buildEvo();});
+  [...document.getElementById('e_dgview').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_dgview').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.dgview=b.dataset.v;EVO.idx=1e9;stopEvoPlay();buildEvo();});
   document.getElementById('e_tarifa').onchange=e=>{EVO.tarifa=e.target.value;buildEvo();};
-  document.getElementById('e_slider').oninput=e=>{EVO.idx=+e.target.value;buildEvo();};
+  document.getElementById('e_slider').oninput=e=>{stopEvoPlay();EVO.idx=+e.target.value;buildEvo();};
+  const eb=document.getElementById('e_play');eb.innerHTML=PLAY;
+  eb.onclick=()=>{if(window._et){stopEvoPlay();return;}EVO.idx=0;eb.innerHTML=PAUSE;buildEvo();window._et=setInterval(()=>{EVO.idx++;if(EVO.idx>=evYears().length){stopEvoPlay();return;}buildEvo();},520);};
 }
 function selectDemand(){const nm=document.getElementById('d_reg').value;_curName=nm;buildDemandChart(nm);highlightRegion(nm);}
 function highlightRegion(nm){const polys=(window.__RP||{})[nm];const src=map.getSource('rgnhi');if(!src)return;if(!polys){src.setData({type:'FeatureCollection',features:[]});return;}const feats=polys.map(poly=>({type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(p=>[p[1],p[0]]))}}));src.setData({type:'FeatureCollection',features:feats});}
