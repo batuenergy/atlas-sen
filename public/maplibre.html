@@ -47,9 +47,60 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
 #ttip .ty,#dtip .ty{font-weight:600;font-size:12px;margin-bottom:3px}#ttip .tr,#dtip .tr{display:flex;align-items:center;gap:7px}#ttip .sw,#dtip .sw{width:8px;height:8px;border-radius:2px}#ttip .tv,#dtip .tv{margin-left:14px;font-variant-numeric:tabular-nums}
 .maplibregl-popup-content{background:#111722;color:#e7e9ee;border-radius:10px;border:1px solid rgba(255,255,255,.1);font-size:12px;line-height:1.5;padding:10px 12px}.maplibregl-popup-content b{font-weight:600}.maplibregl-popup-tip{display:none}.maplibregl-popup-content .tag{color:#8b93a4;font-size:11px}
 .maplibregl-ctrl-attrib{background:rgba(17,21,30,.6)!important}.maplibregl-ctrl-attrib a{color:#9aa3b2}
+#title #info-btn{margin-top:8px;background:none;border:0;color:#2bd4ee;font-size:12px;cursor:pointer;padding:0;font-family:inherit;display:block}
+#title #info-btn:hover{text-decoration:underline}
+#side-toggle{display:none;position:fixed;top:16px;right:16px;z-index:6;height:34px;padding:0 14px;border-radius:999px;background:rgba(17,21,30,.92);border:1px solid rgba(255,255,255,.1);color:#e7e9ee;font-size:12.5px;cursor:pointer}
+#about-bg{position:fixed;inset:0;z-index:20;background:rgba(8,10,15,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;pointer-events:none;transition:opacity .25s}
+#about-bg.on{opacity:1;pointer-events:auto}
+#about{position:relative;width:min(460px,100%);max-height:calc(100% - 36px);overflow-y:auto;background:#111722;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px 26px 22px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+#about .ax{position:absolute;top:12px;right:14px;background:none;border:0;color:#7d8597;font-size:18px;cursor:pointer}
+#about .ov{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7d8597}
+#about h1{font-size:22px;font-weight:600;margin:3px 0 10px;color:#fff}
+#about p{font-size:13px;color:#aeb6c6;line-height:1.6;margin:0 0 16px}
+#about h2{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7d8597;margin:0 0 8px}
+#about .srcs ul{margin:0 0 16px;padding:0;list-style:none;font-size:12.5px;color:#cdd3df;line-height:1.75}
+#about .srcs b{color:#fff;font-weight:600}
+#about .acts{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+#about .acts a{padding:10px 12px;border-radius:9px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#e7e9ee;text-decoration:none;font-size:13px}
+#about .acts a:hover{background:rgba(255,255,255,.08)}
+#about .go{display:block;width:100%;height:44px;border:0;border-radius:999px;background:#2bd4ee;color:#08222a;font-weight:600;font-size:14px;cursor:pointer}
+#about .foot{font-size:11px;color:#6b7280;margin-top:14px;text-align:center;line-height:1.5}
+@media (max-width:680px){
+  #side{transform:translateX(110%);transition:transform .24s ease;width:min(86vw,300px);max-height:calc(100% - 92px)}
+  #side.open{transform:translateX(0)}
+  #side-toggle{display:block}
+  #legend{display:none}
+  #title{max-width:62vw;padding:9px 12px}#title .h{font-size:15px}
+  .pill{font-size:12px;height:32px;padding:0 12px}
+  #pill-time{bottom:14px;right:14px}#pill-demand{bottom:14px;right:auto;left:14px}
+  .dstats{gap:14px}.dstat b{font-size:15px}
+  #about{padding:22px 18px}#about h1{font-size:20px}
+}
 </style></head><body>
 <div id="map"></div>
-<div id="title" class="panel"><div class="ov">Atlas de red · MapLibre</div><div class="h">Sistema Eléctrico Nacional</div><div class="t" id="tally">cargando…</div></div>
+<div id="title" class="panel"><div class="ov">Atlas de red · MapLibre</div><div class="h">Sistema Eléctrico Nacional</div><div class="t" id="tally">cargando…</div><button id="info-btn">ⓘ Acerca de · fuentes · colaborar</button></div>
+<button id="side-toggle">Capas y filtros</button>
+<div id="about-bg">
+ <div id="about">
+  <button class="ax" id="about-x" aria-label="Cerrar">×</button>
+  <div class="ov">Atlas de red · código abierto</div>
+  <h1>Sistema Eléctrico Nacional</h1>
+  <p>Un mapa interactivo de toda la red eléctrica de México — generación, transmisión, regiones de control de CENACE, divisiones tarifarias de CFE y demanda en vivo. Reconstruido a partir de datos públicos.</p>
+  <div class="srcs"><h2>Fuentes de datos</h2><ul>
+   <li><b>CENACE</b> — diagramas unifilares y demanda en tiempo casi real</li>
+   <li><b>CFE / DOF</b> — divisiones tarifarias</li>
+   <li><b>INEGI</b> — geometría municipal</li>
+   <li><b>OpenStreetMap</b> — líneas de transmisión (© OpenStreetMap contributors)</li>
+  </ul></div>
+  <div class="acts">
+   <a href="https://github.com/batuenergy/atlas-sen" target="_blank" rel="noopener">★ Proyecto de código abierto en GitHub</a>
+   <a href="https://github.com/batuenergy/atlas-sen/issues/new/choose" target="_blank" rel="noopener">Reportar una corrección o sugerir datos →</a>
+   <a href="mailto:contacto@batuenergy.com?subject=Atlas%20de%20Red%20SEN">Colaborar · escríbenos</a>
+  </div>
+  <button class="go" id="about-go">Explorar el mapa</button>
+  <div class="foot">Hecho por Batu Energy · datos públicos · proyecto independiente, no afiliado a CENACE, CFE ni INEGI</div>
+ </div>
+</div>
 <aside id="side" class="panel">
   <h4>Capas</h4><div id="toggles"></div>
   <h4>Generación · filtros</h4><div id="srcrows"></div>
@@ -83,6 +134,15 @@ map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution
 map.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-right');
 let _mapLoaded=false,_initFn=null;
 map.on('load',()=>{_mapLoaded=true;if(_initFn)_initFn();}); // registered before any async — can't be missed
+// About overlay (mini landing) + mobile drawer
+var aboutBg=document.getElementById('about-bg');
+function openAbout(v){aboutBg.classList.toggle('on',v);}
+document.getElementById('about-go').onclick=function(){openAbout(false);try{localStorage.setItem('atlasAboutSeen','1');}catch(e){}};
+document.getElementById('about-x').onclick=function(){openAbout(false);};
+document.getElementById('info-btn').onclick=function(){openAbout(true);};
+aboutBg.onclick=function(e){if(e.target===aboutBg)openAbout(false);};
+try{if(!localStorage.getItem('atlasAboutSeen'))openAbout(true);}catch(e){openAbout(true);}
+document.getElementById('side-toggle').onclick=function(){document.getElementById('side').classList.toggle('open');};
 let D,C,DEM=null;
 const f={src:null,mkt:'',mw:0,reg:'',kv:0,year:0};
 const T={on:false,year:2026,agg:'cum',big:false};
