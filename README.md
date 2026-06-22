@@ -42,6 +42,30 @@ make serve      # serve public/ at http://localhost:8765
 make test       # pytest + playwright
 ```
 
+## Talk to the data (MCP)
+
+`atlas_mcp.py` is a [Model Context Protocol](https://modelcontextprotocol.io) server that lets an LLM
+(Claude, etc.) query the whole dataset in natural language — no database or API key. It reads the same
+open JSON the map serves and exposes typed tools: `query_generation`, `query_demand` (live),
+`query_distributed_generation`, `query_tarifa` (users & energy), `query_substations`, and
+`list_dimensions`. Proprietary‑geocoded coordinates are **not** exposed — only public attributes and
+aggregates.
+
+```bash
+pip install -r requirements.txt
+python atlas_mcp.py        # stdio MCP server
+```
+
+Add it to an MCP client (Claude Desktop / Claude Code `.mcp.json`):
+
+```json
+{ "mcpServers": { "atlas-sen": { "command": "python", "args": ["/abs/path/to/atlas_mcp.py"] } } }
+```
+
+Then ask things like *"how much distributed generation did Jalisco add between 2022 and 2024?"*,
+*"which tariff division has the most GDMTH users?"*, or *"what's national demand right now?"* —
+every answer carries its CNE/CFE/INEGI source.
+
 ## Data & licensing
 
 Code is **MIT**. Data carries the license of its upstream source — see [`data/SOURCES.md`](data/SOURCES.md) for a per‑dataset provenance table and [`DATA-LICENSE.md`](DATA-LICENSE.md). In short: OpenStreetMap‑derived data is **ODbL** (attribution + share‑alike); CENACE/CFE/INEGI‑derived data is public‑sector / **CC‑BY**. Plant/substation **coordinates** are geocoded with a proprietary service, so they are **not** part of the open dataset — the map loads them at runtime from a Batu‑hosted endpoint. (Re‑sourcing them from OpenStreetMap to make the dataset fully self‑contained is a welcome contribution — see `METHODOLOGY.md`.)
