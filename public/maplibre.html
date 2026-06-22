@@ -264,6 +264,8 @@ function onTClick(e){if(T.agg!=='ann')return;const i=tAt(e);const has=TORDER.som
 
 /* ---------- Live demand ---------- */
 const DSER=[['demandaMW','Demanda','#1D4ED8',2.2,false],['generacionMW','Generación','#9A9A95',1,false],['pronosticoMW','Pronóstico','#93B4E0',1.3,true]];
+// CENACE reports hours in Mexico-Central time; render the timestamp the same way so it lines up with the x-axis.
+function fmtMX(iso){try{return new Date(iso).toLocaleString('es-MX',{timeZone:'America/Mexico_City',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',hour12:false})+' h (centro)';}catch(e){return iso.replace('T',' ').replace('Z',' UTC');}}
 let _dH=[],_dgeom={W:860,mL:44,pw:804,n:0},Dbig=false,_curName='';
 function initDemand(){
   const dl=document.getElementById('dlane');
@@ -297,7 +299,7 @@ function buildDemandChart(name){
   const lat=DEM.regions[name].latest,dem=lat?lat.demandaMW:null,gen=lat?lat.generacionMW:null,sur=(dem!=null&&gen!=null)?gen-dem:null,sc=sur==null?'#9aa3b2':(sur>=0?'#34d399':'#f87171');
   const st=(v,l)=>`<div class="dstat"><b>${v==null?'n/d':v.toLocaleString()}</b><span>${l}</span></div>`;
   document.getElementById('d_stats').innerHTML=st(dem,'Demanda (MW)')+st(gen,'Generación (MW)')+`<div class="dstat"><b style="color:${sc}">${sur==null?'n/d':(sur>=0?'+':'−')+Math.abs(sur).toLocaleString()}</b><span>Superávit${lat?' · h'+lat.hora:''}</span></div>`;
-  document.getElementById('d_upd').textContent='Fuente: CENACE'+(DEM.updatedAt?' · '+DEM.updatedAt.replace('T',' ').replace('Z',' UTC'):'');
+  document.getElementById('d_upd').textContent='Fuente: CENACE'+(DEM.updatedAt?' · act. '+fmtMX(DEM.updatedAt):'');
 }
 function dAt(e){const el=document.getElementById('dchart'),r=el.getBoundingClientRect(),vx=(e.clientX-r.left)/r.width*_dgeom.W;let k=_dgeom.n<=1?0:Math.round(Math.max(0,Math.min(1,(vx-_dgeom.mL)/_dgeom.pw))*(_dgeom.n-1));return{k,px:(_dgeom.mL+(_dgeom.n<=1?0:k/(_dgeom.n-1)*_dgeom.pw))/_dgeom.W*r.width,py:e.clientY-r.top,cw:r.width};}
 function onDMove(e){const i=dAt(e),row=_dH[i.k];if(!row)return;const h=document.getElementById('dhover'),tp=document.getElementById('dtip');if(!h)return;h.style.left=i.px+'px';h.classList.add('on');let b=`<div class="ty">Hora ${row.hora}:00</div>`;DSER.forEach(s=>{const v=row[s[0]];if(v==null)return;b+=`<div class="tr"><span class="sw" style="background:${s[2]}"></span>${s[1]}<span class="tv">${v.toLocaleString()} MW</span></div>`;});tp.innerHTML=b;tp.style.left=Math.max(82,Math.min(i.cw-82,i.px))+'px';tp.style.top=i.py+'px';tp.classList.add('on');}
