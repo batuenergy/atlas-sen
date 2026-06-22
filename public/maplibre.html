@@ -81,6 +81,8 @@ const KVCOLOR=['step',['get','kv'],'#6b7280',115,'#8b7cf0',230,'#3aa0ff',400,'#2
 const map=new maplibregl.Map({container:'map',style:'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',center:[-99,22.5],zoom:4.4,attributionControl:false});
 map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'© OpenStreetMap · CARTO · CENACE/CFE/INEGI · Batu'}),'top-left');
 map.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-right');
+let _mapLoaded=false,_initFn=null;
+map.on('load',()=>{_mapLoaded=true;if(_initFn)_initFn();}); // registered before any async — can't be missed
 let D,C,DEM=null;
 const f={src:null,mkt:'',mw:0,reg:'',kv:0,year:0};
 const T={on:false,year:2026,agg:'cum',big:false};
@@ -139,7 +141,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
 
     initTimeline();initDemand();applyFilters();
   }
-  if(map.loaded())onMapReady();else map.on('load',onMapReady);
+  _initFn=onMapReady;if(_mapLoaded)onMapReady();
 }).catch(e=>{document.getElementById('tally').textContent='error al cargar datos';console.error(e);});
 
 function filtBase(p){if(!f.src.has(p[4]))return false;if(f.mkt&&p[8]!==f.mkt)return false;if(f.mw>0&&p[3]<f.mw)return false;if(f.reg&&D.REG[p[6]]!==f.reg)return false;return true;}
