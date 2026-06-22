@@ -55,7 +55,7 @@ def test_transmission_lines(atlas):
     assert len(atlas["OL"]) > 1000
     kvs = set()
     for kv, geom in atlas["OL"]:
-        assert isinstance(kv, int) and kv >= 115
+        assert isinstance(kv, int) and kv >= 69  # incl. 69-115 kV sub-transmission
         assert len(geom) >= 2 and len(geom[0]) == 2
         kvs.add(kv)
     assert {400, 230, 115} <= kvs

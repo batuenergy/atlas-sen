@@ -8,7 +8,7 @@ that produces it. Reproduce any of it with `make data`.
 | `plants.json` | Generation plants: name, source, MW, owner, market, COD | CENACE single‑line diagrams (extracted) + ownership research | CC‑BY 4.0 | `scripts/extract_grid.py` |
 | `substations.json` | 400/230 kV substations: kV, transformer MVA, generation, saturation | CENACE single‑line diagrams (extracted) | CC‑BY 4.0 | `scripts/extract_grid.py` |
 | `coordinates.json` | lat/lng for plants & substations | Geocoded via **Google Maps Platform** (proprietary) | © Google — **not** openly licensed; **not committed** here, served at runtime from a Batu endpoint | (internal) |
-| `lines.json` | High‑voltage transmission line geometry (115–400 kV) | **OpenStreetMap** (`power=line`, Overpass) | **ODbL 1.0** | `scripts/fetch_osm_lines.py` |
+| `lines.json` | Transmission & sub‑transmission line geometry (69–400 kV) | **OpenStreetMap** (`power=line`, Overpass) | **ODbL 1.0** | `scripts/fetch_osm_lines.py` |
 | `osm_substations.json` | Distribution & sub‑transmission substations (≤161 kV) with real coordinates | **OpenStreetMap** (`power=substation`, Overpass) | **ODbL 1.0** | `scripts/fetch_osm_substations.py` |
 | `cfe_rgd_by_division.json` | Per‑division distribution‑substation count + transformer MVA | CFE Distribución — *Valores de Corto Circuito de las RGD* (extracted) | CC‑BY 4.0 | `scripts/fetch_rgd_substations.py` |
 | `edges.json` | Substation‑to‑substation topology (schematic) | CENACE single‑line diagrams (extracted) | CC‑BY 4.0 | `scripts/extract_grid.py` |

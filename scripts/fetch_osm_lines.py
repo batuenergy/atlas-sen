@@ -20,7 +20,8 @@ os.makedirs('data/derived', exist_ok=True)
 if not os.path.exists(RAW):
     print('fetching Overpass (1-3 min)...')
     req = urllib.request.Request('https://overpass-api.de/api/interpreter',
-                                 data=urllib.parse.urlencode({'data': QUERY}).encode())
+                                 data=urllib.parse.urlencode({'data': QUERY}).encode(),
+                                 headers={'User-Agent': 'atlas-sen/fetch-osm-lines'})
     with urllib.request.urlopen(req, timeout=300) as r:
         open(RAW, 'wb').write(r.read())
 
@@ -35,7 +36,7 @@ for w in raw:
     if len(g) < 2:
         continue
     kv = maxkv(w.get('tags', {}).get('voltage'))
-    if kv < 115:
+    if kv < 69:  # include 69-115 kV sub-transmission (connects distribution substations)
         continue
     coords = [(p['lon'], p['lat']) for p in g if p.get('lat') is not None]
     if len(coords) < 2:

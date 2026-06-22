@@ -25,8 +25,10 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
 .seg button.on{background:rgba(43,212,238,.16);color:#bff0fa}.seg button+button{border-left:1px solid rgba(255,255,255,.1)}
 #reset{font-size:11.5px;color:#9aa3b2;cursor:pointer;text-decoration:underline;text-underline-offset:3px;margin-top:8px;display:inline-block}
 #legend{bottom:16px;left:16px;padding:10px 13px;font-size:11px;line-height:1.7}
-#legend .lg{display:flex;align-items:center;gap:7px}#legend .ln{width:20px;height:3px;border-radius:2px}
-#legend .hd{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7d8597;margin:0 0 4px}
+#legend .lg{display:flex;align-items:center;gap:7px}#legend .ln{width:20px;height:3px;border-radius:2px;flex:none}
+#legend .sw-wrap{width:20px;display:flex;justify-content:center;flex:none}#legend .dt{border-radius:50%;box-sizing:border-box}
+#legend .hd{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7d8597;margin:0 0 4px}#legend .hd2{margin-top:9px}
+#legend .note{font-size:9px;color:#6b7280;margin:5px 0 0;max-width:150px;line-height:1.4}
 .pill{position:fixed;z-index:3;display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 15px;border-radius:999px;font-size:12.5px;color:#e7e9ee;cursor:pointer;background:rgba(17,21,30,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08)}
 #pill-time{bottom:16px;right:16px}#pill-demand{bottom:16px;right:188px;display:none}
 .lane{position:fixed;left:0;right:0;bottom:0;z-index:4;padding:10px 18px 12px;background:rgba(13,16,22,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);transition:transform .24s cubic-bezier(.22,.61,.36,1)}
@@ -111,9 +113,16 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
   <h4>Tensión (líneas)</h4><div class="seg" id="f_kv"><button data-v="0" class="on">Todas</button><button data-v="230">230+</button><button data-v="400">400+</button></div>
   <a id="reset">Limpiar filtros</a>
 </aside>
-<div id="legend" class="panel"><p class="hd">Tensión</p>
-  <div class="lg"><span class="ln" style="background:#22d3ee"></span>400 kV+</div><div class="lg"><span class="ln" style="background:#3aa0ff"></span>230 kV</div>
-  <div class="lg"><span class="ln" style="background:#8b7cf0"></span>115–161 kV</div><div class="lg"><span class="ln" style="background:#6b7280"></span>&lt;115 kV</div></div>
+<div id="legend" class="panel"><p class="hd">Líneas (kV)</p>
+  <div class="lg"><span class="ln" style="background:#22d3ee"></span>400 kV+</div>
+  <div class="lg"><span class="ln" style="background:#3aa0ff"></span>230 kV</div>
+  <div class="lg"><span class="ln" style="background:#8b7cf0"></span>115–161 kV</div>
+  <div class="lg"><span class="ln" style="background:#6b7280"></span>69–115 kV</div>
+  <p class="hd hd2">Subestaciones</p>
+  <div class="lg"><span class="sw-wrap"><span class="dt" style="width:13px;height:13px;border:1.5px solid #d4dbe8"></span></span>Transmisión · 400/230 kV</div>
+  <div class="lg"><span class="sw-wrap"><span class="dt" style="width:9px;height:9px;background:#ff9d54"></span></span>Subtransmisión · 69–161 kV</div>
+  <div class="lg"><span class="sw-wrap"><span class="dt" style="width:6px;height:6px;background:#ffd29b"></span></span>Distribución · ≤34.5 kV</div>
+  <p class="note">El tamaño del punto indica el nivel de tensión — a mayor tensión, mayor energía. Las redes de media tensión (&lt;34.5 kV) no se trazan: no existen en OpenStreetMap.</p></div>
 <button id="pill-demand" class="pill">Demanda en vivo</button>
 <button id="pill-time" class="pill">Ver evolución · 1960–2026</button>
 <div id="lane" class="lane">
@@ -179,8 +188,8 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     map.addLayer({id:'lines-glow',source:'lines',type:'line',layout:{'line-cap':'round'},paint:{'line-color':KVCOLOR,'line-width':['interpolate',['linear'],['get','kv'],69,2,230,4,400,7],'line-blur':4,'line-opacity':0.35}});
     map.addLayer({id:'lines',source:'lines',type:'line',layout:{'line-cap':'round'},paint:{'line-color':KVCOLOR,'line-width':['interpolate',['linear'],['zoom'],4,['interpolate',['linear'],['get','kv'],69,0.4,230,1,400,1.8],10,['interpolate',['linear'],['get','kv'],69,1,230,2.2,400,3.6]],'line-opacity':0.92}});
     map.addLayer({id:'rgnhi-line',source:'rgnhi',type:'line',paint:{'line-color':'#2bd4ee','line-width':2,'line-opacity':0.9}});
-    map.addLayer({id:'dsubs',source:'dsubs',type:'circle',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],4,1.5,8,3,11,5],'circle-color':['match',['get','band'],0,'#ffd29b','#ff9d54'],'circle-opacity':0.78,'circle-stroke-color':'#0b0e14','circle-stroke-width':0.5}});
-    map.addLayer({id:'hubs',source:'hubs',type:'circle',paint:{'circle-radius':['interpolate',['linear'],['get','kv'],69,2,230,3.2,400,4.5],'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#aeb6c6','circle-stroke-width':1,'circle-stroke-opacity':0.85}});
+    map.addLayer({id:'dsubs',source:'dsubs',type:'circle',layout:{visibility:'none'},paint:{'circle-radius':['interpolate',['linear'],['zoom'],5,['match',['get','band'],1,1.6,1],11,['match',['get','band'],1,3.6,2.4]],'circle-color':['match',['get','band'],0,'#ffd29b','#ff9d54'],'circle-opacity':0.8,'circle-stroke-color':'#0b0e14','circle-stroke-width':0.4}});
+    map.addLayer({id:'hubs',source:'hubs',type:'circle',paint:{'circle-radius':['interpolate',['linear'],['get','kv'],69,3,230,5,400,6.5],'circle-color':'rgba(0,0,0,0)','circle-stroke-color':'#d4dbe8','circle-stroke-width':1.4,'circle-stroke-opacity':0.95}});
     map.addLayer({id:'plants',source:'plants',type:'circle',paint:{'circle-radius':['interpolate',['linear'],['get','mw'],0,2.2,100,4,500,7.5,1500,12,2800,17],'circle-color':typeColor,'circle-opacity':0.82,'circle-stroke-color':'#0b0e14','circle-stroke-width':0.6}});
     map.addLayer({id:'lines-label',source:'lines',type:'symbol',minzoom:6,layout:{'symbol-placement':'line','symbol-spacing':320,'text-field':['concat',['to-string',['get','kv']],' kV'],'text-size':10,'text-font':['Open Sans Bold','Noto Sans Regular']},paint:{'text-color':KVCOLOR,'text-halo-color':'#0b0e14','text-halo-width':1.4}});
 
@@ -192,7 +201,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     ['plants','hubs','dsubs','tariff-fill'].forEach(l=>{map.on('mouseenter',l,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',l,()=>map.getCanvas().style.cursor='');});
 
     const GROUPS={plants:['plants'],lines:['lines-glow','lines','lines-label'],hubs:['hubs'],dsubs:['dsubs'],regions:['regions-fill','regions-line'],tariff:['tariff-fill','tariff-line']};
-    const TOGS=[['plants','Generación','#F5B301',1],['lines','Líneas de transmisión','#2bd4ee',1],['hubs','Subestaciones','#9aa3b2',1],['dsubs','Subest. de distribución','#ff9d54',0],['regions','Regiones (CENACE)','#3C7DC4',0],['tariff','Zonas tarifarias CFE','#7F77DD',0]];
+    const TOGS=[['plants','Generación','#F5B301',1],['lines','Líneas de transmisión','#2bd4ee',1],['hubs','Subestaciones de transmisión','#9aa3b2',1],['dsubs','Subestaciones de distribución','#ff9d54',0],['regions','Regiones (CENACE)','#3C7DC4',0],['tariff','Zonas tarifarias CFE','#7F77DD',0]];
     const tc=document.getElementById('toggles');
     TOGS.forEach(([k,lab,col,on])=>{const r=document.createElement('div');r.className='tog'+(on?' on':'');r.innerHTML=`<span class="bx" style="${on?'background:'+col+';border-color:'+col:''}"></span>${lab}`;if(!on)GROUPS[k].forEach(id=>map.setLayoutProperty(id,'visibility','none'));r.onclick=()=>{const vis=r.classList.toggle('on');GROUPS[k].forEach(id=>map.setLayoutProperty(id,'visibility',vis?'visible':'none'));r.querySelector('.bx').style.cssText=vis?`background:${col};border-color:${col}`:'';};tc.appendChild(r);});
 
