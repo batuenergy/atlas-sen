@@ -1,12 +1,12 @@
 name: Demand snapshot
 
-# Fetches CENACE semi-real-time demand every ~10 min and commits to the `data` branch
-# (kept off main to avoid CI/deploy churn). The site reads today.json from there;
-# a once-daily finalize appends history/<date>.json.
+# Optional self-hosted live-demand feed for forks. DISABLED by default: scheduled runs
+# require an orphan `data` branch to exist AND a deployment that reads it. (Batu's
+# production live demand comes from an app route instead, so this isn't used there.)
+# To enable: create an orphan `data` branch, add a `schedule:` trigger below, and
+# re-enable the workflow in the repo's Actions tab.
 
 on:
-  schedule:
-    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 permissions:
