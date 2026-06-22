@@ -14,6 +14,7 @@ An interactive map of Mexico's national electricity system (Sistema Eléctrico N
 - **Subestaciones de distribución** — ~2,000 distribution / sub‑transmission substations (≤161 kV) from OpenStreetMap, plus per‑division transformer capacity from CFE's RGD short‑circuit report.
 - **Regiones de control (CENACE)** and **Zonas tarifarias CFE (17)** as choropleths.
 - **Demanda en vivo** — semi‑real‑time demand / generation / forecast per region, from CENACE.
+- **Usuarios · consumo · GD (evolución)** — year‑by‑year choropleths: estimated users and energy sales per tarifa per división tarifaria (CNE memorias de cálculo), and distributed‑generation capacity per state + by system size (CNE/CRE GD reports).
 
 ## Why
 

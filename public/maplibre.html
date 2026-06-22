@@ -30,7 +30,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
 #legend .hd{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#7d8597;margin:0 0 4px}#legend .hd2{margin-top:9px}
 #legend .note{font-size:9px;color:#6b7280;margin:5px 0 0;max-width:150px;line-height:1.4}
 .pill{position:fixed;z-index:3;display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 15px;border-radius:999px;font-size:12.5px;color:#e7e9ee;cursor:pointer;background:rgba(17,21,30,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08)}
-#pill-time{bottom:16px;right:16px}#pill-demand{bottom:16px;right:188px;display:none}
+#pill-time{bottom:16px;right:16px}#pill-demand{bottom:16px;right:188px;display:none}#pill-evo{bottom:16px;right:360px}
 .lane{position:fixed;left:0;right:0;bottom:0;z-index:4;padding:10px 18px 12px;background:rgba(13,16,22,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.1);transform:translateY(110%);transition:transform .24s cubic-bezier(.22,.61,.36,1)}
 .lane.open{transform:translateY(0)}
 .lh{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px}
@@ -41,6 +41,9 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
 .lr{display:flex;align-items:center;gap:12px;margin-top:6px}
 #t_play{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:50%;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 #dchart{height:150px;position:relative;cursor:crosshair}#dlane.big #dchart{height:300px}
+#e_read{font-size:12px;color:#e7e9ee;margin:2px 0}#e_read b{font-size:15px}
+#e_scale{display:flex;align-items:center;gap:7px;font-size:10px;color:#9aa3b2;margin:5px 0 2px}#e_scale .e_g{height:9px;width:130px;border-radius:3px;display:inline-block;flex:none}
+#echart{display:none;margin-top:4px}#elane .lr{margin-top:8px}
 .dtitle{border:1px solid transparent;border-radius:6px;background:transparent;font:inherit;font-size:15px;font-weight:600;color:#e7e9ee;padding:2px 4px;cursor:pointer}.dtitle:hover{border-color:rgba(255,255,255,.12)}
 .dstats{display:flex;gap:22px;margin:1px 0 8px}.dstat b{display:block;font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}.dstat span{font-size:10px;color:#7d8597}
 .dlg{display:flex;align-items:center;gap:16px;margin-top:6px;font-size:11px;color:#9aa3b2}.dlg i{display:inline-block;width:11px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}.dlg i.dash{border-top:2px dashed #93B4E0;height:0;background:none}.dupd{margin-left:auto;color:#7d8597}
@@ -74,7 +77,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
   #legend{display:none}
   #title{max-width:62vw;padding:9px 12px}#title .h{font-size:15px}
   .pill{font-size:12px;height:32px;padding:0 12px}
-  #pill-time{bottom:14px;right:14px}#pill-demand{bottom:14px;right:auto;left:14px}
+  #pill-time{bottom:14px;right:14px}#pill-demand{bottom:14px;right:auto;left:14px}#pill-evo{bottom:52px;right:14px}
   .dstats{gap:14px}.dstat b{font-size:15px}
   #about{padding:22px 18px}#about h1{font-size:20px}
 }
@@ -125,6 +128,7 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
   <p class="note">El tamaño del punto indica el nivel de tensión — a mayor tensión, mayor energía. Las redes de media tensión (&lt;34.5 kV) no se trazan: no existen en OpenStreetMap.</p></div>
 <button id="pill-demand" class="pill">Demanda en vivo</button>
 <button id="pill-time" class="pill">Ver evolución · 1960–2026</button>
+<button id="pill-evo" class="pill">Usuarios · consumo · GD</button>
 <div id="lane" class="lane">
   <div class="lh"><div class="tt">Capacidad al <b id="t_yr">2026</b> · <b id="t_tot">0</b> GW <span style="color:#7d8597;font-size:11px">(con COD)</span><span id="t_chip" style="display:none;margin-left:10px;color:#2bd4ee;cursor:pointer"></span></div>
     <div style="display:flex;align-items:center;gap:10px"><div class="seg" id="t_agg" style="width:auto"><button data-v="cum" class="on" style="padding:0 12px">Acumulado</button><button data-v="ann" style="padding:0 12px">Anual</button></div><button id="t_big" class="iconbtn" title="Expandir">⤢</button><span class="x" id="t_x">×</span></div></div>
@@ -136,6 +140,20 @@ input[type=range]{width:100%;accent-color:#2bd4ee}
     <div style="display:flex;align-items:center;gap:8px"><button id="d_center" class="iconbtn" title="Centrar">⊙</button><button id="d_big" class="iconbtn" title="Expandir">⤢</button><span class="x" id="d_x">×</span></div></div>
   <div class="dstats" id="d_stats"></div><div id="dchart"></div>
   <div class="dlg"><span><i style="background:#1D4ED8"></i>Demanda</span><span><i style="background:#9A9A95"></i>Generación</span><span><i class="dash"></i>Pronóstico</span><span class="dupd" id="d_upd">Fuente: CENACE</span></div>
+</div>
+<div id="elane" class="lane">
+  <div class="lh">
+    <div class="seg" id="e_metric" style="width:auto"><button data-v="users" class="on" style="padding:0 11px">Usuarios</button><button data-v="energy" style="padding:0 11px">Consumo</button><button data-v="dg" style="padding:0 11px">Gen. distribuida</button></div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <select id="e_tarifa" class="dtitle" style="max-width:160px"></select>
+      <div class="seg" id="e_dgview" style="width:auto;display:none"><button data-v="region" class="on" style="padding:0 10px">Región</button><button data-v="size" style="padding:0 10px">Tamaño</button></div>
+      <span class="x" id="e_x">×</span>
+    </div>
+  </div>
+  <div id="e_read"></div>
+  <div id="e_scale"></div>
+  <div id="echart"></div>
+  <div class="lr"><input type="range" id="e_slider" min="0" max="1" step="1" value="0"><b id="e_yr" style="min-width:62px;text-align:right">—</b></div>
 </div>
 <script>
 const KVCOLOR=['step',['get','kv'],'#6b7280',115,'#8b7cf0',230,'#3aa0ff',400,'#22d3ee'];
@@ -218,7 +236,7 @@ Promise.all([fetch('data/atlas.json').then(r=>r.json()),fetch('data/coordinates.
     document.getElementById('f_mw').oninput=e=>{f.mw=+e.target.value;document.getElementById('o_mw').textContent=(+e.target.value).toLocaleString()+' MW';applyFilters();};
     document.getElementById('reset').onclick=()=>{f.src=new Set(Object.keys(D.T));f.mkt='';f.mw=0;f.reg='';f.kv=0;f.own='';document.querySelectorAll('#srcrows .row').forEach(r=>r.classList.remove('off'));document.getElementById('f_reg').value='';document.getElementById('f_grp').value='';document.getElementById('f_mw').value=0;document.getElementById('o_mw').textContent='0 MW';['f_mkt','f_kv'].forEach(id=>[...document.getElementById(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));applyFilters();};
 
-    initTimeline();initDemand();applyFilters();
+    initTimeline();initDemand();initEvo();applyFilters();
   }
   _initFn=onMapReady;if(_mapLoaded)onMapReady();
 }).catch(e=>{document.getElementById('tally').textContent='error al cargar datos';console.error(e);});
@@ -245,7 +263,7 @@ function applyFilters(){
 /* ---------- Timeline ---------- */
 function initTimeline(){
   const lane=document.getElementById('lane');
-  document.getElementById('pill-time').onclick=()=>{closeD();T.on=true;lane.classList.add('open');document.getElementById('pill-time').style.opacity=0;applyFilters();};
+  document.getElementById('pill-time').onclick=()=>{closeD();closeEvo();T.on=true;lane.classList.add('open');document.getElementById('pill-time').style.opacity=0;applyFilters();};
   document.getElementById('t_x').onclick=()=>{stopPlay();T.on=false;f.year=0;document.getElementById('t_chip').style.display='none';lane.classList.remove('open');document.getElementById('pill-time').style.opacity=1;applyFilters();};
   document.getElementById('t_slider').oninput=e=>{T.year=+e.target.value;if(f.year){f.year=0;document.getElementById('t_chip').style.display='none';}applyFilters();};
   const ag=document.getElementById('t_agg');[...ag.children].forEach(b=>b.onclick=()=>{[...ag.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');T.agg=b.dataset.v;if(b.dataset.v!=='ann'){f.year=0;document.getElementById('t_chip').style.display='none';}applyFilters();});
@@ -289,7 +307,7 @@ function fmtMX(iso){try{return new Date(iso).toLocaleString('es-MX',{timeZone:'A
 let _dH=[],_dgeom={W:860,mL:44,pw:804,n:0},Dbig=false,_curName='';
 function initDemand(){
   const dl=document.getElementById('dlane');
-  document.getElementById('pill-demand').onclick=()=>{document.getElementById('lane').classList.remove('open');document.getElementById('pill-time').style.opacity=1;T.on=false;f.year=0;applyFilters();dl.classList.add('open');document.getElementById('pill-demand').style.opacity=0;selectDemand();};
+  document.getElementById('pill-demand').onclick=()=>{closeEvo();document.getElementById('lane').classList.remove('open');document.getElementById('pill-time').style.opacity=1;T.on=false;f.year=0;applyFilters();dl.classList.add('open');document.getElementById('pill-demand').style.opacity=0;selectDemand();};
   document.getElementById('d_x').onclick=()=>closeD();
   document.getElementById('d_reg').onchange=selectDemand;
   document.getElementById('d_big').onclick=()=>{Dbig=!Dbig;dl.classList.toggle('big',Dbig);buildDemandChart(document.getElementById('d_reg').value);};
@@ -300,6 +318,74 @@ function initDemand(){
   setInterval(()=>{fetch(window.ATLAS_DEMAND_URL||'data/demand/today.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.regions){DEM=j;if(document.getElementById('dlane').classList.contains('open'))buildDemandChart(document.getElementById('d_reg').value);}}).catch(()=>{});},600000);
 }
 function closeD(){document.getElementById('dlane').classList.remove('open');if(DEM)document.getElementById('pill-demand').style.opacity=1;map.getSource('rgnhi')&&map.getSource('rgnhi').setData({type:'FeatureCollection',features:[]});}
+
+// ---- Evolución por zona: usuarios CFE · consumo (energía) · generación distribuida ----
+const EVO={loaded:false,metric:'users',tarifa:'ALL',dgview:'region',idx:0,data:null};
+const EVO_TF=['DB1','DB2','PDBT','GDBT','GDMTH','GDMTO','DIST','DIT','RABT','RAMT','APBT','APMT'];
+const EVO_SZ=['0-5 kW','5-10 kW','10-30 kW','30-50 kW','50-100 kW','100-250 kW','250-500 kW'];
+const EVO_SZC=['#fde68a','#fbbf24','#fb923c','#f97316','#e85d3a','#d63f2f','#b01c1c'];
+const EVO_RAMP={users:['#0e2a45','#3aa0ff'],energy:['#3a2a0c','#f5b301'],dg:['#241a3d','#b388ff']};
+const EVO_UNIT={users:'usuarios',energy:'GWh',dg:'MW'};
+function evRev(c){return [c[1],c[0]];}
+function evLerp(a,b,t){const A=parseInt(a.slice(1),16),B=parseInt(b.slice(1),16);const r=Math.round((A>>16)+((B>>16)-(A>>16))*t),g=Math.round(((A>>8)&255)+(((B>>8)&255)-((A>>8)&255))*t),bl=Math.round((A&255)+((B&255)-(A&255))*t);return '#'+((1<<24)+(r<<16)+(g<<8)+bl).toString(16).slice(1);}
+function evFmt(n){return n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?(n/1e3).toFixed(0)+'k':String(Math.round(n));}
+function evYears(){const E=EVO.data;return EVO.metric==='users'?E.users.years:EVO.metric==='energy'?E.energy.years:EVO.dgview==='size'?E.dgsize.years:E.dgstate.periods;}
+function evVal(name,key){const E=EVO.data;
+  if(EVO.metric==='dg'){const s=E.dgstate.byState[name];return s&&s[key]?s[key].mw:null;}
+  const src=(EVO.metric==='users'?E.users:E.energy).byDivision[name];if(!src)return null;
+  if(EVO.tarifa==='ALL'){let t=0,any=false;EVO_TF.forEach(tf=>{const v=src[tf]&&src[tf][key];if(v!=null){t+=v;any=true;}});return any?t:null;}
+  const v=src[EVO.tarifa]&&src[EVO.tarifa][key];return v==null?null:v;}
+function evPolys(){return EVO.metric==='dg'?EVO.data.spoly:D.TZ;}
+function buildEvo(){
+  if(!EVO.data)return;const yrs=evYears();EVO.idx=Math.max(0,Math.min(EVO.idx,yrs.length-1));const key=yrs[EVO.idx];
+  const sl=document.getElementById('e_slider');sl.max=yrs.length-1;sl.value=EVO.idx;document.getElementById('e_yr').textContent=key;
+  const sizeMode=(EVO.metric==='dg'&&EVO.dgview==='size');
+  ['evo-fill','evo-line'].forEach(id=>map.setLayoutProperty(id,'visibility',sizeMode?'none':'visible'));
+  document.getElementById('echart').style.display=sizeMode?'block':'none';
+  document.getElementById('e_scale').style.display=sizeMode?'none':'flex';
+  if(sizeMode){drawDGSize();return;}
+  const polys=evPolys();const names=Object.keys(polys);let max=0;
+  names.forEach(n=>{const v=evVal(n,key);if(v!=null&&v>max)max=v;});if(max<=0)max=1;
+  const ramp=EVO_RAMP[EVO.metric];const ft=[];let tot=0;
+  names.forEach(n=>{const v=evVal(n,key);if(v!=null)tot+=v;(polys[n]||[]).forEach(poly=>{const col=v==null?'#33384a':evLerp(ramp[0],ramp[1],Math.pow(v/max,0.6));ft.push({type:'Feature',properties:{name:n,v:v==null?-1:v,color:col},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(evRev))}});});});
+  map.getSource('evo').setData({type:'FeatureCollection',features:ft});
+  const div=EVO.metric==='energy'?1000:1,u=EVO_UNIT[EVO.metric];
+  const lbl=EVO.metric==='dg'?'nacional · GD acumulada':(EVO.tarifa==='ALL'?'todas las tarifas':'tarifa '+EVO.tarifa);
+  document.getElementById('e_read').innerHTML=`<b>${Math.round(tot/div).toLocaleString()}</b> ${u} · ${lbl} · ${key}`;
+  document.getElementById('e_scale').innerHTML=`<span class="e_g" style="background:linear-gradient(90deg,${ramp[0]},${ramp[1]})"></span><span>0</span><span style="margin-left:auto">${evFmt(max/div)} ${u}</span>`;
+}
+function drawDGSize(){
+  const E=EVO.data.dgsize,yrs=E.years,W=860,H=190,mL=46,mR=12,mT=10,mB=18,pw=W-mL-mR,ph=H-mT-mB;
+  let max=0;yrs.forEach(y=>{let s=0;EVO_SZ.forEach(sz=>s+=(E.capacityMWp[sz]||{})[y]||0);if(s>max)max=s;});if(max<=0)max=1;
+  const X=i=>mL+(yrs.length<=1?0:i/(yrs.length-1)*pw),Y=v=>mT+ph-v/max*ph;
+  let svg=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="width:100%;height:${H}px;display:block">`;
+  for(let g=0;g<=4;g++){const gv=max*g/4,gy=Y(gv);svg+=`<line x1="${mL}" y1="${gy}" x2="${W-mR}" y2="${gy}" stroke="#fff" stroke-opacity=".06"/><text x="${mL-5}" y="${gy+3}" text-anchor="end" font-size="8" fill="#7d8597">${evFmt(gv)}</text>`;}
+  let base=yrs.map(()=>0);
+  EVO_SZ.forEach((sz,si)=>{const top=yrs.map((y,i)=>base[i]+((E.capacityMWp[sz]||{})[y]||0));let pts=[];for(let i=0;i<yrs.length;i++)pts.push(X(i)+','+Y(top[i]));for(let i=yrs.length-1;i>=0;i--)pts.push(X(i)+','+Y(base[i]));svg+=`<polygon points="${pts.join(' ')}" fill="${EVO_SZC[si]}" fill-opacity=".85"/>`;base=top;});
+  yrs.forEach((y,i)=>svg+=`<text x="${X(i)}" y="${H-4}" text-anchor="middle" font-size="8" fill="#7d8597">${y}</text>`);
+  svg+=`<text x="3" y="${mT+6}" font-size="8" fill="#7d8597">MW</text></svg>`;
+  document.getElementById('echart').innerHTML=svg+'<div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:5px;font-size:9px;color:#9aa3b2">'+EVO_SZ.map((sz,i)=>`<span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${EVO_SZC[i]};margin-right:3px;vertical-align:middle"></i>${sz}</span>`).join('')+'</div>';
+  const last=yrs[yrs.length-1];document.getElementById('e_read').innerHTML=`<b>${Math.round((E.capacityMWp_total||{})[last]||max).toLocaleString()}</b> MW de GD acumulada · por tamaño de sistema · ${yrs[0]}–${last}`;
+}
+function closeEvo(){const el=document.getElementById('elane');if(!el)return;el.classList.remove('open');const p=document.getElementById('pill-evo');if(p)p.style.opacity=1;['evo-fill','evo-line'].forEach(id=>map.getLayer(id)&&map.setLayoutProperty(id,'visibility','none'));}
+function evoLoad(cb){if(EVO.loaded)return cb();document.getElementById('e_read').textContent='cargando…';Promise.all(['dg_by_size','dg_by_state','cfe_users_ts','cfe_energy_ts','state_polys'].map(f=>fetch('data/'+f+'.json').then(r=>r.json()))).then(([dgsize,dgstate,users,energy,spoly])=>{EVO.data={dgsize,dgstate,users,energy,spoly};EVO.loaded=true;cb();}).catch(err=>{console.error('evo load',err);document.getElementById('e_read').textContent='error al cargar datos';});}
+function initEvo(){
+  map.addSource('evo',{type:'geojson',data:{type:'FeatureCollection',features:[]}});
+  map.addLayer({id:'evo-fill',source:'evo',type:'fill',layout:{visibility:'none'},paint:{'fill-color':['get','color'],'fill-opacity':0.62}},'lines-glow');
+  map.addLayer({id:'evo-line',source:'evo',type:'line',layout:{visibility:'none'},paint:{'line-color':'#0b0e14','line-opacity':0.35,'line-width':0.5}},'lines-glow');
+  const epop=new maplibregl.Popup({closeButton:false,maxWidth:'240px'});
+  map.on('click','evo-fill',e=>{const p=e.features[0].properties;const div=EVO.metric==='energy'?1000:1,u=EVO_UNIT[EVO.metric];const val=p.v<0?'sin dato':Math.round(p.v/div).toLocaleString()+' '+u;epop.setLngLat(e.lngLat).setHTML(`<b>${p.name}</b><br>${val} · ${evYears()[EVO.idx]}`).addTo(map);});
+  map.on('mouseenter','evo-fill',()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave','evo-fill',()=>map.getCanvas().style.cursor='');
+  document.getElementById('e_tarifa').innerHTML='<option value="ALL">Todas las tarifas</option>'+EVO_TF.map(t=>`<option value="${t}">${t}</option>`).join('');
+  const el=document.getElementById('elane');
+  function sync(){document.getElementById('e_tarifa').style.display=EVO.metric==='dg'?'none':'';document.getElementById('e_dgview').style.display=EVO.metric==='dg'?'':'none';}
+  document.getElementById('pill-evo').onclick=()=>{closeD();document.getElementById('lane').classList.remove('open');document.getElementById('pill-time').style.opacity=1;T.on=false;f.year=0;document.getElementById('t_chip').style.display='none';applyFilters();el.classList.add('open');document.getElementById('pill-evo').style.opacity=0;sync();evoLoad(buildEvo);};
+  document.getElementById('e_x').onclick=closeEvo;
+  [...document.getElementById('e_metric').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_metric').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.metric=b.dataset.v;EVO.idx=0;sync();buildEvo();});
+  [...document.getElementById('e_dgview').children].forEach(b=>b.onclick=()=>{[...document.getElementById('e_dgview').children].forEach(x=>x.classList.remove('on'));b.classList.add('on');EVO.dgview=b.dataset.v;EVO.idx=0;buildEvo();});
+  document.getElementById('e_tarifa').onchange=e=>{EVO.tarifa=e.target.value;buildEvo();};
+  document.getElementById('e_slider').oninput=e=>{EVO.idx=+e.target.value;buildEvo();};
+}
 function selectDemand(){const nm=document.getElementById('d_reg').value;_curName=nm;buildDemandChart(nm);highlightRegion(nm);}
 function highlightRegion(nm){const polys=(window.__RP||{})[nm];const src=map.getSource('rgnhi');if(!src)return;if(!polys){src.setData({type:'FeatureCollection',features:[]});return;}const feats=polys.map(poly=>({type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:poly.map(r=>r.map(p=>[p[1],p[0]]))}}));src.setData({type:'FeatureCollection',features:feats});}
 function centerRegion(){const polys=(window.__RP||{})[_curName];if(!polys){map.flyTo({center:[-99,22.5],zoom:4.4});return;}let mnx=180,mny=90,mxx=-180,mxy=-90;polys.forEach(poly=>poly.forEach(r=>r.forEach(p=>{if(p[1]<mnx)mnx=p[1];if(p[1]>mxx)mxx=p[1];if(p[0]<mny)mny=p[0];if(p[0]>mxy)mxy=p[0];})));map.fitBounds([[mnx,mny],[mxx,mxy]],{padding:60,maxZoom:7,duration:700});}
