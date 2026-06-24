@@ -9,7 +9,7 @@ coordinates (zonas_de_carga.json, private repo) by zona id at runtime.
 
 Writes <out>/today.json and, with --history, <out>/history/<operatingDate>.json. Stdlib only (runs on a
 GitHub runner because CENACE serves those IPs but rejects datacenter IPs)."""
-import argparse, datetime, json, os, ssl, urllib.parse, urllib.request
+import argparse, datetime, json, os, ssl, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
 
@@ -48,6 +48,7 @@ def fetch_with_retry(args):
         except Exception as e:
             if attempt == 2:
                 return zona_id, system, ("ERR", str(e))
+            time.sleep(0.5 * (attempt + 1))  # brief backoff so transient hiccups aren't hammered
     return zona_id, system, (None, None)
 
 
@@ -79,7 +80,10 @@ def main():
     ap.add_argument("--day", default="", help="force operating day YYYY-MM-DD (default: latest published)")
     args = ap.parse_args()
 
-    zonas = json.load(open(args.index))["zonas"]
+    with open(args.index) as f:
+        zonas = json.load(f).get("zonas")
+    if not zonas:
+        raise SystemExit(f"index {args.index} is empty or missing 'zonas'")
     if args.day:
         op_date, day = args.day, args.day.replace("-", "/")
     else:
@@ -110,11 +114,13 @@ def main():
     payload = {"updatedAt": now, "operatingDate": op_date, "source": "CENACE", "market": "MDA",
                "count": len(out), "zonas": out}
     os.makedirs(args.out, exist_ok=True)
-    json.dump(payload, open(os.path.join(args.out, "today.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    with open(os.path.join(args.out, "today.json"), "w") as f:
+        json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
     if args.history:
         hd = os.path.join(args.out, "history")
         os.makedirs(hd, exist_ok=True)
-        json.dump(payload, open(os.path.join(hd, op_date + ".json"), "w"), ensure_ascii=False, separators=(",", ":"))
+        with open(os.path.join(hd, op_date + ".json"), "w") as f:
+            json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
     print("wrote", args.out, "@", now)
 
 
