@@ -316,9 +316,6 @@ def parse_state_table(text: str, period: str, col_order: str) -> dict:
     """
     lines = text.split("\n")
     results = {}
-    # Build pattern to match any state name at start of token run
-    all_names = set(CANONICAL_STATES) | set(STATE_ALIASES.keys())
-
     # We look for lines whose first non-space token matches a known state
     for line in lines:
         stripped = line.strip()

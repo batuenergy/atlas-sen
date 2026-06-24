@@ -15,8 +15,7 @@ from zoneinfo import ZoneInfo
 
 WS = "https://ws01.cenace.gob.mx:8082/SWPEND/SIM/{sis}/MDA/{zona}/{d}/{d}/JSON"
 CT = ZoneInfo("America/Mexico_City")
-# ws01:8082 presents a cert that fails hostname verification; this is public read-only data.
-CTX = ssl._create_unverified_context()
+CTX = ssl.create_default_context()  # verify ws01's TLS cert (it presents a valid chain)
 
 
 def fetch_zona(system, zona_id, day):
@@ -41,6 +40,7 @@ def fetch_zona(system, zona_id, day):
 
 
 def fetch_with_retry(args):
+    """Worker: (system, zona_id, day) -> (zona_id, system, result). Retries transient errors 3x."""
     system, zona_id, day = args
     for attempt in range(3):
         try:
@@ -53,6 +53,8 @@ def fetch_with_retry(args):
 
 def pick_operating_day(zonas):
     """Latest published MDA day: tomorrow if available, else today (CT)."""
+    if not zonas:
+        raise SystemExit("zonas index is empty — nothing to fetch")
     today = datetime.datetime.now(CT).date()
     probe = zonas[0]
     for d in (today + datetime.timedelta(days=1), today):
@@ -69,6 +71,7 @@ def pick_operating_day(zonas):
 
 
 def main():
+    """Fetch all zonas for the latest MDA operating day and write today.json (+ optional history)."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--index", default="public/data/pnd/zonas_index.json")
     ap.add_argument("--out", default="public/data/pnd")
@@ -96,6 +99,12 @@ def main():
     print(f"fetched {len(out)}/{len(zonas)} zonas; failed {len(fails)}")
     for f in fails:
         print("  FAIL", f)
+
+    # Don't publish a partial snapshot as canonical data — abort on broad failure (keeps the last
+    # good today.json in place; the next scheduled run retries).
+    ratio = len(out) / len(zonas) if zonas else 0
+    if ratio < 0.9:
+        raise SystemExit(f"aborting write: only {ratio:.0%} of zonas fetched (need >=90%)")
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     payload = {"updatedAt": now, "operatingDate": op_date, "source": "CENACE", "market": "MDA",
