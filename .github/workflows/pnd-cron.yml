@@ -1,0 +1,46 @@
+name: MDA price snapshot
+
+# Fetches CENACE MDA zone prices (PND per Zona de Carga) and commits them to the `data` branch.
+# MDA clears the evening before the operating day, so this runs twice a day (evening publish + a
+# morning retry), not every 15 min. Runs on a GitHub (Azure) runner because CENACE serves those IPs
+# but rejects datacenter IPs. The preview joins these prices to the proprietary zona coordinates
+# (private repo) by zona id and polls the snapshot via raw.githubusercontent.
+
+on:
+  schedule:
+    # Off the congested :00/:15/:30/:45 marks. CT = UTC-6 (no DST in central Mexico).
+    - cron: "37 4 * * *"   # ~22:37 CT — evening, after MDA publishes tomorrow's prices
+    - cron: "47 14 * * *"  # ~08:47 CT — morning retry safety net
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pnd-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch CENACE MDA snapshot
+        run: |
+          base="https://raw.githubusercontent.com/${{ github.repository }}/main"
+          curl -fsSL "$base/scripts/fetch_pnd.py" -o fetch_pnd.py
+          curl -fsSL "$base/public/data/pnd/zonas_index.json" -o zonas_index.json
+          python fetch_pnd.py --index zonas_index.json --out public/data/pnd --history
+      - name: Commit if changed
+        run: |
+          git config user.name "atlas-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A public/data/pnd
+          git diff --quiet --cached || git commit -m "data: MDA price snapshot $(date -u +%FT%TZ)"
+          git push
