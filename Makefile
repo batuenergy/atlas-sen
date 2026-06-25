@@ -1,4 +1,4 @@
-.PHONY: setup data build serve test lint clean
+.PHONY: setup data build serve test lint clean demand pnd zonas
 
 VENV := .venv
 PY := $(VENV)/bin/python
@@ -20,6 +20,13 @@ data: ## regenerate derived geometry from sources (network; ~150MB INEGI downloa
 
 demand: ## fetch the latest CENACE demand snapshot (used by the scheduled job)
 	$(PY) scripts/fetch_demand.py
+
+pnd: ## fetch the latest CENACE MDA zone-price snapshot (used by the scheduled job)
+	$(PY) scripts/fetch_pnd.py
+
+zonas: ## (maintainer) rebuild Zonas de Carga georeferencing from the NodosP catálogo + INEGI
+	$(PY) scripts/build_zonas_de_carga.py
+	@echo "* zonas_de_carga.json carries proprietary coords — copy to the PRIVATE repo, do NOT commit here."
 
 build: ## assemble the map into public/
 	$(PY) scripts/build_map.py
