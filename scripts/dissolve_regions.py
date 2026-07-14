@@ -66,7 +66,31 @@ for reg,gs in byreg.items():
     polys=[]
     for k,poly in enumerate(raw):
         if k>0 and shoe(poly[0])<MIN_AREA: continue
-        polys.append([ring_ll(r) for r in poly if r is poly[0] or shoe(r)>=MIN_AREA*0.5])
+        # Outer ring only — drop interior holes. A hole appears when a municipio inside a
+        # region is mis-voted to another gerencia (same misgeocode issue as the strays): it
+        # gets excluded from its true region, leaving a donut hole exactly where it sits.
+        # That municipio genuinely belongs to this region, so filling the hole is correct.
+        polys.append([ring_ll(poly[0])])
+    # Region polygons represent the grid's control-region footprint, so keep only each
+    # region's main contiguous body (polys is sorted largest-first). This drops both
+    # (a) misgeocoded-substation slivers dragged in from a distant municipio (a bad lat/lng
+    # in the maintainer-only geocoded file makes a far municipio vote for the wrong gerencia)
+    # and (b) offshore islands that aren't on the SEN (Isla Guadalupe, Cedros, Islas Marías,
+    # Alacranes, Gulf islets), which leak in via municipio geometry / the empty-municipio
+    # nearest-fill above. Cozumel is the one exception — it IS connected to the SEN by
+    # submarine cable — so it is whitelisted.
+    if polys:
+        def _cen(poly):
+            ys=[p[0] for p in poly[0]]; xs=[p[1] for p in poly[0]]
+            return (min(ys)+max(ys))/2,(min(xs)+max(xs))/2
+        def _cozumel(cy,cx):
+            return (reg or '')=='Peninsular' and abs(cx+86.9)<0.4 and abs(cy-20.4)<0.4
+        kept=[polys[0]]
+        for poly in polys[1:]:
+            cy,cx=_cen(poly)
+            if _cozumel(cy,cx): kept.append(poly); continue
+            print(f'  drop non-main {reg} @[{cy:.1f},{cx:.1f}]')
+        polys=kept
     out[reg]=polys
 import os
 os.makedirs('data/derived',exist_ok=True)

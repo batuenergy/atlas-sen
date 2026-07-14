@@ -82,7 +82,7 @@ for (g,zn),pts in zacc.items():
     cx=round(sum(p[0] for p in pts)/len(pts),4); cy=round(sum(p[1] for p in pts)/len(pts),4)
     Z.append([zn,g,[[round(la,4),round(lo,4)] for (lo,la) in h],cy,cx,len(set(pts))])
 
-TYPE_META={'pv':['Fotovoltaica','#F5B301'],'wind':['Eolica','#1D9E75'],'hydro':['Hidroelectrica','#378ADD'],'geo':['Geotermica','#D85A30'],'nuc':['Nuclear','#7F77DD'],'cc':['Ciclo combinado','#A98B63'],'th':['Termoelectrica','#7C5C3E'],'coal':['Carboelectrica','#3C332C'],'tg':['Turbogas','#C9A227'],'ci':['Combustion interna','#8A6240'],'cog':['Cogeneracion','#97C459'],'cegen':['CEGEN (s/ubicar)','#B9B6AE'],'bat':['Baterias','#534AB7']}
+TYPE_META={'pv':['Fotovoltaica','#F5B301'],'wind':['Eólica','#1D9E75'],'hydro':['Hidroeléctrica','#378ADD'],'geo':['Geotérmica','#D85A30'],'nuc':['Nuclear','#7F77DD'],'cc':['Ciclo combinado','#A98B63'],'th':['Termoeléctrica','#7C5C3E'],'coal':['Carboeléctrica','#3C332C'],'tg':['Turbogás','#C9A227'],'ci':['Combustión interna','#8A6240'],'cog':['Cogeneración','#97C459'],'cegen':['CEGEN (s/ubicar)','#B9B6AE'],'bat':['Baterías','#534AB7']}
 
 # CFE tariff divisions: dissolved polygons + point-in-polygon node tagging (needs coords)
 TZ=json.load(open(f'{DER}/cfe_division_polys.json'))

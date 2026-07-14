@@ -1,0 +1,17 @@
+{
+  "src": "Proyectos México / CFE — Plan de Fortalecimiento y Expansión del SEN 2025–2030",
+  "lines": [
+    {"n":"Interconexión Baja California–SIN (HVDC)","kv":"HVDC","mw":1500,"st":"planeacion","from":[32.63,-115.45],"to":[29.07,-110.96],"a":"Mexicali","b":"Hermosillo","note":"Enlace de corriente directa, 1,500 MW — conectaría el sistema de BC al resto del SEN."},
+    {"n":"354 Línea Submarina Playacar–Chankanaab II","kv":"115","km":33.6,"st":"licitacion","from":[20.63,-87.07],"to":[20.42,-86.92],"a":"Playa del Carmen","b":"Cozumel","note":"Cable submarino de corriente alterna. Fallo de licitación previsto 2026."}
+  ],
+  "subs": [
+    {"n":"353 LT Las Delicias–Querétaro","kv":"230","st":"construccion","cod":2026,"lat":20.59,"lng":-100.39,"edo":"Querétaro","note":"83.5 km de línea + 5 subestaciones (Las Delicias, Querétaro Potencia, Querétaro I, Santa Fe, Conín)."},
+    {"n":"SE Leona Vicario + 105 km de línea","kv":"—","st":"concluido","cod":2025,"lat":20.99,"lng":-87.20,"edo":"Quintana Roo","note":"Concluida — MXN 2,156 M, atiende ~718k usuarios en la Riviera Maya."},
+    {"n":"SE Presidente Juárez","kv":"230","st":"concluido","cod":2026,"lat":32.36,"lng":-117.05,"edo":"Baja California","note":"Subestación nueva (SF6) que alimenta la CC González Ortega. Inaugurada mar-2026."},
+    {"n":"SE San Ildefonso + LT El Sauz","kv":"115","st":"concluido","cod":2026,"lat":20.78,"lng":-100.05,"edo":"Querétaro","note":"Ampliación de 140 a 180 MW. Modernizada mar-2026."},
+    {"n":"SE Laguna Verde 230 kV","kv":"230","st":"planeacion","cod":2026,"lat":19.72,"lng":-96.41,"edo":"Veracruz","note":"Modernización/ampliación (SF6)."},
+    {"n":"SE Guadalajara Industrial (Banco 2)","kv":"—","st":"planeacion","cod":2026,"lat":20.67,"lng":-103.35,"edo":"Jalisco","note":"Ampliación de capacidad de transformación."},
+    {"n":"SE Zac Nicté","kv":"—","st":"construccion","cod":2026,"lat":20.63,"lng":-87.07,"edo":"Quintana Roo","note":"Subestación nueva — Playa del Carmen."},
+    {"n":"LT Zona Metropolitana de Monterrey (69.6 km)","kv":"—","st":"concluido","cod":2025,"lat":25.67,"lng":-100.31,"edo":"Nuevo León","note":"Concluida — MXN 707.76 M. Marcador en el centro de la ZMM; ruta no publicada."}
+  ]
+}

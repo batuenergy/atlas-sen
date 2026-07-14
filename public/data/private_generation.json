@@ -1,0 +1,24 @@
+{
+  "src": "CNE/SENER — 1ª Convocatoria de Atención Prioritaria (Planeación Vinculante), dic-2025",
+  "note": "18 proyectos privados aprobados (20 permisos, 2 retirados). Conteo y estatus: oficiales (CNE). Nombre, desarrollador y capacidad: prensa. Coordenadas: Manifestación de Impacto Ambiental (SEMARNAT) donde disponible; si no, centroide municipal.",
+  "projects": [
+    {"n":"Tecozautla","dev":"Green Park Energy (Iberdrola–Cox)","t":"pv","mw":122.3,"st":31.3,"edo":"Hidalgo","mun":"Tecozautla","lat":20.5126,"lng":-99.7945,"prec":"exact","firm":"Firme","mia":"13HI2025E0096","cod":2027},
+    {"n":"El Toro","dev":"Green Park Energy (Iberdrola–Cox)","t":"pv","mw":107,"st":29.7,"edo":"Guanajuato","mun":"Manuel Doblado","lat":20.7269,"lng":-101.9536,"prec":"muni","firm":"Inferido","mia":"","cod":2027},
+    {"n":"La Alegría Solar","dev":"Copenhagen Infrastructure Partners (Sunstone Power)","t":"pv","mw":600,"st":300,"edo":"Campeche","mun":"Campeche","lat":19.5555,"lng":-90.3924,"prec":"exact","firm":"Firme","mia":"04CA2025E0024","cod":2028},
+    {"n":"La Esperanza Solar","dev":"Copenhagen Infrastructure Partners (Sunstone Power)","t":"pv","mw":300,"st":150,"edo":"Campeche","mun":"Escárcega","lat":18.5994,"lng":-90.9507,"prec":"exact","firm":"Firme","mia":"04CA2025E0008","cod":2028},
+    {"n":"Saturno Solar","dev":"Dhamma Energy México","t":"pv","mw":155.7,"st":50.3,"edo":"Hidalgo","mun":"Singuilucan","lat":19.9713,"lng":-98.5750,"prec":"exact","firm":"Firme","mia":"13HI2019E0019","cod":2028},
+    {"n":"Akuwa Solar","dev":"Dhamma Energy México","t":"pv","mw":130.8,"st":42.2,"edo":"Hidalgo","mun":"Singuilucan","lat":19.9660,"lng":-98.5680,"prec":"near","firm":"Firme","mia":"","cod":2027},
+    {"n":"Delfín Solar","dev":"Dhamma Energy México","t":"pv","mw":172.8,"st":55,"edo":"Hidalgo","mun":"Singuilucan / Zempoala","lat":19.95,"lng":-98.56,"prec":"muni","firm":"Inferido","mia":"","cod":2028},
+    {"n":"Tamesí Solar","dev":"Solarig","t":"pv","mw":122.5,"st":36.2,"edo":"Tamaulipas","mun":"Altamira","lat":22.30,"lng":-98.03,"prec":"muni","firm":"Inferido","mia":"","cod":2028},
+    {"n":"Panabá 1B","dev":"Elecnor","t":"wind","mw":252,"st":102.1,"edo":"Yucatán","mun":"Panabá","lat":21.3933,"lng":-88.4131,"prec":"exact","firm":"Firme","mia":"P.E. Panabá 1A/1B","cod":2028},
+    {"n":"Dzilam","dev":"Eólica Dzilam","t":"wind","mw":120,"st":48.6,"edo":"Yucatán","mun":"Dzilam González","lat":21.28,"lng":-88.93,"prec":"muni","firm":"Inferido","mia":"MIA-R 2025","cod":2028},
+    {"n":"Zapoteca","dev":"Zapoteca de Energía","t":"wind","mw":200,"st":69.8,"edo":"Oaxaca","mun":"Juchitán de Zaragoza","lat":16.40,"lng":-95.02,"prec":"muni","firm":"Inferido","mia":"","cod":2028},
+    {"n":"Energía Solar Herrera (Tecali–La Magdalena)","dev":"Energía Solar Herrera","t":"pv","mw":231,"st":60.3,"edo":"Puebla","mun":"Tecali de Herrera","lat":18.87,"lng":-97.95,"prec":"muni","firm":"Inferido","mia":"21PU2025E0122","cod":2027},
+    {"n":"Piedras Negras","dev":"Gemex (Martil Solar)","t":"pv","mw":147,"st":36.2,"edo":"Veracruz","mun":"Tlalixcoyan","lat":18.7692,"lng":-96.1733,"prec":"near","firm":"Firme","mia":"aprobada 2026","cod":2028},
+    {"n":"CFV CGS","dev":"CGS Solarmex","t":"pv","mw":108.9,"st":29.6,"edo":"Zacatecas","mun":"Ojocaliente","lat":22.5706,"lng":-102.2547,"prec":"muni","firm":"Inferido","mia":"MIA-R 2025","cod":2028},
+    {"n":"ALTEN Hidalgo","dev":"ALTEN Energías Renovables","t":"pv","mw":113.3,"st":31.3,"edo":"Hidalgo","mun":"Nopala de Villagrán","lat":20.2565,"lng":-99.7699,"prec":"near","firm":"Firme","mia":"MIA-R 2025","cod":2028},
+    {"n":"Central Eólica 24","dev":"EPM","t":"wind","mw":105,"st":0,"edo":"Tamaulipas","mun":"Mier","lat":26.361,"lng":-99.224,"prec":"near","firm":"Firme","mia":"aprobada","cod":0},
+    {"n":"Global Hidalgo 2","dev":"Global Solar América","t":"pv","mw":116,"st":0,"edo":"Hidalgo","mun":"Nopala de Villagrán","lat":20.2519,"lng":-99.6442,"prec":"muni","firm":"Inferido","mia":"MIA-R 2025","cod":0},
+    {"n":"Vientos del Caribe","dev":"n/d","t":"wind","mw":208,"st":0,"edo":"Quintana Roo","mun":"Othón P. Blanco","lat":18.50,"lng":-88.44,"prec":"near","firm":"Firme","mia":"23QR2021E0072","cod":0}
+  ]
+}
