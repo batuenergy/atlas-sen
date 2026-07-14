@@ -49,3 +49,18 @@ from OSM `power=plant` (fuel‑type‑constrained, name‑similarity + distance�
 the `osm_plants.json` cache), snapping matched plants to community‑verified footprints and
 flagging still‑stacked, unmatched plants as approximate. Substations are the remaining
 open‑coordinate gap.
+
+**Regenerating `public/data/osm_plants.json`** (the committed Overpass cache): run
+`OSM_REFETCH=1 node scripts/regeocode_plants_osm.mjs`, which re‑queries Overpass with
+
+```
+[out:json][timeout:180];
+( node["power"="plant"](14.0,-118.6,33.0,-86.0);
+  way["power"="plant"](14.0,-118.6,33.0,-86.0);
+  relation["power"="plant"](14.0,-118.6,33.0,-86.0); );
+out center tags;
+```
+
+(Mexico bbox; ODbL, © OpenStreetMap contributors). It's a large raw export, so refresh it
+deliberately — only when re‑geocoding — and expect a big diff. Without `OSM_REFETCH` the script
+reuses the committed cache.

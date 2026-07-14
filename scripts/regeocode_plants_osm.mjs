@@ -44,9 +44,9 @@ async function loadOsm() {
 }
 
 const STOP = new Set('central de la el los las planta parque ciclo combinado turbogas turbo gas termoelectrica termica geotermica geotermoelectrica hidroelectrica fotovoltaica solar eolico eolica eoloelectrica nucleoelectrica carboelectrica cc tg ct ci cogeneracion energia generacion power plant y del san santa unidad fase'.split(' '));
-const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const toks = s => norm(s).split(' ').filter(t => t.length >= 3 && !STOP.has(t));
-const FOSSIL = new Set(['gas', 'oil', 'diesel', 'coal', 'biomass', 'biogas', 'waste', 'combustion', '']);
+const FOSSIL = new Set(['gas', 'natural_gas', 'oil', 'fuel_oil', 'diesel', 'coal', 'biomass', 'biogas', 'waste', 'combustion', '']);
 function compat(t, src) {
   if (!src) return true;
   if (t === 'pv') return src === 'solar';

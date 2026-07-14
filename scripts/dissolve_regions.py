@@ -57,6 +57,12 @@ def shoe(r):
 MIN_AREA=0.01
 byreg=collections.defaultdict(list)
 for i,r in enumerate(assigned): byreg[r].append(geoms[i])
+def _cen(poly):
+    ys=[p[0] for p in poly[0]]; xs=[p[1] for p in poly[0]]
+    return (min(ys)+max(ys))/2,(min(xs)+max(xs))/2
+def _is_cozumel(reg,cy,cx):
+    # Cozumel is SEN-connected (submarine cable) — the one offshore polygon to keep.
+    return (reg or '')=='Peninsular' and abs(cx+86.9)<0.4 and abs(cy-20.4)<0.4
 out={}
 for reg,gs in byreg.items():
     u=unary_union(gs).simplify(0.012, preserve_topology=True)
@@ -80,15 +86,10 @@ for reg,gs in byreg.items():
     # nearest-fill above. Cozumel is the one exception — it IS connected to the SEN by
     # submarine cable — so it is whitelisted.
     if polys:
-        def _cen(poly):
-            ys=[p[0] for p in poly[0]]; xs=[p[1] for p in poly[0]]
-            return (min(ys)+max(ys))/2,(min(xs)+max(xs))/2
-        def _cozumel(cy,cx):
-            return (reg or '')=='Peninsular' and abs(cx+86.9)<0.4 and abs(cy-20.4)<0.4
         kept=[polys[0]]
         for poly in polys[1:]:
             cy,cx=_cen(poly)
-            if _cozumel(cy,cx): kept.append(poly); continue
+            if _is_cozumel(reg,cy,cx): kept.append(poly); continue
             print(f'  drop non-main {reg} @[{cy:.1f},{cx:.1f}]')
         polys=kept
     out[reg]=polys
