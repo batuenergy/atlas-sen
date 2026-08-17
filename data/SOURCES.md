@@ -22,6 +22,7 @@ that produces it. Reproduce any of it with `make data`.
 | `private_generation.json` | Private renewable projects approved in CNE/SENER *Atención Prioritaria / Planeación Vinculante* (1st call, Dec 2025) — the private‑developer pipeline | CNE results doc (count/status/zone, anonymized folios) + press (name/developer/MW) + SEMARNAT MIA (coordinates) | CC‑BY 4.0 (public sector) + press attribution | curated |
 | `dg_by_size.json`, `dg_by_state.json` | Distributed‑generation installed capacity (MW) + contracts, by size bucket × year and by state × semester | CNE/CRE *Estadísticas de GD / generación exenta* (RES/142/2017) + datos.gob.mx | CC‑BY 4.0 | `scripts/fetch_dg.py` |
 | `cfe_users_ts.json`, `cfe_energy_ts.json` | Estimated users & energy sales (MWh) by tarifa × división × year | CNE *Memorias de cálculo de las tarifas de operación / finales del Suministro Básico* | CC‑BY 4.0 | `scripts/fetch_cfe_tarifa_ts.py` |
+| `permisos.json` | Plant → permit modality, number, grant date and expiry (`base` records whether the date was read from the título, is indefinite, or fell back to the 30-year term) | **CNE** *Lista de permisos otorgados de generación* (monthly XLSX) + each permit's **título** from the CNE Registro Público | CC‑BY 4.0 (public sector) | `scripts/build_permisos.mjs` (titles via `scripts/crawl_permit_titles.mjs`) |
 | `timeseries.json` | Generation capacity by source by year (1960–2026) | Derived from `plants.json` COD | CC‑BY 4.0 | `scripts/build_timeseries.py` |
 | `demand/today.json`, `demand/history/*.json` | Semi‑real‑time demand/generation/forecast per region | CENACE `GraficaDemanda.aspx` | Public (attribute CENACE) | `scripts/fetch_demand.py` (scheduled) |
 
@@ -32,6 +33,8 @@ that produces it. Reproduce any of it with `make data`.
 | `unifilares/` | Region extractions from the CENACE single‑line diagram PDFs | CENACE (public) |
 | `cfe_muni_division.json` | Parsed DOF municipio→tariff‑division table | DOF acuerdo 5783862 |
 | `ownership.json` | Plant → parent company / market / regime | Public registries + research |
+| `permisos-cne-jul26.json` | Normalized snapshot of the CNE's granted‑generation‑permit table (1,038 permits in force, 122.9 GW) | CNE (public, CC‑BY) |
+| `permisos-vigencia-titulos.json` | Term clause read out of each permit's **título**, verbatim, plus how it was resolved (`fecha-explicita` / `plazo` / `indefinida`) | CNE Registro Público (`drive.cne.gob.mx`) |
 
 ## Notes on coordinates
 

@@ -1,6 +1,6 @@
 shapely>=2.0
 openpyxl>=3.1     # build_zonas_de_carga.py — parse the CENACE NodosP catálogo (xlsx)
 requests>=2.31
-ruff>=0.5
+ruff>=0.5,<0.16  # upper-bounded: 0.16 changed default rules and reds CI on untouched scripts
 pytest>=8.0
 mcp>=1.2          # atlas_mcp.py — natural-language access to the dataset
