@@ -27,3 +27,6 @@ public/data/pnd/zonas_de_carga.json
 data/sources/muni/
 data/sources/muni_centroids.json
 data/sources/osm_raw.json
+
+# Permit-title PDFs cached by scripts/crawl_permit_titles.mjs (re-fetchable)
+data/.permit-titles/

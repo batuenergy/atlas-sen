@@ -1,4 +1,4 @@
-.PHONY: setup data build serve test lint clean demand pnd zonas
+.PHONY: setup data permisos build serve test lint clean demand pnd zonas
 
 VENV := .venv
 PY := $(VENV)/bin/python
@@ -27,6 +27,9 @@ pnd: ## fetch the latest CENACE MDA zone-price snapshot (used by the scheduled j
 zonas: ## (maintainer) rebuild Zonas de Carga georeferencing from the NodosP catálogo + INEGI
 	$(PY) scripts/build_zonas_de_carga.py
 	@echo "* zonas_de_carga.json carries proprietary coords — copy to the PRIVATE repo, do NOT commit here."
+
+permisos: ## rebuild permisos.json (permit modality + expiry) from the CNE snapshot
+	node scripts/build_permisos.mjs
 
 build: ## assemble the map into public/
 	$(PY) scripts/build_map.py
