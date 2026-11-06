@@ -128,7 +128,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
   // Target the permits the atlas actually shows, plus every PIE permit — the
   // legacy independent-power fleet is where the terms deviate most from 30 years.
-  const snapshot = JSON.parse(readFileSync(join(SRC, 'permisos-cne-jul26.json'), 'utf8'));
+  const snapshot = JSON.parse(readFileSync(join(SRC, 'permisos-cne.json'), 'utf8'));
   const dataset = new Set(Object.values(JSON.parse(readFileSync(join(__dirname, '..', 'public', 'data', 'permisos.json'), 'utf8')).byPlant).map((v) => v.num).filter(Boolean));
   for (const p of snapshot) if (p.mod === 'P.I.E.') dataset.add(p.num);
   const targets = [...dataset].filter((n) => idx[n]).sort();

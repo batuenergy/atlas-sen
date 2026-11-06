@@ -1,4 +1,4 @@
-.PHONY: setup data permisos build serve test lint clean demand pnd zonas
+.PHONY: setup data permisos permisos-fetch build serve test lint clean demand pnd zonas
 
 VENV := .venv
 PY := $(VENV)/bin/python
@@ -29,6 +29,10 @@ zonas: ## (maintainer) rebuild Zonas de Carga georeferencing from the NodosP cat
 	@echo "* zonas_de_carga.json carries proprietary coords — copy to the PRIVATE repo, do NOT commit here."
 
 permisos: ## rebuild permisos.json (permit modality + expiry) from the CNE snapshot
+	node scripts/build_permisos.mjs
+
+permisos-fetch: ## download the latest monthly CNE permit table, then rebuild permisos.json
+	$(PY) scripts/fetch_permisos_cne.py
 	node scripts/build_permisos.mjs
 
 build: ## assemble the map into public/

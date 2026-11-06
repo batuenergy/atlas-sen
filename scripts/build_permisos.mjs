@@ -34,7 +34,7 @@
  * prorrogados". An expiry is a cliff, not a renewal formality.
  *
  * ── Inputs ───────────────────────────────────────────────────────────────────
- *   data/sources/permisos-cne-jul26.json  CNE snapshot, normalized (public, CC-BY)
+ *   data/sources/permisos-cne.json  CNE snapshot, normalized (public, CC-BY)
  *   data/sources/atlas-ownership.json    plant → {spv, regimen, …}; Batu research
  *   public/data/atlas.json               plant inventory (name, MW, tech)
  */
@@ -47,9 +47,13 @@ const DATA = join(__dirname, '..', 'public', 'data');
 const SRC = join(__dirname, '..', 'data', 'sources');
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-const SNAPSHOT = 'permisos-cne-jul26.json';
+const SNAPSHOT = 'permisos-cne.json';
+// Written by scripts/fetch_permisos_cne.py alongside the snapshot.
+const { actualizacion } = readJson(join(SRC, 'permisos-cne.meta.json'));
+const MES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const [yy, mm, dd] = actualizacion.split('-').map(Number);
 const SOURCE = {
-  label: 'CNE · Lista de permisos otorgados de generación de energía eléctrica (31-jul-2026)',
+  label: `CNE · Lista de permisos otorgados de generación de energía eléctrica (${dd}-${MES[mm - 1]}-${yy})`,
   url: 'https://www.gob.mx/cne/documentos/estadisticas-e-informacion-en-materia-de-permisos-de-electricidad',
 };
 /** LIE art. 17 / permit-title Condición TERCERA: up to 30 years from issuance. */
@@ -267,6 +271,18 @@ function unitConflict(a, b) {
   return true;
 }
 
+/**
+ * Holders that sit on many permits (CFE, Pemex) only identify a plant through the
+ * plant named inside the holder string. Without that hit the join is capacity
+ * alone: the bare "Comisión Federal de Electricidad E P E" Umán solar permit
+ * (CNE/E/73/GEN/2026) went to a wind farm, and Cerro Prieto II took Valentín
+ * Gómez Farías.
+ */
+const holderOf = (p) => norm(String(p.titular).split(',')[0]);
+const plantsPerHolder = new Map();
+for (const p of permisos) if (p.plantKey) plantsPerHolder.set(holderOf(p), (plantsPerHolder.get(holderOf(p)) || 0) + 1);
+const isUmbrella = (p) => plantsPerHolder.get(holderOf(p)) >= 3;
+
 const stats = { alta: 0, media: 0, sinDato: 0, fallback: 0, cfe: 0, descartado: 0, duplicado: 0, vencidoIncoherente: 0 };
 const out0 = { today: new Date().toISOString().slice(0, 10) };
 
@@ -301,6 +317,7 @@ function matchPlant(name, mw, tech, own) {
     // candidates outright also lets a weaker-but-corroborated permit win.
     if (mt === 0) continue;
     const tt = techOk(tech, permit.tecnologia) ? 1 : 0;
+    if (!pt && isUmbrella(permit) && !(mt === 3 && tt)) continue;
     const score = Math.max(nt, pt, ct) * 10 + pt * 6 + mt * 3 + tt;
     if (!best || score > best.score) best = { permit, score, nt, pt, ct, mt, tt };
   }
