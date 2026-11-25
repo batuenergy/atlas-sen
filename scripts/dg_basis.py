@@ -43,6 +43,25 @@ H1_2025 = {
             "según el reporte CNE 1S-2025 citado por la prensa; cifra NO reexpresada (el PDF ya no está en el portal de la CNE).",
     "src": "https://energiaestrategica.com/energiaestrategica/es/notes/la-cne-acumula-47-gw-en-solicitudes-y-consolida-el-avance-de-la-generacion-distribuida-en-mexico",
 }
+# National GD cumulative at 30-jun of each year, so the map can compare ene–jun against
+# ene–jun. Only national totals exist for mid-year cuts (no size bands before 2026).
+# basis: "gd+sipyme" through 2024, "gd" from 2025 (see BASIS CHANGE above).
+# n = None where the source gives MW only. 2026 comes from the size tables themselves.
+H1_NATIONAL = {
+    "2020": {"mw": 1196.52, "n": 165528, "basis": "gd+sipyme",
+             "src": "CRE, Estadísticas GD 1S-2020 (tabla por estado; public/data/dg_by_state.json 2020-H1)"},
+    "2021": {"mw": 1817.09, "n": None, "basis": "gd+sipyme",
+             "nota": "2S-2020 (1,571.09 MW) + 246 MW instalados en ene–jun 2021 según la CRE citada por la prensa.",
+             "src": "https://energiaestrategica.com/energiaestrategica/es/notes/la-generacion-distribuida-en-mexico-crecio-246-mw-durante-primer-semestre-de-2021"},
+    "2022": {"mw": 2307.44, "n": 300624, "basis": "gd+sipyme",
+             "src": "CRE, Estadísticas GD 1S-2022 (tabla por estado; public/data/dg_by_state.json 2022-H1)"},
+    "2023": {"mw": 2954.65, "n": None, "basis": "gd+sipyme",
+             "nota": "1S-2024 (3,891.22 MW) − 936.57 MW de crecimiento anual reportado por la CRE.",
+             "src": "https://energiaadebate.com/aumenta-31-capacidad-instalada-en-generacion-distribuida"},
+    "2024": {"mw": 3891.22, "n": 460896, "basis": "gd+sipyme",
+             "src": "https://factorenergetico.mx/generacion-distribuida-suma-inversiones-de-5200-mdd-y-una-capacidad-instalada-de-3891-mw-al-primer-semestre-de-2024"},
+    "2025": {"mw": H1_2025["mw"], "n": H1_2025["solicitudes"], "basis": "gd", "nota": H1_2025["nota"], "src": H1_2025["src"]},
+}
 
 
 def split(total, weights, integer=False):
@@ -94,13 +113,25 @@ def main():
                                "estimado con la proporción de 2024).")
     pz["meta"]["2025_restated_url"] = REPORT_URL
     pz["meta"]["prevYearH1"] = {"2025-H1": H1_2025}
-    pz["meta"]["note_2026-H1"] = pz["meta"].get("note_2026-H1", "") + " Periodo parcial (ene–jun): no se anualiza."
+    pz["meta"]["h1National"] = {
+        "nota": "Acumulado nacional al 30-jun de cada año (sólo total: no hay desglose por tamaño de cortes de mitad de año "
+                "antes de 2026). Las altas ene–jun se miden contra el cierre del año anterior; a través del cambio de base "
+                "se resta SIPyME. 2026 = reporte CNE 1S-2026 contra el 2025 reexpresado (5,228.00 MW); con el 2025 sin "
+                "reexpresar (5,189.71 MW) serían 485.8 MW.",
+        "years": {**H1_NATIONAL, "2026": {"from": "2026-H1", "basis": "gd", "src": REPORT_URL}},
+    }
+    tag = " Periodo parcial (ene–jun): no se anualiza."
+    pz["meta"]["note_2026-H1"] = pz["meta"].get("note_2026-H1", "").replace(tag, "") + tag  # idempotent
     (OUT / "dg_by_size.json").write_text(json.dumps(pz, ensure_ascii=False, separators=(",", ":")))
 
     gd25 = RESTATED_2025["mw"]
     print(f"2025 additions (GD basis): {gd25 - (pz['capacityMWp_total']['2024'] - SIP_MW):,.1f} MW")
     print(f"2026 ene–jun: {pz['capacityMWp_total']['2026-H1'] - gd25:,.2f} MW · "
           f"2025 ene–jun: {H1_2025['mw'] - (pz['capacityMWp_total']['2024'] - SIP_MW):,.1f} MW")
+    T = pz["capacityMWp_total"]
+    for y, v in H1_NATIONAL.items():
+        prev = T[str(int(y) - 1)] - (SIP_MW if v["basis"] == "gd" and int(y) - 1 <= int(BOUNDARY["through"]) else 0)
+        print(f"  ene–jun {y}: {v['mw'] - prev:,.1f} MW")
 
 
 if __name__ == "__main__":
