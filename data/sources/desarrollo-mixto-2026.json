@@ -1,0 +1,274 @@
+{
+ "convocatoria": "1ª Convocatoria de proyectos de generación bajo esquemas de desarrollo mixto (CFE/SENER)",
+ "publicada": "2026-02-06",
+ "fallo": "2026-06-05",
+ "fallo_total": {
+  "proyectos": 37,
+  "mw": 7411,
+  "pv": {
+   "n": 33,
+   "mw": 6710
+  },
+  "wind": {
+   "n": 4,
+   "mw": 700
+  },
+  "desarrolladores": 31,
+  "meta_sener_mw": 6500,
+  "inv_musd": 7400
+ },
+ "cfe_actualizado": {
+  "fecha": "2026-10",
+  "proyectos": 38,
+  "mw": 8026,
+  "pv": {
+   "n": 30,
+   "mw": 4897
+  },
+  "wind": {
+   "n": 8,
+   "mw": 3129
+  },
+  "cod": "2028–2030",
+  "por_asignar_mw": 4151,
+  "src": "https://www.cfe.gob.mx/finanzas/Documents/ProgramaDesarrollo-26.pdf"
+ },
+ "proyectos_por_gerencia": {
+  "Peninsular": 10,
+  "Noreste": 10,
+  "Noroeste": 5,
+  "Baja California": 3,
+  "Baja California Sur": 3,
+  "Occidental": 3,
+  "Oriental": 2,
+  "Norte": 1
+ },
+ "terminos": "CFE 54% / privado 46% · CFE compra 70% de la energía a 25 años · baterías ≥30% de la capacidad, 3 h",
+ "siguiente": "2ª convocatoria mixta: 66 proyectos preseleccionados (8,241 MW), fallo esperado nov-2026 a ene-2027",
+ "nota": "CFE no ha publicado el listado oficial por proyecto. Nombres y gerencia: reconstrucción de Energía Estratégica tras el fallo (36 de 37 identificados). MW por proyecto sólo donde la prensa lo reporta; el resto, sin dato público. Ubicación: sólo la gerencia de control regional; ningún proyecto tiene coordenadas públicas. El fallo (37 · 7,411 MW) y el corte de CFE (38 · 8,026 MW) no se reconcilian públicamente.",
+ "sources": [
+  "https://www.energiaestrategica.com/es/notes/cfe-adjudica-37-proyectos-renovables-a-31-desarrolladores-los-ganadores-del-esquema-mixto-uno-por-uno",
+  "https://www.energiaestrategica.com/es/notes/quienes-se-quedaron-con-los-7400-mw-mixtos-con-cfe-en-mexico-asi-se-reparten-los-37-proyectos-y-la-capacidad-adjudicada",
+  "https://www.pv-magazine-mexico.com/2026/06/09/la-cfe-adjudica-6-7-gw-fotovoltaicos-en-su-primera-convocatoria-de-esquemas-mixtos/",
+  "https://energiaadebate.com/cfe-adjudica-7411-mw-renovables-y-alcanza-una-cobertura-de-114-en-su-primera-convocatoria-de-inversion-mixta/",
+  "https://www.cfe.gob.mx/finanzas/Documents/ProgramaDesarrollo-26.pdf"
+ ],
+ "projects": [
+  {
+   "n": "El Chorro",
+   "reg": "Noreste",
+   "t": "pv"
+  },
+  {
+   "n": "Parque FV Energías Renovables de Tamaulipas",
+   "reg": "Noreste",
+   "dev": "Cubico México",
+   "t": "pv",
+   "mw": 110
+  },
+  {
+   "n": "Delaro",
+   "reg": "Noreste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "Energeo Los Molinos",
+   "reg": "Noreste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "Montecristo",
+   "reg": "Noreste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "Proyecto Eólico Región Noreste",
+   "reg": "Noreste",
+   "dev": "Oak Creek",
+   "t": "wind"
+  },
+  {
+   "n": "Santa Gertrudis",
+   "reg": "Noreste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "El Guajillo",
+   "reg": "Noreste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "Viento de Bella Unión",
+   "reg": "Noreste",
+   "t": "wind"
+  },
+  {
+   "n": "Tikinmul",
+   "reg": "Peninsular",
+   "t": "pv"
+  },
+  {
+   "n": "Kiin",
+   "reg": "Peninsular",
+   "dev": "Cubico México",
+   "t": "pv",
+   "mw": 130
+  },
+  {
+   "n": "Los Girasoles",
+   "reg": "Peninsular",
+   "t": "pv"
+  },
+  {
+   "n": "Hecelchakán",
+   "reg": "Peninsular",
+   "dev": "Cubico México",
+   "t": "pv",
+   "mw": 130
+  },
+  {
+   "n": "PV Sandom Solar",
+   "reg": "Peninsular",
+   "dev": "Solarig",
+   "t": "pv"
+  },
+  {
+   "n": "Saas",
+   "reg": "Peninsular",
+   "dev": "Cubico México",
+   "t": "pv",
+   "mw": 130
+  },
+  {
+   "n": "Planta Solar Haab Kiin",
+   "reg": "Peninsular",
+   "dev": "Fisterra Energy",
+   "t": "pv",
+   "mw": 123
+  },
+  {
+   "n": "Dalia 3 PV (Castamay)",
+   "reg": "Peninsular",
+   "t": "pv"
+  },
+  {
+   "n": "Global Solar 3 Campeche",
+   "reg": "Peninsular",
+   "dev": "Global Solar America 3",
+   "t": "pv"
+  },
+  {
+   "n": "PV Moquel Solar",
+   "reg": "Peninsular",
+   "dev": "Solarig",
+   "t": "pv"
+  },
+  {
+   "n": "San Simón Solar",
+   "reg": "Baja California",
+   "dev": "Fisterra Energy",
+   "t": "pv",
+   "mw": 455.7,
+   "edo": "Baja California"
+  },
+  {
+   "n": "Solitario",
+   "reg": "Baja California",
+   "t": "pv",
+   "edo": "Baja California"
+  },
+  {
+   "n": "CFV Quasara",
+   "reg": "Baja California",
+   "t": "pv"
+  },
+  {
+   "n": "El Palmar",
+   "reg": "Baja California Sur",
+   "t": "pv"
+  },
+  {
+   "n": "La Pasión",
+   "reg": "Baja California Sur",
+   "t": "pv"
+  },
+  {
+   "n": "Álvaro Obregón",
+   "reg": "Baja California Sur",
+   "t": "pv"
+  },
+  {
+   "n": "Sol de Sonora 70",
+   "reg": "Noroeste",
+   "dev": "Thermion Energy",
+   "t": "pv"
+  },
+  {
+   "n": "Cimarrón Solar",
+   "reg": "Noroeste",
+   "dev": "Cimarrón Solar",
+   "t": "pv",
+   "mw": 300
+  },
+  {
+   "n": "Sunora",
+   "reg": "Noroeste",
+   "dev": "Sunora",
+   "t": "pv",
+   "mw": 300
+  },
+  {
+   "n": "La Poza Solar",
+   "reg": "Noroeste",
+   "t": "pv"
+  },
+  {
+   "n": "Don Humberto",
+   "reg": "Noroeste",
+   "dev": "Don Humberto",
+   "t": "pv",
+   "mw": 131
+  },
+  {
+   "n": "Selka Power Plant 1",
+   "reg": "Occidental",
+   "dev": "Selka Energy",
+   "t": "pv",
+   "mw": 131.1
+  },
+  {
+   "n": "San Pedro Solar",
+   "reg": "Occidental",
+   "t": "pv"
+  },
+  {
+   "n": "Fresnillo (PV Atocha)",
+   "reg": "Occidental",
+   "t": "pv"
+  },
+  {
+   "n": "Planta Solar Cerro Colorado",
+   "reg": "Oriental",
+   "dev": "Fisterra Energy",
+   "t": "pv",
+   "mw": 123.2
+  },
+  {
+   "n": "Solar Energía Tres Hermanos",
+   "reg": "Oriental",
+   "t": "pv"
+  },
+  {
+   "n": "CFV Las Garzas",
+   "reg": "Norte",
+   "dev": "Freeman Energy – Quantum Energía",
+   "t": "pv",
+   "mw": 270
+  }
+ ]
+}
