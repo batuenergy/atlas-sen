@@ -34,7 +34,7 @@
  * prorrogados". An expiry is a cliff, not a renewal formality.
  *
  * ── Inputs ───────────────────────────────────────────────────────────────────
- *   data/sources/permisos-cne-jul26.json  CNE snapshot, normalized (public, CC-BY)
+ *   data/sources/permisos-cne-oct26.json  CNE snapshot, normalized (public, CC-BY)
  *   data/sources/atlas-ownership.json    plant → {spv, regimen, …}; Batu research
  *   public/data/atlas.json               plant inventory (name, MW, tech)
  */
@@ -47,9 +47,9 @@ const DATA = join(__dirname, '..', 'public', 'data');
 const SRC = join(__dirname, '..', 'data', 'sources');
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-const SNAPSHOT = 'permisos-cne-jul26.json';
+const SNAPSHOT = 'permisos-cne-oct26.json';
 const SOURCE = {
-  label: 'CNE · Lista de permisos otorgados de generación de energía eléctrica (31-jul-2026)',
+  label: 'CNE · Lista de permisos otorgados de generación de energía eléctrica (31-oct-2026)',
   url: 'https://www.gob.mx/cne/documentos/estadisticas-e-informacion-en-materia-de-permisos-de-electricidad',
 };
 /** LIE art. 17 / permit-title Condición TERCERA: up to 30 years from issuance. */
@@ -133,7 +133,7 @@ const legalName = (spv) => norm(String(spv).split(/[(/]/)[0]);
  * which silently mis-assigns (Central La Venta is 84.2 MW, but a 30 MW CFE
  * permit outscored it on a plain MW join).
  */
-const PLANT_WORD = /\b(central(?:es)?|planta|refineria|complejo|parque|proyecto|unidad|c\.?\s?[htcng]\.?)\b/gi;
+const PLANT_WORD = /\b(central(?:es)?|planta|refineria|complejo|parque|proyecto|unidad|c\.?\s?[htcng]\.?|p\.\s?e\.)(?=\s|$)/gi;
 function plantHint(titular) {
   const parts = String(titular).split(',');
   // Walk from the end for the first segment that names a plant rather than a
@@ -211,6 +211,19 @@ const atlas = readJson(join(DATA, 'atlas.json'));
  * names. A token match built only out of these is noise, and letting one through
  * is how "CFE Generación VI" matched "Compañía de Generación Valladolid".
  */
+/**
+ * Holders that name the plant inside at least one of their permits (multi-plant fleets):
+ * the bare holder key is a prefix of a plant-named key ("comision federal de electricidad"
+ * ⊂ "comision federal de electricidad central la venta").
+ */
+const namedKeys = permisos.filter((p) => p.plantKey).map((p) => p.key);
+const FLEET_MIN = 3; // Sierra Juárez (1 named permit) or Bio Pappel (2) are not fleets; CFE, Pemex are
+const NAMES_PLANTS = new Set(
+  permisos
+    .filter((p) => !p.plantKey && namedKeys.filter((k) => k.startsWith(`${p.key} `)).length >= FLEET_MIN)
+    .map((p) => p.key),
+);
+
 const STOP = new Set([
   'generacion', 'generadora', 'energia', 'energias', 'electricidad', 'electrica',
   'comision', 'federal', 'central', 'centrales', 'parque', 'parques', 'planta',
@@ -291,6 +304,12 @@ function matchPlant(name, mw, tech, own) {
     // "TMH Tamazunchale I" once the "C.C." prefix is out of the way.
     const ct = Math.max(rawKey ? nameTier(rawKey, permit.key) : 0, nameKey ? nameTier(nameKey, permit.key) : 0);
     if (!nt && !pt && !ct) continue;
+    // Fleet holders (CFE, Pemex…) name the plant inside the permit; their legal name is
+    // shared by the whole fleet, so a legal-name hit alone only lets CAPACITY decide —
+    // that sent the Oct-2026 unnamed CFE PV permits (CNE/E/73-74, Umán & San Quintín)
+    // to Río Bravo and La Venta II, and a 240 MW hydro permit to Cerro Prieto II.
+    // For a fleet, only a plant-name tie (axis B or C) counts.
+    if (!pt && !ct && NAMES_PLANTS.has(legalKey)) continue;
     if (unitConflict(name, permit.titular)) continue;
 
     const mt = mwTier(mw, permit.mw);
